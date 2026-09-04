@@ -8,547 +8,431 @@
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f8fafc;
-  color:#111827;
-  line-height:1.6;
+    background:#f5f7fb;
+    color:#222;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-.container{
-  width:90%;
-  max-width:1200px;
-  margin:auto;
-}
-
-/* HEADER */
 header{
-  background:white;
-  border-bottom:1px solid #e5e7eb;
-  position:sticky;
-  top:0;
-  z-index:1000;
+    background:#ffffff;
+    padding:14px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.navbar{
-  height:70px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+/* LOGO AREA */
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-circle{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#eeeeee;
+    flex-shrink:0;
+    border:2px solid #ddd;
+}
+
+.logo-circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 .logo{
-  font-size:24px;
-  font-weight:800;
-  color:#4f46e5;
+    font-size:24px;
+    font-weight:bold;
+    color:#111;
 }
 
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:28px;
+nav{
+    display:flex;
+    gap:20px;
+    align-items:center;
 }
 
-.nav-links a{
-  color:#374151;
-  font-size:15px;
-  font-weight:600;
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    cursor:pointer;
 }
 
-.nav-links a:hover{
-  color:#4f46e5;
+nav a:hover{
+    color:#007bff;
 }
 
-.login{
-  background:#111827;
-  color:white !important;
-  padding:10px 18px;
-  border-radius:8px;
-}
-
-.login:hover{
-  background:#4f46e5;
-}
-
-/* HERO */
 .hero{
-  padding:90px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#eef2ff,#ffffff);
+    padding:80px 5%;
+    text-align:center;
+    background:linear-gradient(135deg,#eef4ff,#ffffff);
 }
 
 .hero h1{
-  font-size:48px;
-  line-height:1.2;
-  margin-bottom:18px;
-}
-
-.hero h1 span{
-  color:#4f46e5;
+    font-size:42px;
+    margin-bottom:15px;
 }
 
 .hero p{
-  max-width:700px;
-  margin:auto;
-  color:#667085;
-  font-size:18px;
+    font-size:18px;
+    color:#666;
+    max-width:700px;
+    margin:auto;
 }
 
-.hero-btn{
-  display:inline-block;
-  margin-top:28px;
-  background:#4f46e5;
-  color:white;
-  padding:13px 25px;
-  border-radius:9px;
-  font-weight:700;
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.hero-btn:hover{
-  background:#3730a3;
-}
-
-/* SECTION */
 section{
-  padding:70px 0;
+    padding:60px 5%;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:40px;
+    text-align:center;
+    margin-bottom:35px;
 }
 
 .section-title h2{
-  font-size:32px;
-  margin-bottom:8px;
+    font-size:32px;
+    margin-bottom:10px;
 }
 
 .section-title p{
-  color:#667085;
+    color:#777;
 }
 
-/* CATEGORIES */
+/* CATEGORY */
 .category-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  align-items:stretch;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    align-items:stretch;
 }
 
 .category{
-  height:155px;
-  background:white;
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  padding:20px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  overflow:hidden;
-  transition:.3s;
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.07);
+    height:155px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    transition:.2s;
 }
 
 .category:hover{
-  transform:translateY(-5px);
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transform:translateY(-4px);
 }
 
-.category-icon{
-  font-size:34px;
-  margin-bottom:8px;
+.category .icon{
+    font-size:35px;
+    margin-bottom:10px;
 }
 
-.category h3{
-  font-size:17px;
-  margin-bottom:4px;
-}
-
-.category p{
-  color:#667085;
-  font-size:13px;
-}
-
-/* DESIGN CARDS */
+/* CARDS */
 .cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-  align-items:stretch;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    align-items:stretch;
 }
 
 .card{
-  background:white;
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  height:100%;
-  transition:.3s;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 3px 15px rgba(0,0,0,.07);
+    display:flex;
+    flex-direction:column;
+    height:100%;
 }
 
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
-}
-
-.card-image{
-  height:180px;
-  background:#eef2ff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:55px;
+.card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
 }
 
 .card-content{
-  padding:20px;
-  flex:1;
-  display:flex;
-  flex-direction:column;
+    padding:20px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
 }
 
 .card-content h3{
-  margin-bottom:8px;
+    margin-bottom:10px;
 }
 
 .card-content p{
-  color:#667085;
-  font-size:14px;
-  min-height:45px;
+    color:#666;
+    min-height:45px;
 }
 
-.price{
-  margin-top:auto;
-  padding-top:15px;
-  font-weight:800;
-  color:#4f46e5;
+.card-content .btn{
+    margin-top:auto;
+    align-self:flex-start;
 }
 
 /* VIDEO */
-.video-card{
-  background:white;
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  height:100%;
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    align-items:stretch;
 }
 
-.video-thumb{
-  height:180px;
-  background:#111827;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  font-size:55px;
+.video-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 3px 15px rgba(0,0,0,.07);
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.video-card iframe{
+    width:100%;
+    height:210px;
+    border:0;
 }
 
 .video-content{
-  padding:20px;
-  flex:1;
+    padding:20px;
 }
 
 .video-content h3{
-  min-height:50px;
-  margin-bottom:8px;
+    min-height:50px;
 }
 
 .video-content p{
-  color:#667085;
-  font-size:14px;
-  min-height:67px;
-}
-
-.watch-btn{
-  display:inline-block;
-  margin-top:15px;
-  background:#4f46e5;
-  color:white;
-  padding:9px 16px;
-  border-radius:8px;
-  font-size:14px;
-  font-weight:700;
+    color:#666;
+    min-height:67px;
 }
 
 /* ABOUT */
 .about{
-  background:white;
-  text-align:center;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+    color:#555;
 }
 
-.about p{
-  max-width:800px;
-  margin:auto;
-  color:#667085;
+/* CONTACT */
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 3px 15px rgba(0,0,0,.07);
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:7px;
+    outline:none;
+}
+
+.form-group textarea{
+    min-height:120px;
+    resize:vertical;
 }
 
 /* CTA */
 .cta{
-  text-align:center;
-  background:#111827;
-  color:white;
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:60px 5%;
+}
+
+.cta h2{
+    font-size:32px;
+    margin-bottom:10px;
 }
 
 .cta p{
-  color:#d1d5db;
-  margin-top:10px;
-}
-
-.cta-btn{
-  display:inline-block;
-  margin-top:22px;
-  background:white;
-  color:#111827;
-  padding:12px 22px;
-  border-radius:8px;
-  font-weight:700;
-}
-
-/* CONTACT */
-.contact{
-  text-align:center;
-}
-
-.contact p{
-  color:#667085;
+    color:#ccc;
 }
 
 /* FOOTER */
 footer{
-  background:#111827;
-  color:white;
-  text-align:center;
-  padding:25px 15px;
+    background:#0b0f19;
+    color:#aaa;
+    text-align:center;
+    padding:25px;
 }
 
-footer p{
-  color:#9ca3af;
-  font-size:14px;
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    z-index:2000;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
 }
 
-/* LOGIN POPUP */
-.login-modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  background:rgba(15,23,42,.65);
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+.modal-box{
+    background:white;
+    width:100%;
+    max-width:600px;
+    max-height:90vh;
+    overflow:auto;
+    border-radius:12px;
+    padding:30px;
+    position:relative;
 }
 
-.login-modal.active{
-  display:flex;
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:28px;
+    cursor:pointer;
+    color:#777;
 }
 
-.login-box{
-  width:100%;
-  max-width:420px;
-  background:white;
-  border-radius:20px;
-  padding:32px;
-  position:relative;
-  box-shadow:0 20px 60px rgba(0,0,0,.25);
-  animation:popup .2s ease;
+/* ADMIN */
+.admin-tabs{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
 }
 
-@keyframes popup{
-  from{
-    transform:scale(.9);
-    opacity:0;
-  }
-  to{
-    transform:scale(1);
-    opacity:1;
-  }
+.admin-tabs button{
+    padding:10px 15px;
+    border:none;
+    background:#eee;
+    border-radius:7px;
+    cursor:pointer;
 }
 
-.login-close{
-  position:absolute;
-  top:15px;
-  right:18px;
-  border:none;
-  background:#f3f4f6;
-  width:35px;
-  height:35px;
-  border-radius:50%;
-  font-size:22px;
-  cursor:pointer;
+.admin-panel{
+    display:none;
 }
 
-.login-close:hover{
-  background:#e5e7eb;
+.admin-panel.active{
+    display:block;
 }
 
-.login-box h2{
-  text-align:center;
-  font-size:28px;
-  color:#111827;
-  margin-bottom:8px;
-}
-
-.login-subtitle{
-  text-align:center;
-  color:#667085;
-  font-size:14px;
-  margin-bottom:25px;
-}
-
-.login-form label{
-  display:block;
-  font-size:14px;
-  font-weight:600;
-  margin-bottom:6px;
-  color:#374151;
-}
-
-.login-form input{
-  width:100%;
-  padding:13px 14px;
-  margin-bottom:15px;
-  border:1px solid #dfe3eb;
-  border-radius:9px;
-  outline:none;
-  font-size:14px;
-}
-
-.login-form input:focus{
-  border-color:#6366f1;
-}
-
-.login-submit{
-  width:100%;
-  padding:13px;
-  border:none;
-  border-radius:9px;
-  background:#111827;
-  color:white;
-  font-size:15px;
-  font-weight:700;
-  cursor:pointer;
-}
-
-.login-submit:hover{
-  background:#4f46e5;
-}
-
-.google-login{
-  width:100%;
-  margin-top:12px;
-  padding:13px;
-  border:1px solid #dfe3eb;
-  border-radius:9px;
-  background:white;
-  color:#111827;
-  font-weight:700;
-  cursor:pointer;
-}
-
-.google-login:hover{
-  background:#f9fafb;
-}
-
-.login-divider{
-  text-align:center;
-  color:#98a2b3;
-  font-size:13px;
-  margin:18px 0;
-}
-
-.switch-login{
-  text-align:center;
-  margin-top:20px;
-  font-size:14px;
-  color:#667085;
-}
-
-.switch-login button{
-  border:none;
-  background:none;
-  color:#4f46e5;
-  font-weight:700;
-  cursor:pointer;
-  font-size:14px;
-}
-
-#registerNameGroup{
-  display:none;
+.preview-logo{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #ddd;
+    margin-top:10px;
 }
 
 /* MOBILE */
 @media(max-width:900px){
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .category-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+    .cards,
+    .video-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .cards{
-    grid-template-columns:1fr;
-  }
+    nav{
+        gap:10px;
+    }
 
-  .hero h1{
-    font-size:38px;
-  }
+    nav a{
+        font-size:14px;
+    }
 }
 
-@media(max-width:650px){
+@media(max-width:600px){
+    header{
+        padding:12px 4%;
+    }
 
-  .navbar{
-    height:auto;
-    padding:15px 0;
-    flex-direction:column;
-    gap:15px;
-  }
+    .logo{
+        font-size:19px;
+    }
 
-  .nav-links{
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
+    .logo-circle{
+        width:34px;
+        height:34px;
+    }
 
-  .nav-links a{
-    font-size:13px;
-  }
+    nav{
+        display:none;
+    }
 
-  .category-grid{
-    grid-template-columns:1fr;
-  }
+    .hero{
+        padding:55px 5%;
+    }
 
-  .hero{
-    padding:65px 15px;
-  }
+    .hero h1{
+        font-size:30px;
+    }
 
-  .hero h1{
-    font-size:32px;
-  }
+    .category-grid,
+    .cards,
+    .video-grid{
+        grid-template-columns:1fr;
+    }
 
-  .hero p{
-    font-size:16px;
-  }
-
-  section{
-    padding:55px 0;
-  }
-
-  .login-box{
-    padding:25px 20px;
-  }
+    section{
+        padding:45px 5%;
+    }
 }
 </style>
 </head>
@@ -557,47 +441,47 @@ footer p{
 
 <!-- HEADER -->
 <header>
-  <div class="container navbar">
 
-    <div class="logo">
-      Unique Idea
+    <div class="brand">
+
+        <!-- ছোট গোল Logo -->
+        <div class="logo-circle">
+            <img id="siteLogo"
+                 src="https://via.placeholder.com/80"
+                 alt="Unique Idea Logo">
+        </div>
+
+        <div class="logo">Unique Idea</div>
+
     </div>
 
-    <nav class="nav-links">
-      <a href="#designs">Designs</a>
-      <a href="#videos">Videos</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-
-      <a href="javascript:void(0)" class="login" onclick="openLogin()">
-        Login
-      </a>
+    <nav>
+        <a onclick="scrollToSection('home')">Home</a>
+        <a onclick="scrollToSection('designs')">Designs</a>
+        <a onclick="scrollToSection('videos')">Videos</a>
+        <a onclick="scrollToSection('about')">About</a>
+        <a onclick="scrollToSection('contact')">Contact</a>
+        <a onclick="openLogin()">Login</a>
     </nav>
 
-  </div>
 </header>
 
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
 
-  <div class="container">
-
-    <h1>
-      Your Hub for
-      <span>Digital Tips & Online Ideas</span>
-    </h1>
+    <h1>Your Hub for Digital Tips & Online Ideas</h1>
 
     <p>
-      Learn YouTube, Facebook, Online Work, Digital Tips
-      and discover useful digital resources from Unique Idea.
+        YouTube Tips, Facebook Tips, Online Work,
+        Digital Tips এবং দরকারি Online Ideas এক জায়গায়।
     </p>
 
-    <a href="#videos" class="hero-btn">
-      Watch Latest Videos
+    <a class="btn"
+       href="https://www.youtube.com/@uniqueIdeam"
+       target="_blank">
+       Visit YouTube
     </a>
-
-  </div>
 
 </section>
 
@@ -605,42 +489,34 @@ footer p{
 <!-- CATEGORIES -->
 <section>
 
-  <div class="container">
-
     <div class="section-title">
-      <h2>Explore Categories</h2>
-      <p>Find useful tips and ideas for your online journey.</p>
+        <h2>Explore Categories</h2>
+        <p>আপনার প্রয়োজন অনুযায়ী ক্যাটাগরি বেছে নিন</p>
     </div>
 
     <div class="category-grid">
 
-      <div class="category">
-        <div class="category-icon">▶️</div>
-        <h3>YouTube Tips</h3>
-        <p>Channel growth & YouTube guides</p>
-      </div>
+        <div class="category">
+            <div class="icon">🎥</div>
+            <h3>YouTube Tips</h3>
+        </div>
 
-      <div class="category">
-        <div class="category-icon">📘</div>
-        <h3>Facebook Tips</h3>
-        <p>Facebook tricks & tutorials</p>
-      </div>
+        <div class="category">
+            <div class="icon">📘</div>
+            <h3>Facebook Tips</h3>
+        </div>
 
-      <div class="category">
-        <div class="category-icon">💻</div>
-        <h3>Online Work</h3>
-        <p>Freelancing & online income</p>
-      </div>
+        <div class="category">
+            <div class="icon">💻</div>
+            <h3>Online Work</h3>
+        </div>
 
-      <div class="category">
-        <div class="category-icon">⚙️</div>
-        <h3>Digital Tips</h3>
-        <p>Apps, tools & technology</p>
-      </div>
+        <div class="category">
+            <div class="icon">💡</div>
+            <h3>Digital Tips</h3>
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
@@ -648,83 +524,37 @@ footer p{
 <!-- DESIGNS -->
 <section id="designs">
 
-  <div class="container">
-
     <div class="section-title">
-      <h2>Featured Designs</h2>
-      <p>Professional digital design resources.</p>
+        <h2>Design Marketplace</h2>
+        <p>Professional digital designs and resources</p>
     </div>
 
-    <div class="cards">
+    <div class="cards" id="designContainer">
 
-      <div class="card">
+        <div class="card">
 
-        <div class="card-image">
-          🎨
+            <img src="https://via.placeholder.com/600x400?text=Your+Design"
+                 alt="Design">
+
+            <div class="card-content">
+
+                <h3>Professional Design</h3>
+
+                <p>
+                    AI, EPS, SVG, PDF সহ বিভিন্ন
+                    digital design এখানে পাওয়া যাবে।
+                </p>
+
+                <button class="btn"
+                        onclick="alert('Design marketplace coming soon!')">
+                    View Design
+                </button>
+
+            </div>
+
         </div>
-
-        <div class="card-content">
-          <h3>Professional Flyer</h3>
-
-          <p>
-            Modern and professional flyer design
-            for business promotion.
-          </p>
-
-          <div class="price">
-            $5.00
-          </div>
-        </div>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-image">
-          📄
-        </div>
-
-        <div class="card-content">
-          <h3>Corporate Brochure</h3>
-
-          <p>
-            Clean corporate brochure template
-            for professional businesses.
-          </p>
-
-          <div class="price">
-            $8.00
-          </div>
-        </div>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-image">
-          ✨
-        </div>
-
-        <div class="card-content">
-          <h3>Creative Template</h3>
-
-          <p>
-            Creative editable template for
-            social media and marketing.
-          </p>
-
-          <div class="price">
-            $6.00
-          </div>
-        </div>
-
-      </div>
 
     </div>
-
-  </div>
 
 </section>
 
@@ -732,124 +562,117 @@ footer p{
 <!-- VIDEOS -->
 <section id="videos">
 
-  <div class="container">
-
     <div class="section-title">
-      <h2>Latest Videos</h2>
-      <p>Learn useful digital skills from Unique Idea.</p>
+        <h2>Latest Videos</h2>
+        <p>Unique Idea YouTube Channel-এর ভিডিও</p>
     </div>
 
-    <div class="cards">
+    <div class="video-grid" id="videoContainer">
 
-      <div class="video-card">
+        <div class="video-card">
 
-        <div class="video-thumb">
-          ▶️
-        </div>
+            <iframe
+                src="https://www.youtube.com/embed?listType=user_uploads&list=uniqueIdeam"
+                title="Unique Idea YouTube Videos"
+                allowfullscreen>
+            </iframe>
 
-        <div class="video-content">
+            <div class="video-content">
 
-          <h3>
-            YouTube & Facebook Tips
-          </h3>
+                <h3>Unique Idea YouTube Channel</h3>
 
-          <p>
-            Learn useful tips and tricks
-            for growing your social media.
-          </p>
+                <p>
+                    YouTube, Facebook, Online Work
+                    এবং Digital Tips পেতে আমাদের
+                    YouTube Channel Subscribe করুন।
+                </p>
 
-          <a
-            href="https://www.youtube.com/@uniqueIdeam"
-            target="_blank"
-            class="watch-btn">
-            Watch Video
-          </a>
+                <a class="btn"
+                   href="https://www.youtube.com/@uniqueIdeam"
+                   target="_blank">
+                   Watch Channel
+                </a>
 
-        </div>
-
-      </div>
-
-
-      <div class="video-card">
-
-        <div class="video-thumb">
-          ▶️
-        </div>
-
-        <div class="video-content">
-
-          <h3>
-            Digital Tips & How-To Tutorials
-          </h3>
-
-          <p>
-            Easy tutorials about apps,
-            tools, technology and online work.
-          </p>
-
-          <a
-            href="https://www.youtube.com/@uniqueIdeam"
-            target="_blank"
-            class="watch-btn">
-            Watch Video
-          </a>
+            </div>
 
         </div>
-
-      </div>
-
-
-      <div class="video-card">
-
-        <div class="video-thumb">
-          ▶️
-        </div>
-
-        <div class="video-content">
-
-          <h3>
-            Online Work & Freelancing Tips
-          </h3>
-
-          <p>
-            Discover useful online work
-            and freelancing tips.
-          </p>
-
-          <a
-            href="https://www.youtube.com/@uniqueIdeam"
-            target="_blank"
-            class="watch-btn">
-            Watch Video
-          </a>
-
-        </div>
-
-      </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
 <!-- ABOUT -->
-<section class="about" id="about">
-
-  <div class="container">
+<section id="about">
 
     <div class="section-title">
-      <h2>About Unique Idea</h2>
+        <h2>About Unique Idea</h2>
     </div>
 
-    <p>
-      Unique Idea is a platform for YouTube Tips,
-      Facebook Tips, Online Work, Digital Tips,
-      technology tutorials and useful online ideas.
-    </p>
+    <div class="about">
 
-  </div>
+        <p>
+            Unique Idea একটি Digital Tips এবং Online Ideas
+            ভিত্তিক প্ল্যাটফর্ম। এখানে YouTube Tips,
+            Facebook Tips, Online Work, Digital Tools,
+            Graphic Design এবং বিভিন্ন দরকারি
+            How-to Guide শেয়ার করা হয়।
+        </p>
+
+        <br>
+
+        <p>
+            আমাদের লক্ষ্য হলো সহজ ভাষায় দরকারি
+            Digital Information সবার কাছে পৌঁছে দেওয়া।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>আপনার মতামত বা প্রশ্ন আমাদের জানান</p>
+    </div>
+
+    <div class="contact-box">
+
+        <form onsubmit="submitContact(event)">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text"
+                       id="contactName"
+                       placeholder="Your Name"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email"
+                       id="contactEmail"
+                       placeholder="Your Email"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea id="contactMessage"
+                          placeholder="Write your message..."
+                          required></textarea>
+            </div>
+
+            <button class="btn" type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
 
 </section>
 
@@ -857,41 +680,18 @@ footer p{
 <!-- CTA -->
 <section class="cta">
 
-  <div class="container">
-
     <h2>Stay Connected With Unique Idea</h2>
 
     <p>
-      Subscribe to get more YouTube, Facebook,
-      Online Work and Digital Tips.
+        নতুন Digital Tips এবং Online Ideas পেতে
+        আমাদের সাথে থাকুন।
     </p>
 
-    <a
-      href="https://www.youtube.com/@uniqueIdeam"
-      target="_blank"
-      class="cta-btn">
-      Subscribe on YouTube
+    <a class="btn"
+       href="https://www.youtube.com/@uniqueIdeam"
+       target="_blank">
+       Subscribe on YouTube
     </a>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Contact</h2>
-      <p>
-        Have a question or business inquiry?
-        Contact Unique Idea.
-      </p>
-    </div>
-
-  </div>
 
 </section>
 
@@ -899,261 +699,805 @@ footer p{
 <!-- FOOTER -->
 <footer>
 
-  <p>
-    © 2026 Unique Idea. All Rights Reserved.
-  </p>
+    <p>
+        © 2026 Unique Idea. All Rights Reserved.
+    </p>
 
 </footer>
 
 
-<!-- LOGIN / REGISTER POPUP -->
-<div class="login-modal" id="loginModal">
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
 
-  <div class="login-box">
+    <div class="modal-box">
 
-    <button
-      class="login-close"
-      onclick="closeLogin()">
-      ×
-    </button>
+        <span class="close"
+              onclick="closeModal('loginModal')">
+              ×
+        </span>
 
+        <h2>Login</h2>
 
-    <h2 id="loginTitle">
-      Welcome Back
-    </h2>
+        <br>
 
-    <p
-      class="login-subtitle"
-      id="loginSubtitle">
-      Login to your Unique Idea account
-    </p>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email"
+                   id="loginEmail"
+                   placeholder="Email">
+        </div>
 
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password"
+                   id="loginPassword"
+                   placeholder="Password">
+        </div>
 
-    <form
-      class="login-form"
-      id="loginForm"
-      onsubmit="handleFormSubmit(event)">
+        <button class="btn"
+                onclick="loginDemo()">
+            Login
+        </button>
 
-
-      <!-- NAME - REGISTER ONLY -->
-      <div id="registerNameGroup">
-
-        <label for="registerName">
-          Full Name
-        </label>
-
-        <input
-          type="text"
-          id="registerName"
-          placeholder="Enter your full name">
-
-      </div>
-
-
-      <!-- EMAIL -->
-      <label for="loginEmail">
-        Email Address
-      </label>
-
-      <input
-        type="email"
-        id="loginEmail"
-        placeholder="Enter your email"
-        required>
-
-
-      <!-- PASSWORD -->
-      <label for="loginPassword">
-        Password
-      </label>
-
-      <input
-        type="password"
-        id="loginPassword"
-        placeholder="Enter your password"
-        required>
-
-
-      <button
-        type="submit"
-        class="login-submit"
-        id="loginSubmit">
-        Login
-      </button>
-
-    </form>
-
-
-    <div class="login-divider">
-      OR
-    </div>
-
-
-    <button
-      class="google-login"
-      onclick="googleLogin()">
-      🌐 Continue with Google
-    </button>
-
-
-    <div
-      class="switch-login"
-      id="switchLogin">
-
-      Don't have an account?
-
-      <button onclick="showRegister()">
-        Create Account
-      </button>
+        <p style="margin-top:20px;color:#777;">
+            Demo login interface.
+            Real account system will require a backend.
+        </p>
 
     </div>
 
-  </div>
+</div>
+
+
+<!-- ADMIN / MANAGE MODAL -->
+<div class="modal" id="adminModal">
+
+    <div class="modal-box">
+
+        <span class="close"
+              onclick="closeModal('adminModal')">
+              ×
+        </span>
+
+        <h2>Manage Website</h2>
+
+        <br>
+
+        <div class="admin-tabs">
+
+            <button onclick="showAdminPanel('logoPanel')">
+                Logo
+            </button>
+
+            <button onclick="showAdminPanel('designPanel')">
+                Designs
+            </button>
+
+            <button onclick="showAdminPanel('videoPanel')">
+                Videos
+            </button>
+
+            <button onclick="showAdminPanel('contactPanel')">
+                Contact
+            </button>
+
+        </div>
+
+
+        <!-- LOGO PANEL -->
+        <div class="admin-panel active"
+             id="logoPanel">
+
+            <h3>Website Logo</h3>
+
+            <br>
+
+            <div class="form-group">
+
+                <label>Select Logo Image</label>
+
+                <input type="file"
+                       id="logoInput"
+                       accept="image/*"
+                       onchange="previewLogo()">
+
+            </div>
+
+            <img id="logoPreview"
+                 class="preview-logo"
+                 src="https://via.placeholder.com/80"
+                 alt="Logo Preview">
+
+            <br><br>
+
+            <button class="btn"
+                    onclick="saveLogo()">
+                Save Logo
+            </button>
+
+            <button class="btn"
+                    style="background:#dc3545;margin-left:8px;"
+                    onclick="removeLogo()">
+                Remove Logo
+            </button>
+
+            <p style="margin-top:15px;color:#777;">
+                Logoটি 40×40px গোল করে Header-এ দেখানো হবে।
+            </p>
+
+        </div>
+
+
+        <!-- DESIGN PANEL -->
+        <div class="admin-panel"
+             id="designPanel">
+
+            <h3>Add Design</h3>
+
+            <br>
+
+            <div class="form-group">
+                <label>Design Name</label>
+                <input type="text"
+                       id="designName"
+                       placeholder="Design Name">
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="designDescription"
+                          placeholder="Design Description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Thumbnail</label>
+                <input type="file"
+                       id="designImage"
+                       accept="image/*">
+            </div>
+
+            <button class="btn"
+                    onclick="addDesign()">
+                Add Design
+            </button>
+
+        </div>
+
+
+        <!-- VIDEO PANEL -->
+        <div class="admin-panel"
+             id="videoPanel">
+
+            <h3>Add YouTube Video</h3>
+
+            <br>
+
+            <div class="form-group">
+
+                <label>Video Title</label>
+
+                <input type="text"
+                       id="videoTitle"
+                       placeholder="Video Title">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>YouTube URL</label>
+
+                <input type="url"
+                       id="videoUrl"
+                       placeholder="https://www.youtube.com/watch?v=...">
+
+            </div>
+
+            <button class="btn"
+                    onclick="addVideo()">
+                Add Video
+            </button>
+
+        </div>
+
+
+        <!-- CONTACT PANEL -->
+        <div class="admin-panel"
+             id="contactPanel">
+
+            <h3>Contact Information</h3>
+
+            <br>
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input type="email"
+                       id="siteEmail"
+                       value="your@email.com">
+
+            </div>
+
+            <button class="btn"
+                    onclick="saveContact()">
+                Save Contact
+            </button>
+
+        </div>
+
+    </div>
 
 </div>
 
 
 <script>
 
-let registerMode = false;
+/* =========================
+   GENERAL FUNCTIONS
+========================= */
+
+function scrollToSection(id){
+
+    const section = document.getElementById(id);
+
+    if(section){
+        section.scrollIntoView({
+            behavior:"smooth"
+        });
+    }
+
+}
 
 
-/* OPEN LOGIN */
+/* =========================
+   LOGIN
+========================= */
+
 function openLogin(){
 
-  registerMode = false;
-
-  showLogin();
-
-  document
-    .getElementById("loginModal")
-    .classList.add("active");
-}
-
-
-/* CLOSE LOGIN */
-function closeLogin(){
-
-  document
-    .getElementById("loginModal")
-    .classList.remove("active");
-}
-
-
-/* SHOW REGISTER */
-function showRegister(){
-
-  registerMode = true;
-
-  document
-    .getElementById("loginTitle")
-    .innerText = "Create Account";
-
-  document
-    .getElementById("loginSubtitle")
-    .innerText =
-      "Create your Unique Idea account";
-
-  document
-    .getElementById("loginSubmit")
-    .innerText = "Create Account";
-
-  document
-    .getElementById("registerNameGroup")
-    .style.display = "block";
-
-  document
-    .getElementById("switchLogin")
-    .innerHTML =
-      'Already have an account? <button onclick="showLogin()">Login</button>';
-}
-
-
-/* SHOW LOGIN */
-function showLogin(){
-
-  registerMode = false;
-
-  document
-    .getElementById("loginTitle")
-    .innerText = "Welcome Back";
-
-  document
-    .getElementById("loginSubtitle")
-    .innerText =
-      "Login to your Unique Idea account";
-
-  document
-    .getElementById("loginSubmit")
-    .innerText = "Login";
-
-  document
-    .getElementById("registerNameGroup")
-    .style.display = "none";
-
-  document
-    .getElementById("switchLogin")
-    .innerHTML =
-      'Don\'t have an account? <button onclick="showRegister()">Create Account</button>';
-}
-
-
-/* FORM SUBMIT */
-function handleFormSubmit(event){
-
-  event.preventDefault();
-
-  if(registerMode){
-
-    alert(
-      "Account registration interface is ready. Real account creation will be connected later."
-    );
-
-  }else{
-
-    alert(
-      "Login interface is ready. Real login system will be connected later."
-    );
-
-  }
+    document.getElementById("loginModal").style.display="flex";
 
 }
 
+function closeModal(id){
 
-/* GOOGLE LOGIN */
-function googleLogin(){
-
-  alert(
-    "Google Login interface is ready. Google authentication will be connected later."
-  );
+    document.getElementById(id).style.display="none";
 
 }
 
+function loginDemo(){
 
-/* CLICK OUTSIDE TO CLOSE */
-document
-  .getElementById("loginModal")
-  .addEventListener("click", function(event){
+    const email =
+        document.getElementById("loginEmail").value;
 
-    if(event.target === this){
+    const password =
+        document.getElementById("loginPassword").value;
 
-      closeLogin();
+    if(!email || !password){
+
+        alert("Please enter email and password.");
+
+        return;
 
     }
 
-  });
+    alert(
+        "Demo Login Successful!\n\nReal authentication will be added later."
+    );
+
+    closeModal("loginModal");
+
+}
 
 
-/* ESC KEY TO CLOSE */
-document.addEventListener("keydown", function(event){
+/* =========================
+   LOGO SYSTEM
+========================= */
 
-  if(event.key === "Escape"){
+function previewLogo(){
 
-    closeLogin();
+    const file =
+        document.getElementById("logoInput").files[0];
 
-  }
+    if(!file){
+        return;
+    }
 
-});
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+
+        document.getElementById("logoPreview").src =
+            e.target.result;
+
+    };
+
+    reader.readAsDataURL(file);
+
+}
+
+
+function saveLogo(){
+
+    const file =
+        document.getElementById("logoInput").files[0];
+
+    if(!file){
+
+        alert("Please select a logo image first.");
+
+        return;
+
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+
+        const logoData = e.target.result;
+
+        localStorage.setItem(
+            "uniqueIdeaLogo",
+            logoData
+        );
+
+        loadLogo();
+
+        alert("Logo saved successfully!");
+
+    };
+
+    reader.readAsDataURL(file);
+
+}
+
+
+function loadLogo(){
+
+    const savedLogo =
+        localStorage.getItem("uniqueIdeaLogo");
+
+    const siteLogo =
+        document.getElementById("siteLogo");
+
+    const logoPreview =
+        document.getElementById("logoPreview");
+
+    if(savedLogo){
+
+        siteLogo.src = savedLogo;
+
+        if(logoPreview){
+            logoPreview.src = savedLogo;
+        }
+
+    }
+
+}
+
+
+function removeLogo(){
+
+    localStorage.removeItem("uniqueIdeaLogo");
+
+    document.getElementById("siteLogo").src =
+        "https://via.placeholder.com/80";
+
+    document.getElementById("logoPreview").src =
+        "https://via.placeholder.com/80";
+
+    alert("Logo removed.");
+
+}
+
+
+/* =========================
+   ADMIN PANEL
+========================= */
+
+function openAdmin(){
+
+    document.getElementById("adminModal").style.display="flex";
+
+}
+
+function showAdminPanel(panelId){
+
+    const panels =
+        document.querySelectorAll(".admin-panel");
+
+    panels.forEach(function(panel){
+
+        panel.classList.remove("active");
+
+    });
+
+    document.getElementById(panelId)
+        .classList.add("active");
+
+}
+
+
+/* =========================
+   DESIGN SYSTEM
+========================= */
+
+function addDesign(){
+
+    const name =
+        document.getElementById("designName").value;
+
+    const description =
+        document.getElementById("designDescription").value;
+
+    const imageFile =
+        document.getElementById("designImage").files[0];
+
+    if(!name || !description){
+
+        alert("Please fill all fields.");
+
+        return;
+
+    }
+
+    if(imageFile){
+
+        const reader = new FileReader();
+
+        reader.onload=function(e){
+
+            saveDesign(
+                name,
+                description,
+                e.target.result
+            );
+
+        };
+
+        reader.readAsDataURL(imageFile);
+
+    }else{
+
+        saveDesign(
+            name,
+            description,
+            "https://via.placeholder.com/600x400?text=Design"
+        );
+
+    }
+
+}
+
+
+function saveDesign(name,description,image){
+
+    const designs =
+        JSON.parse(
+            localStorage.getItem("uniqueIdeaDesigns")
+            || "[]"
+        );
+
+    designs.push({
+
+        id:Date.now(),
+
+        name:name,
+
+        description:description,
+
+        image:image
+
+    });
+
+    localStorage.setItem(
+        "uniqueIdeaDesigns",
+        JSON.stringify(designs)
+    );
+
+    loadDesigns();
+
+    alert("Design added successfully!");
+
+}
+
+
+function loadDesigns(){
+
+    const designs =
+        JSON.parse(
+            localStorage.getItem("uniqueIdeaDesigns")
+            || "[]"
+        );
+
+    const container =
+        document.getElementById("designContainer");
+
+    designs.forEach(function(design){
+
+        const card =
+            document.createElement("div");
+
+        card.className="card";
+
+        card.innerHTML=`
+
+            <img src="${design.image}"
+                 alt="${design.name}">
+
+            <div class="card-content">
+
+                <h3>${design.name}</h3>
+
+                <p>${design.description}</p>
+
+                <button class="btn"
+                        onclick="deleteDesign(${design.id})">
+                    Delete
+                </button>
+
+            </div>
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+function deleteDesign(id){
+
+    let designs =
+        JSON.parse(
+            localStorage.getItem("uniqueIdeaDesigns")
+            || "[]"
+        );
+
+    designs =
+        designs.filter(
+            design => design.id !== id
+        );
+
+    localStorage.setItem(
+        "uniqueIdeaDesigns",
+        JSON.stringify(designs)
+    );
+
+    location.reload();
+
+}
+
+
+/* =========================
+   VIDEO SYSTEM
+========================= */
+
+function getYouTubeId(url){
+
+    try{
+
+        const parsed =
+            new URL(url);
+
+        if(parsed.hostname.includes("youtu.be")){
+
+            return parsed.pathname.substring(1);
+
+        }
+
+        return parsed.searchParams.get("v");
+
+    }catch(e){
+
+        return null;
+
+    }
+
+}
+
+
+function addVideo(){
+
+    const title =
+        document.getElementById("videoTitle").value;
+
+    const url =
+        document.getElementById("videoUrl").value;
+
+    const videoId =
+        getYouTubeId(url);
+
+    if(!title || !videoId){
+
+        alert(
+            "Please enter a valid YouTube URL."
+        );
+
+        return;
+
+    }
+
+    const videos =
+        JSON.parse(
+            localStorage.getItem("uniqueIdeaVideos")
+            || "[]"
+        );
+
+    videos.push({
+
+        id:Date.now(),
+
+        title:title,
+
+        videoId:videoId
+
+    });
+
+    localStorage.setItem(
+        "uniqueIdeaVideos",
+        JSON.stringify(videos)
+    );
+
+    loadVideos();
+
+    alert("Video added successfully!");
+
+}
+
+
+function loadVideos(){
+
+    const videos =
+        JSON.parse(
+            localStorage.getItem("uniqueIdeaVideos")
+            || "[]"
+        );
+
+    const container =
+        document.getElementById("videoContainer");
+
+    videos.forEach(function(video){
+
+        const card =
+            document.createElement("div");
+
+        card.className="video-card";
+
+        card.innerHTML=`
+
+            <iframe
+                src="https://www.youtube.com/embed/${video.videoId}"
+                title="${video.title}"
+                allowfullscreen>
+            </iframe>
+
+            <div class="video-content">
+
+                <h3>${video.title}</h3>
+
+                <p>
+                    Unique Idea YouTube Video
+                </p>
+
+                <button class="btn"
+                        onclick="deleteVideo(${video.id})">
+                    Delete
+                </button>
+
+            </div>
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+function deleteVideo(id){
+
+    let videos =
+        JSON.parse(
+            localStorage.getItem("uniqueIdeaVideos")
+            || "[]"
+        );
+
+    videos =
+        videos.filter(
+            video => video.id !== id
+        );
+
+    localStorage.setItem(
+        "uniqueIdeaVideos",
+        JSON.stringify(videos)
+    );
+
+    location.reload();
+
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+function submitContact(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thank you! Your message has been received."
+    );
+
+    document.getElementById("contactName").value="";
+    document.getElementById("contactEmail").value="";
+    document.getElementById("contactMessage").value="";
+
+}
+
+
+function saveContact(){
+
+    const email =
+        document.getElementById("siteEmail").value;
+
+    localStorage.setItem(
+        "uniqueIdeaContactEmail",
+        email
+    );
+
+    alert("Contact information saved!");
+
+}
+
+
+/* =========================
+   CLOSE MODAL
+========================= */
+
+window.addEventListener(
+    "click",
+    function(event){
+
+        const loginModal =
+            document.getElementById("loginModal");
+
+        const adminModal =
+            document.getElementById("adminModal");
+
+        if(event.target === loginModal){
+
+            loginModal.style.display="none";
+
+        }
+
+        if(event.target === adminModal){
+
+            adminModal.style.display="none";
+
+        }
+
+    }
+);
+
+
+/* =========================
+   LOAD SAVED DATA
+========================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        loadLogo();
+
+        loadDesigns();
+
+        loadVideos();
+
+    }
+);
 
 </script>
 
