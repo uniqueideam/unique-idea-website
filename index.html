@@ -1,17 +1,19 @@
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Unique Idea</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
@@ -19,8 +21,10 @@ body{
     color:#222;
 }
 
+/* HEADER */
+
 header{
-    background:#ffffff;
+    background:#fff;
     padding:14px 5%;
     display:flex;
     align-items:center;
@@ -31,7 +35,6 @@ header{
     z-index:1000;
 }
 
-/* LOGO AREA */
 .brand{
     display:flex;
     align-items:center;
@@ -43,11 +46,7 @@ header{
     height:40px;
     border-radius:50%;
     overflow:hidden;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#eeeeee;
-    flex-shrink:0;
+    background:#eee;
     border:2px solid #ddd;
 }
 
@@ -55,25 +54,22 @@ header{
     width:100%;
     height:100%;
     object-fit:cover;
-    display:block;
 }
 
 .logo{
     font-size:24px;
     font-weight:bold;
-    color:#111;
 }
 
 nav{
     display:flex;
     gap:20px;
-    align-items:center;
 }
 
 nav a{
     text-decoration:none;
     color:#333;
-    font-weight:600;
+    font-weight:bold;
     cursor:pointer;
 }
 
@@ -81,10 +77,12 @@ nav a:hover{
     color:#007bff;
 }
 
+/* HERO */
+
 .hero{
     padding:80px 5%;
     text-align:center;
-    background:linear-gradient(135deg,#eef4ff,#ffffff);
+    background:linear-gradient(135deg,#eef4ff,#fff);
 }
 
 .hero h1{
@@ -93,24 +91,26 @@ nav a:hover{
 }
 
 .hero p{
-    font-size:18px;
     color:#666;
+    font-size:18px;
     max-width:700px;
     margin:auto;
 }
 
 .btn{
     display:inline-block;
-    margin-top:25px;
-    padding:12px 25px;
+    margin-top:20px;
+    padding:12px 22px;
+    border:0;
+    border-radius:8px;
     background:#007bff;
     color:white;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
     text-decoration:none;
     font-weight:bold;
+    cursor:pointer;
 }
+
+/* SECTIONS */
 
 section{
     padding:60px 5%;
@@ -131,30 +131,24 @@ section{
 }
 
 /* CATEGORY */
+
 .category-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
-    align-items:stretch;
 }
 
 .category{
-    background:white;
-    border-radius:12px;
+    background:#fff;
     padding:25px;
-    text-align:center;
-    box-shadow:0 3px 15px rgba(0,0,0,.07);
     height:155px;
+    border-radius:12px;
+    box-shadow:0 3px 15px rgba(0,0,0,.07);
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    overflow:hidden;
-    transition:.2s;
-}
-
-.category:hover{
-    transform:translateY(-4px);
+    text-align:center;
 }
 
 .category .icon{
@@ -162,22 +156,21 @@ section{
     margin-bottom:10px;
 }
 
-/* CARDS */
+/* DESIGN */
+
 .cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:25px;
-    align-items:stretch;
 }
 
 .card{
-    background:white;
+    background:#fff;
     border-radius:12px;
     overflow:hidden;
     box-shadow:0 3px 15px rgba(0,0,0,.07);
     display:flex;
     flex-direction:column;
-    height:100%;
 }
 
 .card img{
@@ -188,9 +181,9 @@ section{
 
 .card-content{
     padding:20px;
-    flex:1;
     display:flex;
     flex-direction:column;
+    flex:1;
 }
 
 .card-content h3{
@@ -199,54 +192,117 @@ section{
 
 .card-content p{
     color:#666;
-    min-height:45px;
+    margin-bottom:15px;
 }
 
-.card-content .btn{
-    margin-top:auto;
-    align-self:flex-start;
+/* =========================
+   YOUTUBE VIDEO SECTION
+========================= */
+
+.video-tools{
+    max-width:800px;
+    margin:0 auto 35px;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 15px rgba(0,0,0,.07);
 }
 
-/* VIDEO */
+.video-tools h3{
+    margin-bottom:15px;
+}
+
+.video-input{
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:7px;
+    margin-bottom:12px;
+    outline:none;
+}
+
 .video-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:25px;
-    align-items:stretch;
 }
 
 .video-card{
-    background:white;
+    background:#fff;
     border-radius:12px;
     overflow:hidden;
-    box-shadow:0 3px 15px rgba(0,0,0,.07);
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
     display:flex;
     flex-direction:column;
-    height:100%;
 }
 
-.video-card iframe{
+.video-thumb{
+    position:relative;
     width:100%;
-    height:210px;
-    border:0;
+    aspect-ratio:16/9;
+    background:#ddd;
+    overflow:hidden;
 }
 
-.video-content{
-    padding:20px;
+.video-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.video-content h3{
-    min-height:50px;
+.play-button{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:58px;
+    height:42px;
+    border-radius:12px;
+    background:#ff0000;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
 }
 
-.video-content p{
-    color:#666;
-    min-height:67px;
+.video-info{
+    padding:18px;
+}
+
+.video-info h3{
+    font-size:18px;
+    line-height:1.4;
+    margin-bottom:8px;
+}
+
+.video-info p{
+    color:#777;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.video-buttons{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.delete-btn{
+    background:#dc3545;
+}
+
+/* CHANNEL BUTTON */
+
+.channel-box{
+    text-align:center;
+    margin-top:35px;
 }
 
 /* ABOUT */
+
 .about{
-    max-width:900px;
+    max-width:850px;
     margin:auto;
     text-align:center;
     line-height:1.8;
@@ -254,10 +310,11 @@ section{
 }
 
 /* CONTACT */
+
 .contact-box{
     max-width:700px;
     margin:auto;
-    background:white;
+    background:#fff;
     padding:30px;
     border-radius:12px;
     box-shadow:0 3px 15px rgba(0,0,0,.07);
@@ -274,21 +331,19 @@ section{
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select{
+.form-group textarea{
     width:100%;
     padding:12px;
     border:1px solid #ddd;
     border-radius:7px;
-    outline:none;
 }
 
 .form-group textarea{
     min-height:120px;
-    resize:vertical;
 }
 
 /* CTA */
+
 .cta{
     background:#111827;
     color:white;
@@ -297,7 +352,6 @@ section{
 }
 
 .cta h2{
-    font-size:32px;
     margin-bottom:10px;
 }
 
@@ -306,6 +360,7 @@ section{
 }
 
 /* FOOTER */
+
 footer{
     background:#0b0f19;
     color:#aaa;
@@ -313,7 +368,8 @@ footer{
     padding:25px;
 }
 
-/* MODAL */
+/* ADMIN MODAL */
+
 .modal{
     display:none;
     position:fixed;
@@ -339,26 +395,24 @@ footer{
 .close{
     position:absolute;
     right:20px;
-    top:15px;
+    top:12px;
     font-size:28px;
     cursor:pointer;
-    color:#777;
 }
 
-/* ADMIN */
 .admin-tabs{
     display:flex;
-    gap:10px;
+    gap:8px;
     flex-wrap:wrap;
     margin-bottom:25px;
 }
 
 .admin-tabs button{
     padding:10px 15px;
-    border:none;
-    background:#eee;
+    border:0;
     border-radius:7px;
     cursor:pointer;
+    background:#eee;
 }
 
 .admin-panel{
@@ -375,11 +429,12 @@ footer{
     border-radius:50%;
     object-fit:cover;
     border:2px solid #ddd;
-    margin-top:10px;
 }
 
 /* MOBILE */
+
 @media(max-width:900px){
+
     .category-grid{
         grid-template-columns:repeat(2,1fr);
     }
@@ -389,18 +444,16 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
-    nav{
-        gap:10px;
-    }
-
-    nav a{
-        font-size:14px;
-    }
 }
 
 @media(max-width:600px){
+
     header{
         padding:12px 4%;
+    }
+
+    nav{
+        display:none;
     }
 
     .logo{
@@ -410,10 +463,6 @@ footer{
     .logo-circle{
         width:34px;
         height:34px;
-    }
-
-    nav{
-        display:none;
     }
 
     .hero{
@@ -433,44 +482,74 @@ footer{
     section{
         padding:45px 5%;
     }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+
+<!-- ================= HEADER ================= -->
+
 <header>
 
     <div class="brand">
 
-        <!-- ছোট গোল Logo -->
         <div class="logo-circle">
+
             <img id="siteLogo"
                  src="https://via.placeholder.com/80"
                  alt="Unique Idea Logo">
+
         </div>
 
-        <div class="logo">Unique Idea</div>
+        <div class="logo">
+            Unique Idea
+        </div>
 
     </div>
 
+
     <nav>
-        <a onclick="scrollToSection('home')">Home</a>
-        <a onclick="scrollToSection('designs')">Designs</a>
-        <a onclick="scrollToSection('videos')">Videos</a>
-        <a onclick="scrollToSection('about')">About</a>
-        <a onclick="scrollToSection('contact')">Contact</a>
-        <a onclick="openLogin()">Login</a>
+
+        <a onclick="scrollToSection('home')">
+            Home
+        </a>
+
+        <a onclick="scrollToSection('designs')">
+            Designs
+        </a>
+
+        <a onclick="scrollToSection('videos')">
+            Videos
+        </a>
+
+        <a onclick="scrollToSection('about')">
+            About
+        </a>
+
+        <a onclick="scrollToSection('contact')">
+            Contact
+        </a>
+
+        <a onclick="openAdmin()">
+            Manage
+        </a>
+
     </nav>
 
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
 
-    <h1>Your Hub for Digital Tips & Online Ideas</h1>
+    <h1>
+        Your Hub for Digital Tips & Online Ideas
+    </h1>
 
     <p>
         YouTube Tips, Facebook Tips, Online Work,
@@ -480,19 +559,30 @@ footer{
     <a class="btn"
        href="https://www.youtube.com/@uniqueIdeam"
        target="_blank">
-       Visit YouTube
+
+        Visit YouTube Channel
+
     </a>
 
 </section>
 
 
-<!-- CATEGORIES -->
+<!-- ================= CATEGORY ================= -->
+
 <section>
 
     <div class="section-title">
-        <h2>Explore Categories</h2>
-        <p>আপনার প্রয়োজন অনুযায়ী ক্যাটাগরি বেছে নিন</p>
+
+        <h2>
+            Explore Categories
+        </h2>
+
+        <p>
+            আপনার প্রয়োজন অনুযায়ী ক্যাটাগরি বেছে নিন
+        </p>
+
     </div>
+
 
     <div class="category-grid">
 
@@ -521,33 +611,48 @@ footer{
 </section>
 
 
-<!-- DESIGNS -->
+<!-- ================= DESIGNS ================= -->
+
 <section id="designs">
 
     <div class="section-title">
-        <h2>Design Marketplace</h2>
-        <p>Professional digital designs and resources</p>
+
+        <h2>
+            Design Marketplace
+        </h2>
+
+        <p>
+            Professional digital designs and resources
+        </p>
+
     </div>
 
-    <div class="cards" id="designContainer">
+
+    <div class="cards">
 
         <div class="card">
 
-            <img src="https://via.placeholder.com/600x400?text=Your+Design"
-                 alt="Design">
+            <img
+                src="https://via.placeholder.com/600x400?text=Your+Design"
+                alt="Design">
 
             <div class="card-content">
 
-                <h3>Professional Design</h3>
+                <h3>
+                    Professional Design
+                </h3>
 
                 <p>
                     AI, EPS, SVG, PDF সহ বিভিন্ন
                     digital design এখানে পাওয়া যাবে।
                 </p>
 
-                <button class="btn"
-                        onclick="alert('Design marketplace coming soon!')">
+                <button
+                    class="btn"
+                    onclick="alert('Marketplace coming soon!')">
+
                     View Design
+
                 </button>
 
             </div>
@@ -559,55 +664,93 @@ footer{
 </section>
 
 
-<!-- VIDEOS -->
+<!-- ================= VIDEOS ================= -->
+
 <section id="videos">
 
     <div class="section-title">
-        <h2>Latest Videos</h2>
-        <p>Unique Idea YouTube Channel-এর ভিডিও</p>
+
+        <h2>
+            Latest Videos
+        </h2>
+
+        <p>
+            Unique Idea YouTube Channel-এর ভিডিও
+        </p>
+
     </div>
 
-    <div class="video-grid" id="videoContainer">
 
-        <div class="video-card">
+    <!-- ADD VIDEO BOX -->
 
-            <iframe
-                src="https://www.youtube.com/embed?listType=user_uploads&list=uniqueIdeam"
-                title="Unique Idea YouTube Videos"
-                allowfullscreen>
-            </iframe>
+    <div class="video-tools">
 
-            <div class="video-content">
+        <h3>
+            🎬 Add YouTube Video
+        </h3>
 
-                <h3>Unique Idea YouTube Channel</h3>
+        <input
+            class="video-input"
+            id="videoTitle"
+            type="text"
+            placeholder="Video Title লিখুন">
 
-                <p>
-                    YouTube, Facebook, Online Work
-                    এবং Digital Tips পেতে আমাদের
-                    YouTube Channel Subscribe করুন।
-                </p>
+        <input
+            class="video-input"
+            id="videoUrl"
+            type="url"
+            placeholder="YouTube Video Link এখানে দিন">
 
-                <a class="btn"
-                   href="https://www.youtube.com/@uniqueIdeam"
-                   target="_blank">
-                   Watch Channel
-                </a>
+        <button
+            class="btn"
+            onclick="addVideo()">
 
-            </div>
+            + Add Video
 
-        </div>
+        </button>
+
+    </div>
+
+
+    <!-- VIDEO CARDS -->
+
+    <div
+        class="video-grid"
+        id="videoContainer">
+
+    </div>
+
+
+    <!-- CHANNEL -->
+
+    <div class="channel-box">
+
+        <a
+            class="btn"
+            href="https://www.youtube.com/@uniqueIdeam"
+            target="_blank">
+
+            ▶ Visit Unique Idea YouTube Channel
+
+        </a>
 
     </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
+
 <section id="about">
 
     <div class="section-title">
-        <h2>About Unique Idea</h2>
+
+        <h2>
+            About Unique Idea
+        </h2>
+
     </div>
+
 
     <div class="about">
 
@@ -631,43 +774,77 @@ footer{
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
+
 <section id="contact">
 
     <div class="section-title">
-        <h2>Contact Us</h2>
-        <p>আপনার মতামত বা প্রশ্ন আমাদের জানান</p>
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <p>
+            আপনার মতামত বা প্রশ্ন আমাদের জানান
+        </p>
+
     </div>
+
 
     <div class="contact-box">
 
         <form onsubmit="submitContact(event)">
 
             <div class="form-group">
-                <label>Name</label>
-                <input type="text"
-                       id="contactName"
-                       placeholder="Your Name"
-                       required>
+
+                <label>
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Your Name"
+                    required>
+
             </div>
+
 
             <div class="form-group">
-                <label>Email</label>
-                <input type="email"
-                       id="contactEmail"
-                       placeholder="Your Email"
-                       required>
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="contactEmail"
+                    placeholder="Your Email"
+                    required>
+
             </div>
+
 
             <div class="form-group">
-                <label>Message</label>
-                <textarea id="contactMessage"
-                          placeholder="Write your message..."
-                          required></textarea>
+
+                <label>
+                    Message
+                </label>
+
+                <textarea
+                    id="contactMessage"
+                    placeholder="Write your message..."
+                    required></textarea>
+
             </div>
 
-            <button class="btn" type="submit">
+
+            <button
+                class="btn"
+                type="submit">
+
                 Send Message
+
             </button>
 
         </form>
@@ -677,26 +854,34 @@ footer{
 </section>
 
 
-<!-- CTA -->
+<!-- ================= CTA ================= -->
+
 <section class="cta">
 
-    <h2>Stay Connected With Unique Idea</h2>
+    <h2>
+        Stay Connected With Unique Idea
+    </h2>
 
     <p>
         নতুন Digital Tips এবং Online Ideas পেতে
         আমাদের সাথে থাকুন।
     </p>
 
-    <a class="btn"
-       href="https://www.youtube.com/@uniqueIdeam"
-       target="_blank">
-       Subscribe on YouTube
+
+    <a
+        class="btn"
+        href="https://www.youtube.com/@uniqueIdeam"
+        target="_blank">
+
+        Subscribe on YouTube
+
     </a>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
     <p>
@@ -706,222 +891,112 @@ footer{
 </footer>
 
 
-<!-- LOGIN MODAL -->
-<div class="modal" id="loginModal">
+<!-- ================= ADMIN ================= -->
+
+<div
+    class="modal"
+    id="adminModal">
 
     <div class="modal-box">
 
-        <span class="close"
-              onclick="closeModal('loginModal')">
-              ×
+        <span
+            class="close"
+            onclick="closeAdmin()">
+
+            ×
+
         </span>
 
-        <h2>Login</h2>
+
+        <h2>
+            Manage Website
+        </h2>
 
         <br>
 
-        <div class="form-group">
-            <label>Email</label>
-            <input type="email"
-                   id="loginEmail"
-                   placeholder="Email">
-        </div>
-
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password"
-                   id="loginPassword"
-                   placeholder="Password">
-        </div>
-
-        <button class="btn"
-                onclick="loginDemo()">
-            Login
-        </button>
-
-        <p style="margin-top:20px;color:#777;">
-            Demo login interface.
-            Real account system will require a backend.
-        </p>
-
-    </div>
-
-</div>
-
-
-<!-- ADMIN / MANAGE MODAL -->
-<div class="modal" id="adminModal">
-
-    <div class="modal-box">
-
-        <span class="close"
-              onclick="closeModal('adminModal')">
-              ×
-        </span>
-
-        <h2>Manage Website</h2>
-
-        <br>
 
         <div class="admin-tabs">
 
-            <button onclick="showAdminPanel('logoPanel')">
+            <button
+                onclick="showPanel('logoPanel')">
+
                 Logo
+
             </button>
 
-            <button onclick="showAdminPanel('designPanel')">
-                Designs
-            </button>
 
-            <button onclick="showAdminPanel('videoPanel')">
+            <button
+                onclick="showPanel('videoPanel')">
+
                 Videos
-            </button>
 
-            <button onclick="showAdminPanel('contactPanel')">
-                Contact
             </button>
 
         </div>
 
 
-        <!-- LOGO PANEL -->
-        <div class="admin-panel active"
-             id="logoPanel">
+        <!-- LOGO -->
 
-            <h3>Website Logo</h3>
+        <div
+            class="admin-panel active"
+            id="logoPanel">
+
+            <h3>
+                Website Logo
+            </h3>
 
             <br>
 
-            <div class="form-group">
-
-                <label>Select Logo Image</label>
-
-                <input type="file"
-                       id="logoInput"
-                       accept="image/*"
-                       onchange="previewLogo()">
-
-            </div>
-
-            <img id="logoPreview"
-                 class="preview-logo"
-                 src="https://via.placeholder.com/80"
-                 alt="Logo Preview">
+            <input
+                type="file"
+                id="logoInput"
+                accept="image/*"
+                onchange="previewLogo()">
 
             <br><br>
 
-            <button class="btn"
-                    onclick="saveLogo()">
+            <img
+                id="logoPreview"
+                class="preview-logo"
+                src="https://via.placeholder.com/80"
+                alt="Logo Preview">
+
+            <br><br>
+
+            <button
+                class="btn"
+                onclick="saveLogo()">
+
                 Save Logo
+
             </button>
 
-            <button class="btn"
-                    style="background:#dc3545;margin-left:8px;"
-                    onclick="removeLogo()">
-                Remove Logo
+            <button
+                class="btn delete-btn"
+                onclick="removeLogo()">
+
+                Remove
+
             </button>
 
-            <p style="margin-top:15px;color:#777;">
-                Logoটি 40×40px গোল করে Header-এ দেখানো হবে।
+        </div>
+
+
+        <!-- VIDEO -->
+
+        <div
+            class="admin-panel"
+            id="videoPanel">
+
+            <h3>
+                YouTube Video
+            </h3>
+
+            <br>
+
+            <p>
+                Video যোগ করতে উপরের Videos section ব্যবহার করুন।
             </p>
-
-        </div>
-
-
-        <!-- DESIGN PANEL -->
-        <div class="admin-panel"
-             id="designPanel">
-
-            <h3>Add Design</h3>
-
-            <br>
-
-            <div class="form-group">
-                <label>Design Name</label>
-                <input type="text"
-                       id="designName"
-                       placeholder="Design Name">
-            </div>
-
-            <div class="form-group">
-                <label>Description</label>
-                <textarea id="designDescription"
-                          placeholder="Design Description"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Thumbnail</label>
-                <input type="file"
-                       id="designImage"
-                       accept="image/*">
-            </div>
-
-            <button class="btn"
-                    onclick="addDesign()">
-                Add Design
-            </button>
-
-        </div>
-
-
-        <!-- VIDEO PANEL -->
-        <div class="admin-panel"
-             id="videoPanel">
-
-            <h3>Add YouTube Video</h3>
-
-            <br>
-
-            <div class="form-group">
-
-                <label>Video Title</label>
-
-                <input type="text"
-                       id="videoTitle"
-                       placeholder="Video Title">
-
-            </div>
-
-            <div class="form-group">
-
-                <label>YouTube URL</label>
-
-                <input type="url"
-                       id="videoUrl"
-                       placeholder="https://www.youtube.com/watch?v=...">
-
-            </div>
-
-            <button class="btn"
-                    onclick="addVideo()">
-                Add Video
-            </button>
-
-        </div>
-
-
-        <!-- CONTACT PANEL -->
-        <div class="admin-panel"
-             id="contactPanel">
-
-            <h3>Contact Information</h3>
-
-            <br>
-
-            <div class="form-group">
-
-                <label>Email</label>
-
-                <input type="email"
-                       id="siteEmail"
-                       value="your@email.com">
-
-            </div>
-
-            <button class="btn"
-                    onclick="saveContact()">
-                Save Contact
-            </button>
 
         </div>
 
@@ -933,84 +1008,86 @@ footer{
 <script>
 
 /* =========================
-   GENERAL FUNCTIONS
+   NAVIGATION
 ========================= */
 
 function scrollToSection(id){
 
-    const section = document.getElementById(id);
+    const section =
+        document.getElementById(id);
 
     if(section){
+
         section.scrollIntoView({
             behavior:"smooth"
         });
+
     }
 
 }
 
 
 /* =========================
-   LOGIN
+   ADMIN
 ========================= */
 
-function openLogin(){
+function openAdmin(){
 
-    document.getElementById("loginModal").style.display="flex";
-
-}
-
-function closeModal(id){
-
-    document.getElementById(id).style.display="none";
+    document.getElementById("adminModal")
+        .style.display="flex";
 
 }
 
-function loginDemo(){
+function closeAdmin(){
 
-    const email =
-        document.getElementById("loginEmail").value;
+    document.getElementById("adminModal")
+        .style.display="none";
 
-    const password =
-        document.getElementById("loginPassword").value;
+}
 
-    if(!email || !password){
+function showPanel(id){
 
-        alert("Please enter email and password.");
+    document
+        .querySelectorAll(".admin-panel")
+        .forEach(function(panel){
 
-        return;
+            panel.classList.remove("active");
 
-    }
+        });
 
-    alert(
-        "Demo Login Successful!\n\nReal authentication will be added later."
-    );
 
-    closeModal("loginModal");
+    document
+        .getElementById(id)
+        .classList.add("active");
 
 }
 
 
 /* =========================
-   LOGO SYSTEM
+   LOGO
 ========================= */
 
 function previewLogo(){
 
     const file =
-        document.getElementById("logoInput").files[0];
+        document.getElementById("logoInput")
+        .files[0];
 
-    if(!file){
-        return;
-    }
+    if(!file) return;
 
-    const reader = new FileReader();
 
-    reader.onload = function(e){
+    const reader =
+        new FileReader();
 
-        document.getElementById("logoPreview").src =
-            e.target.result;
+
+    reader.onload=function(e){
+
+        document
+            .getElementById("logoPreview")
+            .src=e.target.result;
 
     };
+
 
     reader.readAsDataURL(file);
 
@@ -1020,32 +1097,40 @@ function previewLogo(){
 function saveLogo(){
 
     const file =
-        document.getElementById("logoInput").files[0];
+        document.getElementById("logoInput")
+        .files[0];
+
 
     if(!file){
 
-        alert("Please select a logo image first.");
+        alert("আগে Logo নির্বাচন করুন।");
 
         return;
 
     }
 
-    const reader = new FileReader();
 
-    reader.onload = function(e){
+    const reader =
+        new FileReader();
 
-        const logoData = e.target.result;
+
+    reader.onload=function(e){
 
         localStorage.setItem(
             "uniqueIdeaLogo",
-            logoData
+            e.target.result
         );
 
-        loadLogo();
 
-        alert("Logo saved successfully!");
+        document
+            .getElementById("siteLogo")
+            .src=e.target.result;
+
+
+        alert("Logo Successfully Saved!");
 
     };
+
 
     reader.readAsDataURL(file);
 
@@ -1054,22 +1139,17 @@ function saveLogo(){
 
 function loadLogo(){
 
-    const savedLogo =
-        localStorage.getItem("uniqueIdeaLogo");
+    const logo =
+        localStorage.getItem(
+            "uniqueIdeaLogo"
+        );
 
-    const siteLogo =
-        document.getElementById("siteLogo");
 
-    const logoPreview =
-        document.getElementById("logoPreview");
+    if(logo){
 
-    if(savedLogo){
-
-        siteLogo.src = savedLogo;
-
-        if(logoPreview){
-            logoPreview.src = savedLogo;
-        }
+        document
+            .getElementById("siteLogo")
+            .src=logo;
 
     }
 
@@ -1078,199 +1158,23 @@ function loadLogo(){
 
 function removeLogo(){
 
-    localStorage.removeItem("uniqueIdeaLogo");
-
-    document.getElementById("siteLogo").src =
-        "https://via.placeholder.com/80";
-
-    document.getElementById("logoPreview").src =
-        "https://via.placeholder.com/80";
-
-    alert("Logo removed.");
-
-}
-
-
-/* =========================
-   ADMIN PANEL
-========================= */
-
-function openAdmin(){
-
-    document.getElementById("adminModal").style.display="flex";
-
-}
-
-function showAdminPanel(panelId){
-
-    const panels =
-        document.querySelectorAll(".admin-panel");
-
-    panels.forEach(function(panel){
-
-        panel.classList.remove("active");
-
-    });
-
-    document.getElementById(panelId)
-        .classList.add("active");
-
-}
-
-
-/* =========================
-   DESIGN SYSTEM
-========================= */
-
-function addDesign(){
-
-    const name =
-        document.getElementById("designName").value;
-
-    const description =
-        document.getElementById("designDescription").value;
-
-    const imageFile =
-        document.getElementById("designImage").files[0];
-
-    if(!name || !description){
-
-        alert("Please fill all fields.");
-
-        return;
-
-    }
-
-    if(imageFile){
-
-        const reader = new FileReader();
-
-        reader.onload=function(e){
-
-            saveDesign(
-                name,
-                description,
-                e.target.result
-            );
-
-        };
-
-        reader.readAsDataURL(imageFile);
-
-    }else{
-
-        saveDesign(
-            name,
-            description,
-            "https://via.placeholder.com/600x400?text=Design"
-        );
-
-    }
-
-}
-
-
-function saveDesign(name,description,image){
-
-    const designs =
-        JSON.parse(
-            localStorage.getItem("uniqueIdeaDesigns")
-            || "[]"
-        );
-
-    designs.push({
-
-        id:Date.now(),
-
-        name:name,
-
-        description:description,
-
-        image:image
-
-    });
-
-    localStorage.setItem(
-        "uniqueIdeaDesigns",
-        JSON.stringify(designs)
+    localStorage.removeItem(
+        "uniqueIdeaLogo"
     );
 
-    loadDesigns();
 
-    alert("Design added successfully!");
-
-}
-
-
-function loadDesigns(){
-
-    const designs =
-        JSON.parse(
-            localStorage.getItem("uniqueIdeaDesigns")
-            || "[]"
-        );
-
-    const container =
-        document.getElementById("designContainer");
-
-    designs.forEach(function(design){
-
-        const card =
-            document.createElement("div");
-
-        card.className="card";
-
-        card.innerHTML=`
-
-            <img src="${design.image}"
-                 alt="${design.name}">
-
-            <div class="card-content">
-
-                <h3>${design.name}</h3>
-
-                <p>${design.description}</p>
-
-                <button class="btn"
-                        onclick="deleteDesign(${design.id})">
-                    Delete
-                </button>
-
-            </div>
-        `;
-
-        container.appendChild(card);
-
-    });
-
-}
+    document
+        .getElementById("siteLogo")
+        .src="https://via.placeholder.com/80";
 
 
-function deleteDesign(id){
-
-    let designs =
-        JSON.parse(
-            localStorage.getItem("uniqueIdeaDesigns")
-            || "[]"
-        );
-
-    designs =
-        designs.filter(
-            design => design.id !== id
-        );
-
-    localStorage.setItem(
-        "uniqueIdeaDesigns",
-        JSON.stringify(designs)
-    );
-
-    location.reload();
+    alert("Logo Removed!");
 
 }
 
 
 /* =========================
-   VIDEO SYSTEM
+   YOUTUBE VIDEO ID
 ========================= */
 
 function getYouTubeId(url){
@@ -1280,15 +1184,50 @@ function getYouTubeId(url){
         const parsed =
             new URL(url);
 
-        if(parsed.hostname.includes("youtu.be")){
 
-            return parsed.pathname.substring(1);
+        /* youtube.com/watch?v= */
+
+        if(
+            parsed.hostname.includes("youtube.com")
+            &&
+            parsed.searchParams.get("v")
+        ){
+
+            return parsed.searchParams.get("v");
 
         }
 
-        return parsed.searchParams.get("v");
 
-    }catch(e){
+        /* youtu.be/VIDEOID */
+
+        if(
+            parsed.hostname.includes("youtu.be")
+        ){
+
+            return parsed.pathname
+                .replace("/","");
+
+        }
+
+
+        /* youtube.com/shorts/VIDEOID */
+
+        if(
+            parsed.pathname.includes("/shorts/")
+        ){
+
+            return parsed.pathname
+                .split("/shorts/")[1]
+                .split("/")[0];
+
+        }
+
+
+        return null;
+
+    }
+
+    catch(error){
 
         return null;
 
@@ -1297,34 +1236,68 @@ function getYouTubeId(url){
 }
 
 
+/* =========================
+   ADD VIDEO
+========================= */
+
 function addVideo(){
 
     const title =
-        document.getElementById("videoTitle").value;
+        document
+            .getElementById("videoTitle")
+            .value
+            .trim();
+
 
     const url =
-        document.getElementById("videoUrl").value;
+        document
+            .getElementById("videoUrl")
+            .value
+            .trim();
+
+
+    if(!title){
+
+        alert("Video Title লিখুন।");
+
+        return;
+
+    }
+
+
+    if(!url){
+
+        alert("YouTube Video Link দিন।");
+
+        return;
+
+    }
+
 
     const videoId =
         getYouTubeId(url);
 
-    if(!title || !videoId){
+
+    if(!videoId){
 
         alert(
-            "Please enter a valid YouTube URL."
+            "সঠিক YouTube Video Link দিন।"
         );
 
         return;
 
     }
 
+
     const videos =
         JSON.parse(
-            localStorage.getItem("uniqueIdeaVideos")
-            || "[]"
+            localStorage.getItem(
+                "uniqueIdeaVideos"
+            ) || "[]"
         );
 
-    videos.push({
+
+    videos.unshift({
 
         id:Date.now(),
 
@@ -1334,59 +1307,142 @@ function addVideo(){
 
     });
 
+
     localStorage.setItem(
         "uniqueIdeaVideos",
         JSON.stringify(videos)
     );
 
+
+    document
+        .getElementById("videoTitle")
+        .value="";
+
+
+    document
+        .getElementById("videoUrl")
+        .value="";
+
+
     loadVideos();
 
-    alert("Video added successfully!");
+
+    alert("ভিডিও সফলভাবে যোগ হয়েছে! 🎉");
 
 }
 
 
+/* =========================
+   LOAD VIDEOS
+========================= */
+
 function loadVideos(){
+
+    const container =
+        document.getElementById(
+            "videoContainer"
+        );
+
 
     const videos =
         JSON.parse(
-            localStorage.getItem("uniqueIdeaVideos")
-            || "[]"
+            localStorage.getItem(
+                "uniqueIdeaVideos"
+            ) || "[]"
         );
 
-    const container =
-        document.getElementById("videoContainer");
+
+    container.innerHTML="";
+
+
+    if(videos.length===0){
+
+        container.innerHTML=`
+
+            <div style="
+                grid-column:1/-1;
+                text-align:center;
+                padding:40px;
+                background:white;
+                border-radius:12px;
+                color:#777;
+            ">
+
+                এখনো কোনো ভিডিও যোগ করা হয়নি।
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
 
     videos.forEach(function(video){
 
         const card =
             document.createElement("div");
 
+
         card.className="video-card";
+
 
         card.innerHTML=`
 
-            <iframe
-                src="https://www.youtube.com/embed/${video.videoId}"
-                title="${video.title}"
-                allowfullscreen>
-            </iframe>
+            <a
+                class="video-thumb"
+                href="https://www.youtube.com/watch?v=${video.videoId}"
+                target="_blank">
 
-            <div class="video-content">
+                <img
+                    src="https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg"
+                    alt="${escapeHtml(video.title)}">
 
-                <h3>${video.title}</h3>
+                <div class="play-button">
+                    ▶
+                </div>
+
+            </a>
+
+
+            <div class="video-info">
+
+                <h3>
+                    ${escapeHtml(video.title)}
+                </h3>
 
                 <p>
                     Unique Idea YouTube Video
                 </p>
 
-                <button class="btn"
+
+                <div class="video-buttons">
+
+                    <a
+                        class="btn"
+                        href="https://www.youtube.com/watch?v=${video.videoId}"
+                        target="_blank">
+
+                        Watch Video
+
+                    </a>
+
+
+                    <button
+                        class="btn delete-btn"
                         onclick="deleteVideo(${video.id})">
-                    Delete
-                </button>
+
+                        Delete
+
+                    </button>
+
+                </div>
 
             </div>
+
         `;
+
 
         container.appendChild(card);
 
@@ -1395,25 +1451,64 @@ function loadVideos(){
 }
 
 
+/* =========================
+   DELETE VIDEO
+========================= */
+
 function deleteVideo(id){
+
+    if(
+        !confirm(
+            "এই ভিডিওটি Delete করতে চান?"
+        )
+    ){
+
+        return;
+
+    }
+
 
     let videos =
         JSON.parse(
-            localStorage.getItem("uniqueIdeaVideos")
-            || "[]"
+            localStorage.getItem(
+                "uniqueIdeaVideos"
+            ) || "[]"
         );
+
 
     videos =
         videos.filter(
-            video => video.id !== id
+            function(video){
+
+                return video.id !== id;
+
+            }
         );
+
 
     localStorage.setItem(
         "uniqueIdeaVideos",
         JSON.stringify(videos)
     );
 
-    location.reload();
+
+    loadVideos();
+
+}
+
+
+/* =========================
+   HTML SECURITY
+========================= */
+
+function escapeHtml(text){
+
+    const div =
+        document.createElement("div");
+
+    div.textContent=text;
+
+    return div.innerHTML;
 
 }
 
@@ -1426,55 +1521,46 @@ function submitContact(event){
 
     event.preventDefault();
 
+
     alert(
         "Thank you! Your message has been received."
     );
 
-    document.getElementById("contactName").value="";
-    document.getElementById("contactEmail").value="";
-    document.getElementById("contactMessage").value="";
 
-}
+    document
+        .getElementById("contactName")
+        .value="";
 
 
-function saveContact(){
+    document
+        .getElementById("contactEmail")
+        .value="";
 
-    const email =
-        document.getElementById("siteEmail").value;
 
-    localStorage.setItem(
-        "uniqueIdeaContactEmail",
-        email
-    );
-
-    alert("Contact information saved!");
+    document
+        .getElementById("contactMessage")
+        .value="";
 
 }
 
 
 /* =========================
-   CLOSE MODAL
+   MODAL CLOSE
 ========================= */
 
 window.addEventListener(
     "click",
     function(event){
 
-        const loginModal =
-            document.getElementById("loginModal");
+        const modal =
+            document.getElementById(
+                "adminModal"
+            );
 
-        const adminModal =
-            document.getElementById("adminModal");
 
-        if(event.target === loginModal){
+        if(event.target===modal){
 
-            loginModal.style.display="none";
-
-        }
-
-        if(event.target === adminModal){
-
-            adminModal.style.display="none";
+            closeAdmin();
 
         }
 
@@ -1483,7 +1569,7 @@ window.addEventListener(
 
 
 /* =========================
-   LOAD SAVED DATA
+   START
 ========================= */
 
 document.addEventListener(
@@ -1491,8 +1577,6 @@ document.addEventListener(
     function(){
 
         loadLogo();
-
-        loadDesigns();
 
         loadVideos();
 
