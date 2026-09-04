@@ -84,7 +84,6 @@
 
     .login:hover {
       background: #4f46e5 !important;
-      color: white !important;
     }
 
     /* HERO */
@@ -165,7 +164,7 @@
       transform: translateY(-2px);
     }
 
-    /* CATEGORY */
+    /* CATEGORIES */
     .categories {
       padding: 45px 6%;
       background: white;
@@ -177,15 +176,22 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
+      align-items: stretch;
     }
 
     .category {
+      min-height: 155px;
       padding: 25px 15px;
       text-align: center;
       border: 1px solid #e8ebf2;
       border-radius: 15px;
       background: #fff;
       transition: 0.3s;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .category:hover {
@@ -237,6 +243,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
+      align-items: stretch;
     }
 
     .card {
@@ -246,6 +253,8 @@
       overflow: hidden;
       box-shadow: 0 5px 18px rgba(17,24,39,0.05);
       transition: 0.3s;
+      display: flex;
+      flex-direction: column;
     }
 
     .card:hover {
@@ -260,10 +269,14 @@
       align-items: center;
       justify-content: center;
       font-size: 62px;
+      flex-shrink: 0;
     }
 
     .card-content {
       padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
     .card h3 {
@@ -281,6 +294,10 @@
       font-weight: 800;
       margin: 17px 0;
       color: #111827;
+    }
+
+    .card-content .buy {
+      margin-top: auto;
     }
 
     .buy {
@@ -304,6 +321,22 @@
     }
 
     .video-card {
+      background: #fff;
+      border: 1px solid #e8ebf2;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(17,24,39,0.05);
+      transition: 0.3s;
+
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(17,24,39,0.10);
+    }
 
     .video-box {
       height: 210px;
@@ -311,6 +344,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
 
     .play {
@@ -328,6 +362,9 @@
 
     .video-content {
       padding: 21px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .video-content h3 {
@@ -339,6 +376,10 @@
       color: #667085;
       font-size: 14px;
       margin-bottom: 17px;
+    }
+
+    .video-content .buy {
+      margin-top: auto;
     }
 
     /* ABOUT */
@@ -389,6 +430,10 @@
       font-weight: 800;
     }
 
+    .cta-button:hover {
+      background: #eef2ff;
+    }
+
     /* CONTACT */
     .contact-text {
       text-align: center;
@@ -434,8 +479,9 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
+    /* TABLET */
     @media(max-width: 900px) {
+
       .category-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -449,7 +495,9 @@
       }
     }
 
+    /* MOBILE */
     @media(max-width: 650px) {
+
       header {
         padding: 13px 4%;
       }
@@ -483,6 +531,10 @@
         grid-template-columns: 1fr;
       }
 
+      .category {
+        min-height: 140px;
+      }
+
       .section-heading h2 {
         font-size: 29px;
       }
@@ -495,6 +547,10 @@
       .cta h2 {
         font-size: 28px;
       }
+
+      .about-box {
+        padding: 28px 20px;
+      }
     }
   </style>
 
@@ -505,7 +561,10 @@
 <!-- HEADER -->
 
 <header>
-  <div class="logo">Unique <span>Idea</span></div>
+
+  <div class="logo">
+    Unique <span>Idea</span>
+  </div>
 
   <nav>
     <a href="#designs">Designs</a>
@@ -514,6 +573,7 @@
     <a href="#contact">Contact</a>
     <a href="#" class="login">Login</a>
   </nav>
+
 </header>
 
 <!-- HERO -->
@@ -535,11 +595,12 @@
   </p>
 
   <div class="buttons">
-    <a href="#videos" class="btn primary">
-      📺 Watch Videos
-    </a>
 
 ```
+<a href="#videos" class="btn primary">
+  📺 Watch Videos
+</a>
+
 <a href="#designs" class="btn secondary">
   🎨 Explore Designs
 </a>
@@ -590,60 +651,104 @@
 <section id="designs">
 
   <div class="section-heading">
-    <h2>🎨 Featured Designs</h2>
-    <p>
-      Professional digital templates and editable design resources.
-    </p>
+
+```
+<h2>🎨 Featured Designs</h2>
+
+<p>
+  Professional digital templates and editable design resources.
+</p>
+```
+
   </div>
 
   <div class="cards">
 
 ```
 <div class="card">
-  <div class="preview">🎨</div>
+
+  <div class="preview">
+    🎨
+  </div>
 
   <div class="card-content">
-    <h3>Professional Flyer</h3>
-    <p>Editable EPS / AI design</p>
 
-    <div class="price">$5.00</div>
+    <h3>
+      Professional Flyer
+    </h3>
+
+    <p>
+      Editable EPS / AI design
+    </p>
+
+    <div class="price">
+      $5.00
+    </div>
 
     <a href="#" class="buy">
       Buy & Download
     </a>
+
   </div>
+
 </div>
 
 
 <div class="card">
-  <div class="preview">📄</div>
+
+  <div class="preview">
+    📄
+  </div>
 
   <div class="card-content">
-    <h3>Corporate Brochure</h3>
-    <p>Editable professional template</p>
 
-    <div class="price">$7.00</div>
+    <h3>
+      Corporate Brochure
+    </h3>
+
+    <p>
+      Editable professional template
+    </p>
+
+    <div class="price">
+      $7.00
+    </div>
 
     <a href="#" class="buy">
       Buy & Download
     </a>
+
   </div>
+
 </div>
 
 
 <div class="card">
-  <div class="preview">✨</div>
+
+  <div class="preview">
+    ✨
+  </div>
 
   <div class="card-content">
-    <h3>Creative Template</h3>
-    <p>EPS / SVG / PDF included</p>
 
-    <div class="price">$4.00</div>
+    <h3>
+      Creative Template
+    </h3>
+
+    <p>
+      EPS / SVG / PDF included
+    </p>
+
+    <div class="price">
+      $4.00
+    </div>
 
     <a href="#" class="buy">
       Buy & Download
     </a>
+
   </div>
+
 </div>
 ```
 
@@ -656,9 +761,10 @@
 <section id="videos">
 
   <div class="section-heading">
-    <h2>📺 Latest Videos</h2>
 
 ```
+<h2>📺 Latest Videos</h2>
+
 <p>
   YouTube, Facebook, Online Work এবং Digital Tips-এর
   সহজ ও প্রয়োজনীয় ভিডিও।
@@ -670,10 +776,13 @@
   <div class="cards">
 
 ```
+<!-- VIDEO 1 -->
 <div class="video-card">
 
   <div class="video-box">
-    <div class="play">▶</div>
+    <div class="play">
+      ▶
+    </div>
   </div>
 
   <div class="video-content">
@@ -699,10 +808,13 @@
 </div>
 
 
+<!-- VIDEO 2 -->
 <div class="video-card">
 
   <div class="video-box">
-    <div class="play">▶</div>
+    <div class="play">
+      ▶
+    </div>
   </div>
 
   <div class="video-content">
@@ -728,10 +840,13 @@
 </div>
 
 
+<!-- VIDEO 3 -->
 <div class="video-card">
 
   <div class="video-box">
-    <div class="play">▶</div>
+    <div class="play">
+      ▶
+    </div>
   </div>
 
   <div class="video-content">
@@ -741,7 +856,7 @@
     </h3>
 
     <p>
-      Online work, freelancing এবং digital earning
+      Online Work, Freelancing এবং Digital Earning
       সম্পর্কে দরকারি তথ্য ও গাইড।
     </p>
 
@@ -766,7 +881,13 @@
 <section id="about">
 
   <div class="section-heading">
-    <h2>💡 About Unique Idea</h2>
+
+```
+<h2>
+  💡 About Unique Idea
+</h2>
+```
+
   </div>
 
   <div class="about-box">
@@ -789,7 +910,9 @@
 
 <div class="cta">
 
-  <h2>❤️ Stay Connected With Unique Idea</h2>
+  <h2>
+    ❤️ Stay Connected With Unique Idea
+  </h2>
 
   <p>
     এ ধরনের YouTube, Facebook, Online Work ও Digital Tips
@@ -809,12 +932,22 @@
 <section id="contact">
 
   <div class="section-heading">
-    <h2>📩 Contact Us</h2>
+
+```
+<h2>
+  📩 Contact Us
+</h2>
+```
+
   </div>
 
   <p class="contact-text">
-    Business inquiry, design collaboration অথবা website
-    সম্পর্কিত কোনো প্রশ্ন থাকলে আমাদের সাথে যোগাযোগ করুন।
+
+```
+Business inquiry, design collaboration অথবা website
+সম্পর্কিত কোনো প্রশ্ন থাকলে আমাদের সাথে যোগাযোগ করুন।
+```
+
   </p>
 
 </section>
@@ -832,10 +965,25 @@
   </p>
 
   <div class="footer-links">
-    <a href="#designs">Designs</a>
-    <a href="#videos">Videos</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+
+```
+<a href="#designs">
+  Designs
+</a>
+
+<a href="#videos">
+  Videos
+</a>
+
+<a href="#about">
+  About
+</a>
+
+<a href="#contact">
+  Contact
+</a>
+```
+
   </div>
 
   <div class="copyright">
