@@ -1,1 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unique Idea - Design Marketplace</title>
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f7f8fc;
+      color: #222;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 25px;
+      font-weight: 600;
+    }
+
+    .login {
+      padding: 10px 18px;
+      background: #111;
+      color: white !important;
+      border-radius: 8px;
+    }
+
+    .hero {
+      padding: 90px 7%;
+      text-align: center;
+      background: linear-gradient(135deg, #ffffff, #eef1ff);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #666;
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      margin: 5px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #111;
+      color: white;
+    }
+
+    .secondary {
+      background: white;
+      color: #111;
+      border: 1px solid #ddd;
+    }
+
+    section {
+      padding: 65px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .preview {
+      height: 180px;
+      background: #e9ebf2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .buy {
+      display: block;
+      text-align: center;
+      padding: 11px;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      border-radius: 7px;
+    }
+
+    .video {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    }
+
+    .video-box {
+      height: 220px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+      border-radius: 10px;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    @media(max-width: 700px) {
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Unique Idea</div>
+
+  <nav>
+    <a href="#designs">Designs</a>
+    <a href="#videos">Videos</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="login">Login</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Discover Amazing Designs</h1>
+
+  <p>
+    Welcome to Unique Idea — a creative marketplace for
+    professional designs, digital products and helpful video tutorials.
+  </p>
+
+  <div class="buttons">
+    <a href="#designs" class="btn primary">Explore Designs</a>
+    <a href="#videos" class="btn secondary">Watch Videos</a>
+  </div>
+</section>
+
+<section id="designs">
+  <h2 class="section-title">Featured Designs</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="preview">🎨</div>
+      <div class="card-content">
+        <h3>Professional Flyer</h3>
+        <p>Editable EPS / AI design</p>
+        <div class="price">$5.00</div>
+        <a href="#" class="buy">Buy & Download</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview">📄</div>
+      <div class="card-content">
+        <h3>Corporate Brochure</h3>
+        <p>Editable digital template</p>
+        <div class="price">$7.00</div>
+        <a href="#" class="buy">Buy & Download</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="preview">✨</div>
+      <div class="card-content">
+        <h3>Creative Template</h3>
+        <p>EPS / SVG / PDF included</p>
+        <div class="price">$4.00</div>
+        <a href="#" class="buy">Buy & Download</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="videos">
+  <h2 class="section-title">Latest Videos</h2>
+
+  <div class="cards">
+
+    <div class="video">
+      <div class="video-box">▶️</div>
+      <h3 style="margin-top:15px;">DIY Paper Flower Tutorial</h3>
+      <p style="margin-top:8px;color:#666;">
+        Watch our latest creative tutorial on YouTube.
+      </p>
+      <br>
+      <a href="#" class="buy">Watch on YouTube</a>
+    </div>
+
+    <div class="video">
+      <div class="video-box">▶️</div>
+      <h3 style="margin-top:15px;">Easy Creative Design Tutorial</h3>
+      <p style="margin-top:8px;color:#666;">
+        Learn new creative ideas step by step.
+      </p>
+      <br>
+      <a href="#" class="buy">Watch on YouTube</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Unique Idea</h2>
+
+  <p class="about">
+    Unique Idea is a creative platform where designers can showcase
+    and sell digital designs while viewers can discover useful
+    creative tutorials and videos.
+  </p>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+
+  <p class="about">
+    For business inquiries, design collaborations or support,
+    please contact us.
+  </p>
+</section>
+
+<footer>
+  © 2026 Unique Idea. All Rights Reserved.
+</footer>
+
+</body>
+</html>
