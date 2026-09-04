@@ -1,559 +1,584 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Unique Idea | YouTube, Facebook, Online Work & Digital Tips</title>
-
-  <meta name="description" content="Unique Idea - YouTube, Facebook, Online Work, Freelancing and Digital Tips. Discover useful tutorials, tools and digital ideas.">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #f7f9fc;
-      color: #172033;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #e8ebf2;
-      padding: 15px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 27px;
-      font-weight: 800;
-      color: #111827;
-      letter-spacing: -1px;
-    }
-
-    .logo span {
-      color: #6366f1;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    nav a {
-      color: #374151;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 9px 13px;
-      border-radius: 8px;
-      transition: 0.25s;
-    }
-
-    nav a:hover {
-      background: #f0f2ff;
-      color: #4f46e5;
-    }
-
-    .login {
-      background: #111827;
-      color: white !important;
-      padding: 10px 18px !important;
-    }
-
-    .login:hover {
-      background: #4f46e5 !important;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 100px 6% 90px;
-      text-align: center;
-      background:
-        radial-gradient(circle at 10% 20%, #e0e7ff 0, transparent 28%),
-        radial-gradient(circle at 90% 20%, #dbeafe 0, transparent 28%),
-        linear-gradient(135deg, #ffffff, #f2f4ff);
-    }
-
-    .hero-badge {
-      display: inline-block;
-      padding: 8px 15px;
-      border-radius: 50px;
-      background: #eef2ff;
-      color: #4f46e5;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 {
-      max-width: 850px;
-      margin: auto;
-      font-size: 54px;
-      line-height: 1.1;
-      letter-spacing: -2px;
-      color: #111827;
-    }
-
-    .hero h1 span {
-      color: #4f46e5;
-    }
-
-    .hero p {
-      max-width: 720px;
-      margin: 24px auto 0;
-      color: #667085;
-      font-size: 18px;
-    }
-
-    .buttons {
-      margin-top: 32px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      margin: 5px;
-      border-radius: 10px;
-      font-weight: 700;
-      transition: 0.25s;
-    }
-
-    .primary {
-      background: #111827;
-      color: white;
-    }
-
-    .primary:hover {
-      background: #4f46e5;
-      transform: translateY(-2px);
-    }
-
-    .secondary {
-      background: white;
-      color: #111827;
-      border: 1px solid #dfe3eb;
-    }
-
-    .secondary:hover {
-      border-color: #6366f1;
-      color: #4f46e5;
-      transform: translateY(-2px);
-    }
-
-    /* CATEGORIES */
-    .categories {
-      padding: 45px 6%;
-      background: white;
-    }
-
-    .category-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      align-items: stretch;
-    }
-
-    .category {
-      min-height: 155px;
-      padding: 25px 15px;
-      text-align: center;
-      border: 1px solid #e8ebf2;
-      border-radius: 15px;
-      background: #fff;
-      transition: 0.3s;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .category:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(17,24,39,0.08);
-      border-color: #c7d2fe;
-    }
-
-    .category-icon {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .category h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
-
-    .category p {
-      font-size: 13px;
-      color: #667085;
-    }
-
-    /* GENERAL SECTION */
-    section {
-      padding: 75px 6%;
-    }
-
-    .section-heading {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 40px;
-    }
-
-    .section-heading h2 {
-      font-size: 34px;
-      margin-bottom: 10px;
-      color: #111827;
-    }
-
-    .section-heading p {
-      color: #667085;
-    }
-
-    /* DESIGN CARDS */
-    .cards {
-      max-width: 1150px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      align-items: stretch;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #e8ebf2;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 5px 18px rgba(17,24,39,0.05);
-      transition: 0.3s;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 35px rgba(17,24,39,0.10);
-    }
-
-    .preview {
-      height: 190px;
-      background: linear-gradient(135deg, #eef2ff, #f8fafc);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 62px;
-      flex-shrink: 0;
-    }
-
-    .card-content {
-      padding: 22px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .card h3 {
-      font-size: 19px;
-      margin-bottom: 7px;
-    }
-
-    .card-content p {
-      color: #667085;
-      font-size: 14px;
-    }
-
-    .price {
-      font-size: 21px;
-      font-weight: 800;
-      margin: 17px 0;
-      color: #111827;
-    }
-
-    .card-content .buy {
-      margin-top: auto;
-    }
-
-    .buy {
-      display: block;
-      text-align: center;
-      padding: 11px;
-      background: #111827;
-      color: white;
-      border-radius: 9px;
-      font-weight: 700;
-      transition: 0.25s;
-    }
-
-    .buy:hover {
-      background: #4f46e5;
-    }
-
-    /* VIDEOS */
-    #videos {
-      background: #ffffff;
-    }
-
-    .video-card {
-      background: #fff;
-      border: 1px solid #e8ebf2;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 5px 18px rgba(17,24,39,0.05);
-      transition: 0.3s;
-
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .video-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(17,24,39,0.10);
-    }
-
-    .video-box {
-      height: 210px;
-      background: linear-gradient(135deg, #111827, #3730a3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .play {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      background: white;
-      color: #ef4444;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      padding-left: 4px;
-    }
-
-    .video-content {
-      padding: 21px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .video-content h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .video-content p {
-      color: #667085;
-      font-size: 14px;
-      margin-bottom: 17px;
-    }
-
-    .video-content .buy {
-      margin-top: auto;
-    }
-
-    /* ABOUT */
-    .about-box {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      background: white;
-      padding: 40px;
-      border-radius: 18px;
-      border: 1px solid #e8ebf2;
-      box-shadow: 0 8px 25px rgba(17,24,39,0.05);
-    }
-
-    .about-box p {
-      color: #667085;
-      font-size: 16px;
-    }
-
-    /* CTA */
-    .cta {
-      margin: 0 6% 70px;
-      padding: 60px 30px;
-      text-align: center;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #111827, #3730a3);
-      color: white;
-    }
-
-    .cta h2 {
-      font-size: 34px;
-      margin-bottom: 12px;
-    }
-
-    .cta p {
-      color: #dbe3ff;
-      max-width: 650px;
-      margin: auto;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 13px 25px;
-      border-radius: 9px;
-      background: white;
-      color: #111827;
-      font-weight: 800;
-    }
-
-    .cta-button:hover {
-      background: #eef2ff;
-    }
-
-    /* CONTACT */
-    .contact-text {
-      text-align: center;
-      color: #667085;
-      max-width: 650px;
-      margin: auto;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #111827;
-      color: white;
-      padding: 45px 6% 25px;
-      text-align: center;
-    }
-
-    footer .footer-logo {
-      font-size: 25px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-
-    footer p {
-      color: #aeb7c8;
-      font-size: 14px;
-    }
-
-    .footer-links {
-      margin: 20px 0;
-    }
-
-    .footer-links a {
-      color: #dbe3ff;
-      margin: 0 10px;
-      font-size: 14px;
-    }
-
-    .copyright {
-      border-top: 1px solid #293244;
-      margin-top: 25px;
-      padding-top: 20px;
-      color: #98a2b3;
-      font-size: 13px;
-    }
-
-    /* TABLET */
-    @media(max-width: 900px) {
-
-      .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero h1 {
-        font-size: 43px;
-      }
-    }
-
-    /* MOBILE */
-    @media(max-width: 650px) {
-
-      header {
-        padding: 13px 4%;
-      }
-
-      .logo {
-        font-size: 22px;
-      }
-
-      nav a:not(.login) {
-        display: none;
-      }
-
-      .hero {
-        padding: 75px 5%;
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 55px 5%;
-      }
-
-      .category-grid,
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .category {
-        min-height: 140px;
-      }
-
-      .section-heading h2 {
-        font-size: 29px;
-      }
-
-      .cta {
-        margin: 0 5% 50px;
-        padding: 45px 20px;
-      }
-
-      .cta h2 {
-        font-size: 28px;
-      }
-
-      .about-box {
-        padding: 28px 20px;
-      }
-    }
-  </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Unique Idea | YouTube, Facebook, Online Work & Digital Tips</title>
+
+<meta name="description" content="Unique Idea - YouTube, Facebook, Online Work, Freelancing and Digital Tips.">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f7f9fc;
+  color:#172033;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e8ebf2;
+  padding:15px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:27px;
+  font-weight:800;
+  color:#111827;
+  letter-spacing:-1px;
+}
+
+.logo span{
+  color:#6366f1;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+nav a{
+  color:#374151;
+  font-size:14px;
+  font-weight:600;
+  padding:9px 13px;
+  border-radius:8px;
+}
+
+nav a:hover{
+  background:#f0f2ff;
+  color:#4f46e5;
+}
+
+.login{
+  background:#111827;
+  color:white!important;
+  padding:10px 18px!important;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  padding:100px 6% 90px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 10% 20%,#e0e7ff 0,transparent 28%),
+    radial-gradient(circle at 90% 20%,#dbeafe 0,transparent 28%),
+    linear-gradient(135deg,#fff,#f2f4ff);
+}
+
+.hero-badge{
+  display:inline-block;
+  padding:8px 15px;
+  border-radius:50px;
+  background:#eef2ff;
+  color:#4f46e5;
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  max-width:850px;
+  margin:auto;
+  font-size:54px;
+  line-height:1.1;
+  letter-spacing:-2px;
+  color:#111827;
+}
+
+.hero h1 span{
+  color:#4f46e5;
+}
+
+.hero p{
+  max-width:720px;
+  margin:24px auto 0;
+  color:#667085;
+  font-size:18px;
+}
+
+.buttons{
+  margin-top:32px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 24px;
+  margin:5px;
+  border-radius:10px;
+  font-weight:700;
+}
+
+.primary{
+  background:#111827;
+  color:white;
+}
+
+.secondary{
+  background:white;
+  color:#111827;
+  border:1px solid #dfe3eb;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+  padding:45px 6%;
+  background:white;
+}
+
+.category-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  align-items:stretch;
+}
+
+.category{
+  height:155px;
+  padding:20px 15px;
+  text-align:center;
+  border:1px solid #e8ebf2;
+  border-radius:15px;
+  background:white;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+.category-icon{
+  height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+.category h3{
+  height:25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  margin-bottom:5px;
+}
+
+.category p{
+  height:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  color:#667085;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+  padding:75px 6%;
+}
+
+.section-heading{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 40px;
+}
+
+.section-heading h2{
+  font-size:34px;
+  margin-bottom:10px;
+  color:#111827;
+}
+
+.section-heading p{
+  color:#667085;
+}
+
+/* ================= DESIGN + VIDEO GRID ================= */
+
+.cards{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  align-items:stretch;
+}
+
+/* ================= DESIGN CARD ================= */
+
+.card{
+  background:white;
+  border:1px solid #e8ebf2;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 5px 18px rgba(17,24,39,.05);
+
+  display:flex;
+  flex-direction:column;
+
+  height:100%;
+}
+
+.preview{
+  height:190px;
+  flex-shrink:0;
+
+  background:linear-gradient(135deg,#eef2ff,#f8fafc);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:62px;
+}
+
+.card-content{
+  padding:22px;
+
+  display:flex;
+  flex-direction:column;
+
+  flex:1;
+}
+
+.card h3{
+  height:28px;
+  display:flex;
+  align-items:center;
+
+  font-size:19px;
+  margin-bottom:7px;
+}
+
+.card-content p{
+  min-height:45px;
+  color:#667085;
+  font-size:14px;
+}
+
+.price{
+  height:30px;
+
+  display:flex;
+  align-items:center;
+
+  font-size:21px;
+  font-weight:800;
+  margin:17px 0;
+
+  color:#111827;
+}
+
+.buy{
+  display:block;
+  text-align:center;
+  padding:11px;
+
+  background:#111827;
+  color:white;
+
+  border-radius:9px;
+  font-weight:700;
+}
+
+/* ================= VIDEOS ================= */
+
+#videos{
+  background:white;
+}
+
+.video-card{
+  background:white;
+  border:1px solid #e8ebf2;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 5px 18px rgba(17,24,39,.05);
+
+  display:flex;
+  flex-direction:column;
+
+  height:100%;
+}
+
+.video-box{
+  height:210px;
+  flex-shrink:0;
+
+  background:linear-gradient(135deg,#111827,#3730a3);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.play{
+  width:70px;
+  height:70px;
+
+  border-radius:50%;
+  background:white;
+  color:#ef4444;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:30px;
+  padding-left:4px;
+}
+
+.video-content{
+  padding:21px;
+
+  display:flex;
+  flex-direction:column;
+
+  flex:1;
+}
+
+.video-content h3{
+  min-height:50px;
+
+  display:flex;
+  align-items:flex-start;
+
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.video-content p{
+  min-height:67px;
+
+  color:#667085;
+  font-size:14px;
+  margin-bottom:17px;
+}
+
+.video-content .buy{
+  margin-top:auto;
+}
+
+/* ================= ABOUT ================= */
+
+.about-box{
+  max-width:850px;
+  margin:auto;
+
+  text-align:center;
+
+  background:white;
+  padding:40px;
+
+  border-radius:18px;
+  border:1px solid #e8ebf2;
+
+  box-shadow:0 8px 25px rgba(17,24,39,.05);
+}
+
+.about-box p{
+  color:#667085;
+  font-size:16px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  margin:0 6% 70px;
+  padding:60px 30px;
+
+  text-align:center;
+
+  border-radius:22px;
+
+  background:linear-gradient(135deg,#111827,#3730a3);
+  color:white;
+}
+
+.cta h2{
+  font-size:34px;
+  margin-bottom:12px;
+}
+
+.cta p{
+  color:#dbe3ff;
+  max-width:650px;
+  margin:auto;
+}
+
+.cta-button{
+  display:inline-block;
+  margin-top:25px;
+  padding:13px 25px;
+
+  border-radius:9px;
+
+  background:white;
+  color:#111827;
+
+  font-weight:800;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-text{
+  text-align:center;
+  color:#667085;
+  max-width:650px;
+  margin:auto;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#111827;
+  color:white;
+  padding:45px 6% 25px;
+  text-align:center;
+}
+
+.footer-logo{
+  font-size:25px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+footer p{
+  color:#aeb7c8;
+  font-size:14px;
+}
+
+.footer-links{
+  margin:20px 0;
+}
+
+.footer-links a{
+  color:#dbe3ff;
+  margin:0 10px;
+  font-size:14px;
+}
+
+.copyright{
+  border-top:1px solid #293244;
+  margin-top:25px;
+  padding-top:20px;
+  color:#98a2b3;
+  font-size:13px;
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:900px){
+
+  .category-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:650px){
+
+  header{
+    padding:13px 4%;
+  }
+
+  .logo{
+    font-size:22px;
+  }
+
+  nav a:not(.login){
+    display:none;
+  }
+
+  .hero{
+    padding:75px 5%;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  section{
+    padding:55px 5%;
+  }
+
+  .category-grid,
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .category{
+    height:145px;
+  }
+
+  .section-heading h2{
+    font-size:29px;
+  }
+
+  .cta{
+    margin:0 5% 50px;
+    padding:45px 20px;
+  }
+
+  .cta h2{
+    font-size:28px;
+  }
+
+  .about-box{
+    padding:28px 20px;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
@@ -576,6 +601,7 @@
 
 </header>
 
+
 <!-- HERO -->
 
 <section class="hero">
@@ -596,19 +622,18 @@
 
   <div class="buttons">
 
-```
-<a href="#videos" class="btn primary">
-  📺 Watch Videos
-</a>
+    <a href="#videos" class="btn primary">
+      📺 Watch Videos
+    </a>
 
-<a href="#designs" class="btn secondary">
-  🎨 Explore Designs
-</a>
-```
+    <a href="#designs" class="btn secondary">
+      🎨 Explore Designs
+    </a>
 
   </div>
 
 </section>
+
 
 <!-- CATEGORIES -->
 
@@ -616,35 +641,69 @@
 
   <div class="category-grid">
 
-```
-<div class="category">
-  <div class="category-icon">▶️</div>
-  <h3>YouTube Tips</h3>
-  <p>Channel growth & tutorials</p>
-</div>
+    <div class="category">
 
-<div class="category">
-  <div class="category-icon">📘</div>
-  <h3>Facebook Tips</h3>
-  <p>Useful Facebook guides</p>
-</div>
+      <div class="category-icon">▶️</div>
 
-<div class="category">
-  <div class="category-icon">💻</div>
-  <h3>Online Work</h3>
-  <p>Work & earning ideas</p>
-</div>
+      <h3>
+        YouTube Tips
+      </h3>
 
-<div class="category">
-  <div class="category-icon">⚡</div>
-  <h3>Digital Tips</h3>
-  <p>Apps, tools & technology</p>
-</div>
-```
+      <p>
+        Channel growth & tutorials
+      </p>
+
+    </div>
+
+
+    <div class="category">
+
+      <div class="category-icon">📘</div>
+
+      <h3>
+        Facebook Tips
+      </h3>
+
+      <p>
+        Useful Facebook guides
+      </p>
+
+    </div>
+
+
+    <div class="category">
+
+      <div class="category-icon">💻</div>
+
+      <h3>
+        Online Work
+      </h3>
+
+      <p>
+        Work & earning ideas
+      </p>
+
+    </div>
+
+
+    <div class="category">
+
+      <div class="category-icon">⚡</div>
+
+      <h3>
+        Digital Tips
+      </h3>
+
+      <p>
+        Apps, tools & technology
+      </p>
+
+    </div>
 
   </div>
 
 </section>
+
 
 <!-- DESIGNS -->
 
@@ -652,109 +711,111 @@
 
   <div class="section-heading">
 
-```
-<h2>🎨 Featured Designs</h2>
+    <h2>
+      🎨 Featured Designs
+    </h2>
 
-<p>
-  Professional digital templates and editable design resources.
-</p>
-```
+    <p>
+      Professional digital templates and editable design resources.
+    </p>
 
   </div>
+
 
   <div class="cards">
 
-```
-<div class="card">
 
-  <div class="preview">
-    🎨
-  </div>
+    <div class="card">
 
-  <div class="card-content">
+      <div class="preview">
+        🎨
+      </div>
 
-    <h3>
-      Professional Flyer
-    </h3>
+      <div class="card-content">
 
-    <p>
-      Editable EPS / AI design
-    </p>
+        <h3>
+          Professional Flyer
+        </h3>
 
-    <div class="price">
-      $5.00
+        <p>
+          Editable EPS / AI design
+        </p>
+
+        <div class="price">
+          $5.00
+        </div>
+
+        <a href="#" class="buy">
+          Buy & Download
+        </a>
+
+      </div>
+
     </div>
 
-    <a href="#" class="buy">
-      Buy & Download
-    </a>
 
-  </div>
+    <div class="card">
 
-</div>
+      <div class="preview">
+        📄
+      </div>
 
+      <div class="card-content">
 
-<div class="card">
+        <h3>
+          Corporate Brochure
+        </h3>
 
-  <div class="preview">
-    📄
-  </div>
+        <p>
+          Editable professional template
+        </p>
 
-  <div class="card-content">
+        <div class="price">
+          $7.00
+        </div>
 
-    <h3>
-      Corporate Brochure
-    </h3>
+        <a href="#" class="buy">
+          Buy & Download
+        </a>
 
-    <p>
-      Editable professional template
-    </p>
+      </div>
 
-    <div class="price">
-      $7.00
     </div>
 
-    <a href="#" class="buy">
-      Buy & Download
-    </a>
 
-  </div>
+    <div class="card">
 
-</div>
+      <div class="preview">
+        ✨
+      </div>
 
+      <div class="card-content">
 
-<div class="card">
+        <h3>
+          Creative Template
+        </h3>
 
-  <div class="preview">
-    ✨
-  </div>
+        <p>
+          EPS / SVG / PDF included
+        </p>
 
-  <div class="card-content">
+        <div class="price">
+          $4.00
+        </div>
 
-    <h3>
-      Creative Template
-    </h3>
+        <a href="#" class="buy">
+          Buy & Download
+        </a>
 
-    <p>
-      EPS / SVG / PDF included
-    </p>
+      </div>
 
-    <div class="price">
-      $4.00
     </div>
 
-    <a href="#" class="buy">
-      Buy & Download
-    </a>
-
-  </div>
-
-</div>
-```
 
   </div>
 
 </section>
+
 
 <!-- VIDEOS -->
 
@@ -762,119 +823,124 @@
 
   <div class="section-heading">
 
-```
-<h2>📺 Latest Videos</h2>
+    <h2>
+      📺 Latest Videos
+    </h2>
 
-<p>
-  YouTube, Facebook, Online Work এবং Digital Tips-এর
-  সহজ ও প্রয়োজনীয় ভিডিও।
-</p>
-```
+    <p>
+      YouTube, Facebook, Online Work এবং Digital Tips-এর
+      সহজ ও প্রয়োজনীয় ভিডিও।
+    </p>
 
   </div>
+
 
   <div class="cards">
 
-```
-<!-- VIDEO 1 -->
-<div class="video-card">
 
-  <div class="video-box">
-    <div class="play">
-      ▶
+    <div class="video-card">
+
+      <div class="video-box">
+
+        <div class="play">
+          ▶
+        </div>
+
+      </div>
+
+      <div class="video-content">
+
+        <h3>
+          YouTube, Facebook & Online Work Tips
+        </h3>
+
+        <p>
+          YouTube, Facebook, Online Work ও Digital Tips
+          সম্পর্কে সহজভাবে জানতে আমাদের ভিডিও দেখুন।
+        </p>
+
+        <a
+          href="https://www.youtube.com/@uniqueIdeam"
+          target="_blank"
+          class="buy">
+          Watch on YouTube
+        </a>
+
+      </div>
+
     </div>
-  </div>
-
-  <div class="video-content">
-
-    <h3>
-      YouTube, Facebook & Online Work Tips
-    </h3>
-
-    <p>
-      YouTube, Facebook, Online Work ও Digital Tips
-      সম্পর্কে সহজভাবে জানতে আমাদের ভিডিও দেখুন।
-    </p>
-
-    <a
-      href="https://www.youtube.com/@uniqueIdeam"
-      target="_blank"
-      class="buy">
-      Watch on YouTube
-    </a>
-
-  </div>
-
-</div>
 
 
-<!-- VIDEO 2 -->
-<div class="video-card">
+    <div class="video-card">
 
-  <div class="video-box">
-    <div class="play">
-      ▶
+      <div class="video-box">
+
+        <div class="play">
+          ▶
+        </div>
+
+      </div>
+
+      <div class="video-content">
+
+        <h3>
+          Digital Tips & How-To Tutorials
+        </h3>
+
+        <p>
+          নতুন Apps, Tools, Technology এবং বিভিন্ন
+          How-To Tutorial সহজভাবে শিখুন।
+        </p>
+
+        <a
+          href="https://www.youtube.com/@uniqueIdeam"
+          target="_blank"
+          class="buy">
+          Watch on YouTube
+        </a>
+
+      </div>
+
     </div>
-  </div>
-
-  <div class="video-content">
-
-    <h3>
-      Digital Tips & How-To Tutorials
-    </h3>
-
-    <p>
-      নতুন Apps, Tools, Technology এবং বিভিন্ন
-      How-To Tutorial সহজভাবে শিখুন।
-    </p>
-
-    <a
-      href="https://www.youtube.com/@uniqueIdeam"
-      target="_blank"
-      class="buy">
-      Watch on YouTube
-    </a>
-
-  </div>
-
-</div>
 
 
-<!-- VIDEO 3 -->
-<div class="video-card">
+    <div class="video-card">
 
-  <div class="video-box">
-    <div class="play">
-      ▶
+      <div class="video-box">
+
+        <div class="play">
+          ▶
+        </div>
+
+      </div>
+
+      <div class="video-content">
+
+        <h3>
+          Online Work & Freelancing Tips
+        </h3>
+
+        <p>
+          Online Work, Freelancing এবং Digital Earning
+          সম্পর্কে দরকারি তথ্য ও গাইড।
+        </p>
+
+        <a
+          href="https://www.youtube.com/@uniqueIdeam"
+          target="_blank"
+          class="buy">
+          Watch on YouTube
+        </a>
+
+      </div>
+
     </div>
-  </div>
 
-  <div class="video-content">
-
-    <h3>
-      Online Work & Freelancing Tips
-    </h3>
-
-    <p>
-      Online Work, Freelancing এবং Digital Earning
-      সম্পর্কে দরকারি তথ্য ও গাইড।
-    </p>
-
-    <a
-      href="https://www.youtube.com/@uniqueIdeam"
-      target="_blank"
-      class="buy">
-      Watch on YouTube
-    </a>
-
-  </div>
-
-</div>
-```
 
   </div>
 
 </section>
+
 
 <!-- ABOUT -->
 
@@ -882,29 +948,26 @@
 
   <div class="section-heading">
 
-```
-<h2>
-  💡 About Unique Idea
-</h2>
-```
+    <h2>
+      💡 About Unique Idea
+    </h2>
 
   </div>
 
   <div class="about-box">
 
-```
-<p>
-  Unique Idea একটি digital platform যেখানে YouTube,
-  Facebook, Online Work, Freelancing, Digital Tools
-  এবং Technology নিয়ে সহজ ও দরকারি Tips & Tutorials
-  শেয়ার করা হয়। পাশাপাশি ভবিষ্যতে এখানে বিভিন্ন
-  digital design ও downloadable resources পাওয়া যাবে।
-</p>
-```
+    <p>
+      Unique Idea একটি digital platform যেখানে YouTube,
+      Facebook, Online Work, Freelancing, Digital Tools
+      এবং Technology নিয়ে সহজ ও দরকারি Tips & Tutorials
+      শেয়ার করা হয়। পাশাপাশি ভবিষ্যতে এখানে বিভিন্ন
+      digital design ও downloadable resources পাওয়া যাবে।
+    </p>
 
   </div>
 
 </section>
+
 
 <!-- CTA -->
 
@@ -919,13 +982,15 @@
     পেতে Unique Idea চ্যানেলটি Subscribe করে পাশে থাকুন।
   </p>
 
-<a
- href="https://www.youtube.com/@uniqueIdeam"
- target="_blank"
- class="cta-button">
-🔔 Subscribe on YouTube </a>
+  <a
+    href="https://www.youtube.com/@uniqueIdeam"
+    target="_blank"
+    class="cta-button">
+    🔔 Subscribe on YouTube
+  </a>
 
 </div>
+
 
 <!-- CONTACT -->
 
@@ -933,24 +998,21 @@
 
   <div class="section-heading">
 
-```
-<h2>
-  📩 Contact Us
-</h2>
-```
+    <h2>
+      📩 Contact Us
+    </h2>
 
   </div>
 
   <p class="contact-text">
 
-```
-Business inquiry, design collaboration অথবা website
-সম্পর্কিত কোনো প্রশ্ন থাকলে আমাদের সাথে যোগাযোগ করুন।
-```
+    Business inquiry, design collaboration অথবা website
+    সম্পর্কিত কোনো প্রশ্ন থাকলে আমাদের সাথে যোগাযোগ করুন।
 
   </p>
 
 </section>
+
 
 <!-- FOOTER -->
 
@@ -966,23 +1028,21 @@ Business inquiry, design collaboration অথবা website
 
   <div class="footer-links">
 
-```
-<a href="#designs">
-  Designs
-</a>
+    <a href="#designs">
+      Designs
+    </a>
 
-<a href="#videos">
-  Videos
-</a>
+    <a href="#videos">
+      Videos
+    </a>
 
-<a href="#about">
-  About
-</a>
+    <a href="#about">
+      About
+    </a>
 
-<a href="#contact">
-  Contact
-</a>
-```
+    <a href="#contact">
+      Contact
+    </a>
 
   </div>
 
@@ -994,3 +1054,4 @@ Business inquiry, design collaboration অথবা website
 
 </body>
 </html>
+```
