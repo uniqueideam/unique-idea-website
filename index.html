@@ -3,3541 +3,2543 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Unique Idea Marketplace</title>
+<title>Unique Idea - Digital Marketplace</title>
 
 <style>
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-    background:#f5f7fb;
-    color:#172033;
+  background:#f6f7fb;
+  color:#222;
 }
 
-/* ================= HEADER ================= */
-
 header{
-    background:#fff;
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
-    position:sticky;
-    top:0;
-    z-index:1000;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
 .navbar{
-    max-width:1200px;
-    margin:auto;
-    padding:13px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
+  max-width:1200px;
+  margin:auto;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
 }
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:24px;
-    font-weight:bold;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:23px;
+  font-weight:bold;
+  color:#5b35d5;
 }
 
 .logo-circle{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#1677ff,#7b2cff);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-weight:bold;
-    overflow:hidden;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#5b35d5;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
 }
 
-.logo-circle img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+nav{
+  display:flex;
+  gap:25px;
+  align-items:center;
 }
 
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:18px;
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
 }
 
-.nav-links a{
-    text-decoration:none;
-    color:#333;
-    font-weight:bold;
-    cursor:pointer;
+nav a:hover{
+  color:#5b35d5;
 }
-
-.nav-links a:hover{
-    color:#1677ff;
-}
-
-/* ================= BUTTON ================= */
 
 .btn{
-    border:none;
-    background:#1677ff;
-    color:white;
-    padding:11px 18px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-    text-decoration:none;
-    display:inline-block;
+  border:none;
+  padding:11px 18px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
 }
 
-.btn:hover{
-    opacity:.9;
+.btn-primary{
+  background:#5b35d5;
+  color:white;
 }
 
-.btn-red{
-    background:#e5484d;
+.btn-primary:hover{
+  background:#4825bd;
 }
 
-.btn-green{
-    background:#16865b;
+.btn-outline{
+  border:1px solid #5b35d5;
+  background:white;
+  color:#5b35d5;
 }
-
-.btn-gray{
-    background:#687386;
-}
-
-.btn-light{
-    background:#eaf2ff;
-    color:#1677ff;
-}
-
-/* ================= HERO ================= */
 
 .hero{
-    padding:80px 20px;
-    text-align:center;
-    background:linear-gradient(135deg,#eaf2ff,#fff);
+  background:linear-gradient(135deg,#5b35d5,#8b5cf6);
+  color:white;
+  padding:85px 20px;
+}
+
+.hero-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+  align-items:center;
 }
 
 .hero h1{
-    font-size:44px;
-    margin-bottom:15px;
+  font-size:52px;
+  line-height:1.15;
+  margin-bottom:20px;
 }
 
 .hero p{
-    max-width:750px;
-    margin:auto;
-    color:#687386;
-    font-size:18px;
-    line-height:1.7;
+  font-size:18px;
+  line-height:1.7;
+  margin-bottom:25px;
+  opacity:.95;
 }
 
-.hero-buttons{
-    margin-top:25px;
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
+.hero-card{
+  background:white;
+  color:#222;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,.2);
 }
 
-/* ================= GENERAL ================= */
+.hero-card h3{
+  margin-bottom:15px;
+}
 
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:0 20px;
+.search{
+  width:100%;
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  margin-bottom:12px;
 }
 
 section{
-    padding:65px 0;
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:35px;
+  text-align:center;
+  margin-bottom:40px;
 }
 
 .section-title h2{
-    font-size:32px;
-    margin-bottom:10px;
+  font-size:34px;
+  margin-bottom:10px;
 }
 
 .section-title p{
-    color:#687386;
+  color:#777;
 }
 
-/* ================= CATEGORY ================= */
-
-.category-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+.categories{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
 }
 
 .category{
-    background:#fff;
-    padding:30px 20px;
-    border-radius:14px;
-    text-align:center;
-    box-shadow:0 4px 18px rgba(0,0,0,.06);
+  background:white;
+  padding:28px 20px;
+  text-align:center;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+  cursor:pointer;
+  transition:.3s;
+}
+
+.category:hover{
+  transform:translateY(-5px);
 }
 
 .category-icon{
-    font-size:40px;
-    margin-bottom:12px;
+  font-size:40px;
+  margin-bottom:15px;
 }
 
-/* ================= CARDS ================= */
-
-.card-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
 .card{
-    background:white;
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 4px 18px rgba(0,0,0,.07);
-    display:flex;
-    flex-direction:column;
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
 }
 
-.card-image{
-    width:100%;
-    height:190px;
-    background:#e9edf3;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
+.card-preview{
+  height:190px;
+  background:#eee;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
 }
 
-.card-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.card-preview img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.placeholder{
+  font-size:55px;
 }
 
 .card-body{
-    padding:20px;
-    flex:1;
-    display:flex;
-    flex-direction:column;
+  padding:20px;
 }
 
 .card-body h3{
-    margin-bottom:9px;
+  margin-bottom:8px;
 }
 
 .card-body p{
-    color:#687386;
-    line-height:1.5;
-}
-
-.card-actions{
-    margin-top:auto;
-    padding-top:16px;
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
+  color:#777;
+  line-height:1.5;
+  margin-bottom:15px;
 }
 
 .price{
-    font-size:21px;
-    font-weight:bold;
-    margin-top:12px;
+  font-size:21px;
+  font-weight:bold;
+  color:#5b35d5;
 }
 
-/* ================= ABOUT ================= */
-
-.about-box{
-    max-width:850px;
-    margin:auto;
-    background:white;
-    padding:30px;
-    border-radius:14px;
-    box-shadow:0 4px 18px rgba(0,0,0,.06);
-    line-height:1.8;
-    text-align:center;
+.card-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
-/* ================= DASHBOARD ================= */
+.video-box{
+  position:relative;
+  width:100%;
+  height:190px;
+  overflow:hidden;
+}
 
-#dashboardSection{
-    background:#f1f4f9;
+.video-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.play{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#fff;
+  color:#d00;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:25px;
+}
+
+.about{
+  background:white;
+  max-width:none;
+}
+
+.about-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  padding:70px 20px;
+}
+
+.about h2{
+  font-size:35px;
+  margin-bottom:20px;
+}
+
+.about p{
+  line-height:1.8;
+  color:#666;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.feature{
+  padding:20px;
+  border:1px solid #eee;
+  border-radius:12px;
+}
+
+.feature strong{
+  display:block;
+  margin-bottom:8px;
 }
 
 .dashboard{
-    display:grid;
-    grid-template-columns:230px 1fr;
-    gap:22px;
+  display:none;
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px 80px;
+}
+
+.dashboard.active{
+  display:block;
+}
+
+.dashboard-layout{
+  display:grid;
+  grid-template-columns:240px 1fr;
+  gap:25px;
 }
 
 .sidebar{
-    background:white;
-    border-radius:14px;
-    padding:15px;
-    height:max-content;
-    box-shadow:0 4px 18px rgba(0,0,0,.06);
+  background:white;
+  border-radius:15px;
+  padding:15px;
+  height:max-content;
+  box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
 
 .sidebar button{
-    width:100%;
-    border:none;
-    background:transparent;
-    text-align:left;
-    padding:13px;
-    margin-bottom:5px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
+  width:100%;
+  padding:13px;
+  border:none;
+  background:white;
+  text-align:left;
+  border-radius:8px;
+  margin-bottom:5px;
+  cursor:pointer;
 }
 
 .sidebar button:hover,
 .sidebar button.active{
-    background:#eaf2ff;
-    color:#1677ff;
+  background:#eee8ff;
+  color:#5b35d5;
+  font-weight:bold;
 }
 
-.dashboard-content{
-    min-width:0;
+.panel{
+  display:none;
+  background:white;
+  border-radius:15px;
+  padding:30px;
+  box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
 
-.dashboard-panel{
-    background:white;
-    border-radius:14px;
-    padding:25px;
-    box-shadow:0 4px 18px rgba(0,0,0,.06);
+.panel.active{
+  display:block;
 }
 
-.dashboard-panel.hidden{
-    display:none;
+.panel h2{
+  margin-bottom:25px;
 }
 
 .stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin-top:22px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-bottom:25px;
 }
 
 .stat{
-    background:#f6f8fb;
-    border-radius:10px;
-    padding:18px;
+  background:#f7f5ff;
+  padding:22px;
+  border-radius:12px;
 }
 
-.stat span{
-    color:#687386;
-    font-size:14px;
+.stat small{
+  color:#777;
 }
 
 .stat strong{
-    display:block;
-    font-size:25px;
-    margin-top:6px;
+  display:block;
+  font-size:28px;
+  color:#5b35d5;
+  margin-top:8px;
 }
 
-/* ================= FORM ================= */
-
 .form-group{
-    margin-bottom:16px;
+  margin-bottom:18px;
 }
 
 .form-group label{
-    display:block;
-    font-weight:bold;
-    margin-bottom:6px;
+  display:block;
+  font-weight:bold;
+  margin-bottom:7px;
 }
 
-input,
-textarea,
-select{
-    width:100%;
-    border:1px solid #d9dee8;
-    border-radius:8px;
-    padding:12px;
-    outline:none;
-    background:white;
+.form-control{
+  width:100%;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  outline:none;
 }
 
-input:focus,
-textarea:focus,
-select:focus{
-    border-color:#1677ff;
+textarea.form-control{
+  min-height:110px;
+  resize:vertical;
 }
 
-textarea{
-    min-height:110px;
-    resize:vertical;
+.table{
+  width:100%;
+  border-collapse:collapse;
 }
 
-.two-column{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-/* ================= TABLE ================= */
-
-.table-wrap{
-    overflow-x:auto;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-th,
-td{
-    padding:12px;
-    border-bottom:1px solid #edf0f4;
-    text-align:left;
+.table th,
+.table td{
+  padding:13px;
+  border-bottom:1px solid #eee;
+  text-align:left;
 }
 
 .badge{
-    display:inline-block;
-    padding:5px 9px;
-    border-radius:30px;
-    font-size:12px;
-    font-weight:bold;
+  padding:5px 9px;
+  border-radius:20px;
+  font-size:12px;
+  background:#fff3cd;
 }
 
-.pending{
-    background:#fff2cc;
-    color:#8a6500;
+footer{
+  background:#15121d;
+  color:white;
+  padding:50px 20px;
 }
 
-.approved{
-    background:#dcf7e9;
-    color:#13784f;
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:30px;
 }
 
-.rejected{
-    background:#ffe1e1;
-    color:#a62929;
+footer p{
+  color:#aaa;
+  line-height:1.7;
+  margin-top:10px;
 }
 
-/* ================= MODAL ================= */
+footer a{
+  color:#aaa;
+  text-decoration:none;
+  display:block;
+  margin-top:10px;
+}
 
 .modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.6);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-    z-index:5000;
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  z-index:2000;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
 }
 
-.modal.hidden{
-    display:none;
+.modal.active{
+  display:flex;
 }
 
 .modal-box{
-    width:100%;
-    max-width:500px;
-    max-height:90vh;
-    overflow:auto;
-    background:white;
-    border-radius:15px;
-    padding:28px;
-    position:relative;
+  background:white;
+  width:100%;
+  max-width:430px;
+  padding:30px;
+  border-radius:15px;
+  position:relative;
 }
 
 .close{
-    position:absolute;
-    right:18px;
-    top:10px;
-    border:none;
-    background:none;
-    font-size:28px;
-    cursor:pointer;
+  position:absolute;
+  right:18px;
+  top:15px;
+  font-size:25px;
+  cursor:pointer;
 }
 
-.auth-tabs{
-    display:flex;
-    gap:8px;
-    margin:20px 0;
+.tabs{
+  display:flex;
+  margin-bottom:25px;
 }
 
-.auth-tabs button{
-    flex:1;
-    border:none;
-    padding:11px;
-    border-radius:8px;
-    cursor:pointer;
-    background:#edf0f5;
+.tabs button{
+  flex:1;
+  padding:12px;
+  border:none;
+  background:#eee;
+  cursor:pointer;
 }
 
-.auth-tabs button.active{
-    background:#1677ff;
-    color:white;
+.tabs button.active{
+  background:#5b35d5;
+  color:white;
 }
 
-/* ================= ADMIN ================= */
-
-.admin-item{
-    border:1px solid #e1e5ec;
-    border-radius:10px;
-    padding:15px;
-    margin-bottom:12px;
+.auth-form{
+  display:none;
 }
 
-.admin-buttons{
-    margin-top:12px;
-    display:flex;
-    gap:8px;
+.auth-form.active{
+  display:block;
 }
 
-/* ================= CTA ================= */
+.hidden{
+  display:none!important;
+}
 
 .cta{
-    background:#111827;
-    color:white;
-    text-align:center;
+  background:#5b35d5;
+  color:white;
+  text-align:center;
+  padding:70px 20px;
+}
+
+.cta h2{
+  font-size:38px;
+  margin-bottom:15px;
 }
 
 .cta p{
-    color:#cbd1da;
-    margin:10px 0;
+  margin-bottom:25px;
 }
 
-/* ================= FOOTER ================= */
-
-footer{
-    background:#0b0f19;
-    color:#aaa;
-    text-align:center;
-    padding:25px;
+.mobile-menu{
+  display:none;
 }
-
-/* ================= HIDDEN ================= */
-
-.hidden{
-    display:none!important;
-}
-
-/* ================= MOBILE ================= */
 
 @media(max-width:900px){
+  .hero-inner,
+  .about-inner{
+    grid-template-columns:1fr;
+  }
 
-    .category-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+  .categories{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-    .card-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+  .cards{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-    .dashboard{
-        grid-template-columns:1fr;
-    }
+  .dashboard-layout{
+    grid-template-columns:1fr;
+  }
 
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
 
+  .footer-inner{
+    grid-template-columns:1fr;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .mobile-menu{
+    display:block;
+  }
 }
 
 @media(max-width:600px){
+  .hero h1{
+    font-size:36px;
+  }
 
-    .nav-links{
-        display:none;
-    }
+  .categories,
+  .cards{
+    grid-template-columns:1fr;
+  }
 
-    .hero{
-        padding:55px 20px;
-    }
+  .stats{
+    grid-template-columns:1fr;
+  }
 
-    .hero h1{
-        font-size:31px;
-    }
-
-    .category-grid,
-    .card-grid,
-    .two-column{
-        grid-template-columns:1fr;
-    }
-
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
-
+  section{
+    padding:50px 15px;
+  }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
+  <div class="navbar">
 
-<div class="navbar">
-
-    <div class="brand">
-
-        <div class="logo-circle">
-
-            <img
-                id="siteLogo"
-                src=""
-                alt="Unique Idea">
-
-            <span id="logoText">
-                UI
-            </span>
-
-        </div>
-
-        <span>
-            Unique Idea
-        </span>
-
+    <div class="logo">
+      <div class="logo-circle">UI</div>
+      <span>Unique Idea</span>
     </div>
 
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#designs">Designs</a>
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+      <a href="#dashboard" id="dashboardLink" class="hidden">Dashboard</a>
+    </nav>
 
-    <div class="nav-links">
+    <div>
+      <button class="btn btn-primary" id="loginBtn" onclick="openAuth()">
+        Login / Register
+      </button>
 
-        <a href="#home">
-            Home
-        </a>
-
-        <a href="#designs">
-            Designs
-        </a>
-
-        <a href="#videos">
-            Videos
-        </a>
-
-        <a href="#about">
-            About
-        </a>
-
-        <a
-            id="dashboardLink"
-            class="hidden"
-            href="#dashboardSection">
-
-            Dashboard
-
-        </a>
-
-        <button
-            id="loginButton"
-            class="btn"
-            onclick="openAuth()">
-
-            Login / Register
-
-        </button>
-
-        <button
-            id="logoutButton"
-            class="btn btn-gray hidden"
-            onclick="logout()">
-
-            Logout
-
-        </button>
-
+      <button class="btn btn-outline hidden" id="logoutBtn" onclick="logout()">
+        Logout
+      </button>
     </div>
 
-</div>
-
+  </div>
 </header>
 
 
-<!-- ================= HOME ================= -->
+<!-- HOME -->
 
-<section
-    id="home"
-    class="hero">
+<div id="home">
 
-    <h1>
-        Your Hub for Digital Tips & Online Ideas
-    </h1>
+<section class="hero">
+  <div class="hero-inner">
 
-    <p>
-        YouTube Tips, Facebook Tips, Online Work,
-        Digital Tips এবং Digital Marketplace—
-        সবকিছু এক জায়গায়।
-    </p>
+    <div>
+      <h1>Your Hub for Digital Tips & Online Ideas</h1>
 
-    <div class="hero-buttons">
+      <p>
+        Discover creative designs, digital resources,
+        YouTube tips and online work ideas — all in one place.
+      </p>
 
-        <a
-            class="btn"
-            href="#designs">
-
-            Explore Designs
-
-        </a>
-
-        <a
-            class="btn btn-light"
-            href="https://www.youtube.com/@uniqueIdeam"
-            target="_blank">
-
-            Visit YouTube
-
-        </a>
-
+      <button class="btn btn-primary" style="background:white;color:#5b35d5"
+              onclick="document.getElementById('designs').scrollIntoView()">
+        Explore Designs
+      </button>
     </div>
 
+    <div class="hero-card">
+      <h3>Find Your Favorite Design</h3>
+
+      <input
+        class="search"
+        id="searchBox"
+        placeholder="Search designs..."
+        onkeyup="searchDesigns()"
+      >
+
+      <button class="btn btn-primary" onclick="searchDesigns()">
+        Search
+      </button>
+    </div>
+
+  </div>
 </section>
 
 
-<!-- ================= CATEGORY ================= -->
+<!-- CATEGORIES -->
 
 <section>
+  <div class="section-title">
+    <h2>Explore Categories</h2>
+    <p>Choose a category and discover useful resources.</p>
+  </div>
 
-<div class="container">
-
-<div class="section-title">
-
-    <h2>
-        Explore Categories
-    </h2>
-
-    <p>
-        আপনার প্রয়োজন অনুযায়ী category বেছে নিন
-    </p>
-
-</div>
-
-
-<div class="category-grid">
+  <div class="categories">
 
     <div class="category">
-        <div class="category-icon">🎥</div>
-        <h3>YouTube Tips</h3>
+      <div class="category-icon">▶️</div>
+      <h3>YouTube Tips</h3>
     </div>
 
     <div class="category">
-        <div class="category-icon">📘</div>
-        <h3>Facebook Tips</h3>
+      <div class="category-icon">📘</div>
+      <h3>Facebook Tips</h3>
     </div>
 
     <div class="category">
-        <div class="category-icon">💻</div>
-        <h3>Online Work</h3>
+      <div class="category-icon">💼</div>
+      <h3>Online Work</h3>
     </div>
 
     <div class="category">
-        <div class="category-icon">💡</div>
-        <h3>Digital Tips</h3>
+      <div class="category-icon">💡</div>
+      <h3>Digital Tips</h3>
     </div>
 
-</div>
-
-</div>
-
+  </div>
 </section>
 
 
-<!-- ================= DESIGNS ================= -->
+<!-- DESIGNS -->
 
 <section id="designs">
 
-<div class="container">
+  <div class="section-title">
+    <h2>Digital Designs</h2>
+    <p>Explore creative digital products from Unique Idea.</p>
+  </div>
 
-<div class="section-title">
+  <div class="cards" id="publicDesigns">
 
-    <h2>
-        Design Marketplace
-    </h2>
+    <div class="card design-item">
+      <div class="card-preview">
+        <div class="placeholder">🎨</div>
+      </div>
 
-    <p>
-        Creators তাদের ডিজাইন upload করে marketplace-এ বিক্রি করতে পারবে।
-    </p>
+      <div class="card-body">
+        <h3>Creative Business Flyer</h3>
 
-</div>
+        <p>
+          Professional flyer template for business promotion.
+        </p>
+
+        <div class="card-footer">
+          <span class="price">৳250</span>
+          <button class="btn btn-primary" onclick="buyDesign('Creative Business Flyer',250)">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </div>
 
 
-<div
-    id="publicDesigns"
-    class="card-grid">
+    <div class="card design-item">
+      <div class="card-preview">
+        <div class="placeholder">📄</div>
+      </div>
 
-</div>
+      <div class="card-body">
+        <h3>Corporate Brochure</h3>
 
-</div>
+        <p>
+          Modern editable brochure template for companies.
+        </p>
+
+        <div class="card-footer">
+          <span class="price">৳350</span>
+          <button class="btn btn-primary" onclick="buyDesign('Corporate Brochure',350)">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card design-item">
+      <div class="card-preview">
+        <div class="placeholder">🖼️</div>
+      </div>
+
+      <div class="card-body">
+        <h3>Social Media Template</h3>
+
+        <p>
+          Ready-to-edit social media design template.
+        </p>
+
+        <div class="card-footer">
+          <span class="price">৳150</span>
+          <button class="btn btn-primary" onclick="buyDesign('Social Media Template',150)">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- ================= VIDEOS ================= -->
+<!-- VIDEOS -->
 
 <section id="videos">
 
-<div class="container">
+  <div class="section-title">
+    <h2>Latest Videos</h2>
+    <p>Learn useful digital tips and online work ideas.</p>
+  </div>
 
-<div class="section-title">
+  <div class="cards" id="publicVideos">
 
-    <h2>
-        Latest Videos
-    </h2>
+    <div class="card">
+      <div class="video-box">
+        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg">
+        <div class="play">▶</div>
+      </div>
 
-    <p>
-        Creator-দের approved YouTube videos
-    </p>
+      <div class="card-body">
+        <h3>How to Start Online Work</h3>
+        <p>Learn the basics of starting online work.</p>
 
-</div>
+        <button class="btn btn-primary"
+          onclick="openVideo('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
+          Watch Video
+        </button>
+      </div>
+    </div>
 
-
-<div
-    id="publicVideos"
-    class="card-grid">
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="section-title">
-
-    <h2>
-        About Unique Idea
-    </h2>
-
-</div>
-
-
-<div class="about-box">
-
-    <p>
-        Unique Idea হলো Digital Tips, Online Work,
-        YouTube, Facebook এবং Digital Marketplace
-        নিয়ে তৈরি একটি creator-focused platform।
-    </p>
-
-    <br>
-
-    <p>
-        এখানে creators account খুলে নিজেদের
-        digital designs এবং YouTube videos submit
-        করতে পারবে।
-    </p>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= DASHBOARD ================= -->
+<!-- ABOUT -->
 
-<section
-    id="dashboardSection"
-    class="hidden">
+<div class="about" id="about">
 
-<div class="container">
+  <div class="about-inner">
 
-<div class="dashboard">
+    <div>
+      <h2>About Unique Idea</h2>
 
-<!-- SIDEBAR -->
+      <p>
+        Unique Idea is a digital platform where creators can
+        share and sell their digital designs, templates and
+        creative resources.
+      </p>
 
-<aside class="sidebar">
+      <p style="margin-top:15px">
+        Our goal is to create a simple marketplace for designers,
+        freelancers and digital creators.
+      </p>
+    </div>
 
-    <button
-        class="active"
-        onclick="showDashboard('overview',this)">
+    <div class="features">
 
+      <div class="feature">
+        <strong>🎨 Digital Designs</strong>
+        <span>Discover useful creative resources.</span>
+      </div>
+
+      <div class="feature">
+        <strong>💼 Creator Friendly</strong>
+        <span>Creators can showcase their work.</span>
+      </div>
+
+      <div class="feature">
+        <strong>▶️ Video Learning</strong>
+        <span>Useful YouTube content in one place.</span>
+      </div>
+
+      <div class="feature">
+        <strong>🚀 Growing Platform</strong>
+        <span>Built for digital creators.</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+
+<!-- DASHBOARD -->
+
+<section id="dashboard" class="dashboard">
+
+  <h1 style="margin-bottom:30px">My Dashboard</h1>
+
+  <div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+      <button class="active" onclick="showPanel('overview',this)">
         📊 Overview
+      </button>
 
-    </button>
-
-
-    <button
-        onclick="showDashboard('uploadDesign',this)">
-
+      <button onclick="showPanel('uploadDesign',this)">
         🎨 Upload Design
+      </button>
 
-    </button>
+      <button onclick="showPanel('addVideo',this)">
+        ▶️ Add YouTube Video
+      </button>
 
+      <button onclick="showPanel('myDesigns',this)">
+        🖼️ My Designs
+      </button>
 
-    <button
-        onclick="showDashboard('uploadVideo',this)">
-
-        🎥 Add YouTube Video
-
-    </button>
-
-
-    <button
-        onclick="showDashboard('myDesigns',this)">
-
-        📦 My Designs
-
-    </button>
-
-
-    <button
-        onclick="showDashboard('myVideos',this)">
-
+      <button onclick="showPanel('myVideos',this)">
         🎬 My Videos
+      </button>
 
-    </button>
-
-
-    <button
-        onclick="showDashboard('wallet',this)">
-
+      <button onclick="showPanel('wallet',this)">
         💰 Wallet
+      </button>
 
-    </button>
-
-
-    <button
-        onclick="showDashboard('profile',this)">
-
+      <button onclick="showPanel('profile',this)">
         👤 Profile
+      </button>
 
-    </button>
-
-
-    <button
-        id="adminDashboardButton"
-        class="hidden"
-        onclick="showDashboard('admin',this)">
-
+      <button id="adminPanelBtn" class="hidden"
+              onclick="showPanel('adminPanel',this)">
         ⚙️ Admin Panel
+      </button>
 
-    </button>
-
-</aside>
-
-
-<!-- CONTENT -->
-
-<main class="dashboard-content">
+    </aside>
 
 
-<!-- OVERVIEW -->
+    <main>
 
-<div
-    id="overview"
-    class="dashboard-panel">
+      <!-- OVERVIEW -->
 
-    <h2>
-        Welcome,
-        <span id="dashboardName">
-            Creator
-        </span>
-        👋
-    </h2>
+      <div class="panel active" id="overview">
 
-    <p class="muted">
-        আপনার creator dashboard।
-    </p>
+        <h2>Dashboard Overview</h2>
 
+        <div class="stats">
 
-    <div class="stats">
+          <div class="stat">
+            <small>Total Designs</small>
+            <strong id="statDesigns">0</strong>
+          </div>
 
-        <div class="stat">
+          <div class="stat">
+            <small>Total Videos</small>
+            <strong id="statVideos">0</strong>
+          </div>
 
-            <span>
-                My Designs
-            </span>
+          <div class="stat">
+            <small>Balance</small>
+            <strong>৳<span id="statBalance">0</span></strong>
+          </div>
 
-            <strong id="designCount">
-                0
-            </strong>
+          <div class="stat">
+            <small>Sales</small>
+            <strong id="statSales">0</strong>
+          </div>
 
         </div>
 
+        <p>
+          Welcome to your Unique Idea dashboard.
+        </p>
 
-        <div class="stat">
+      </div>
 
-            <span>
-                My Videos
-            </span>
 
-            <strong id="videoCount">
-                0
-            </strong>
+      <!-- UPLOAD DESIGN -->
+
+      <div class="panel" id="uploadDesign">
+
+        <h2>Upload Design</h2>
+
+        <div class="form-group">
+          <label>Design Title</label>
+          <input id="designTitle" class="form-control"
+                 placeholder="Enter design title">
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="designDescription"
+                    class="form-control"
+                    placeholder="Describe your design"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Price (৳)</label>
+          <input id="designPrice"
+                 type="number"
+                 class="form-control"
+                 placeholder="Example: 250">
+        </div>
+
+        <div class="form-group">
+          <label>Category</label>
+
+          <select id="designCategory" class="form-control">
+
+            <option value="">Select Category</option>
+            <option>Business</option>
+            <option>Flyer</option>
+            <option>Brochure</option>
+            <option>Social Media</option>
+            <option>Poster</option>
+            <option>Template</option>
+            <option>Other</option>
+
+          </select>
 
         </div>
 
+        <div class="form-group">
+          <label>Tags</label>
+
+          <input id="designTags"
+                 class="form-control"
+                 placeholder="business, flyer, template">
+        </div>
+
+        <div class="form-group">
+          <label>Preview Image</label>
+
+          <input id="designPreview"
+                 type="file"
+                 class="form-control"
+                 accept="image/*">
+        </div>
+
+        <div class="form-group">
+          <label>Design File</label>
+
+          <input id="designFile"
+                 type="file"
+                 class="form-control"
+                 accept=".ai,.eps,.svg,.pdf,.zip,.rar">
+        </div>
+
+        <button class="btn btn-primary"
+                onclick="submitDesign()">
+          Submit Design
+        </button>
+
+        <p style="margin-top:15px;color:#777">
+          Submitted designs will appear after admin approval.
+        </p>
+
+      </div>
+
+
+      <!-- VIDEO -->
+
+      <div class="panel" id="addVideo">
+
+        <h2>Add YouTube Video</h2>
+
+        <div class="form-group">
+          <label>Video Title</label>
+
+          <input id="videoTitle"
+                 class="form-control"
+                 placeholder="Video title">
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+
+          <textarea id="videoDescription"
+                    class="form-control"
+                    placeholder="Video description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>YouTube URL</label>
+
+          <input id="videoUrl"
+                 class="form-control"
+                 placeholder="https://youtube.com/watch?v=...">
+        </div>
+
+        <button class="btn btn-primary"
+                onclick="submitVideo()">
+          Submit Video
+        </button>
+
+      </div>
+
+
+      <!-- MY DESIGNS -->
+
+      <div class="panel" id="myDesigns">
+
+        <h2>My Designs</h2>
+
+        <div id="myDesignList">
+          <p>No designs yet.</p>
+        </div>
+
+      </div>
+
+
+      <!-- MY VIDEOS -->
+
+      <div class="panel" id="myVideos">
+
+        <h2>My Videos</h2>
+
+        <div id="myVideoList">
+          <p>No videos yet.</p>
+        </div>
+
+      </div>
+
+
+      <!-- WALLET -->
+
+      <div class="panel" id="wallet">
+
+        <h2>Wallet</h2>
 
         <div class="stat">
 
-            <span>
-                Balance
-            </span>
+          <small>Available Balance</small>
 
-            <strong id="balance">
-                $0.00
-            </strong>
+          <strong>
+            ৳<span id="walletBalance">0</span>
+          </strong>
 
         </div>
 
+        <br>
 
-        <div class="stat">
+        <button class="btn btn-primary"
+                onclick="withdraw()">
+          Request Withdrawal
+        </button>
 
-            <span>
-                Sales
-            </span>
+        <p style="margin-top:15px;color:#777">
+          Withdrawal system will be connected with the payment gateway later.
+        </p>
 
-            <strong id="salesCount">
-                0
-            </strong>
-
-        </div>
-
-    </div>
-
-</div>
+      </div>
 
 
-<!-- UPLOAD DESIGN -->
+      <!-- PROFILE -->
 
-<div
-    id="uploadDesign"
-    class="dashboard-panel hidden">
+      <div class="panel" id="profile">
 
-    <h2>
-        Upload Design
-    </h2>
-
-    <p class="muted">
-        আপনার digital design marketplace-এ submit করুন।
-    </p>
-
-    <br>
-
-
-    <div class="form-group">
-
-        <label>
-            Design Title
-        </label>
-
-        <input
-            id="designTitle"
-            placeholder="যেমন: Business Flyer Template">
-
-    </div>
-
-
-    <div class="form-group">
-
-        <label>
-            Description
-        </label>
-
-        <textarea
-            id="designDescription"
-            placeholder="Design সম্পর্কে লিখুন">
-
-        </textarea>
-
-    </div>
-
-
-    <div class="two-column">
+        <h2>My Profile</h2>
 
         <div class="form-group">
 
-            <label>
-                Price ($)
-            </label>
+          <label>Name</label>
 
-            <input
-                id="designPrice"
-                type="number"
-                min="0"
-                step="0.01"
-                placeholder="5">
+          <input id="profileName"
+                 class="form-control">
 
         </div>
-
 
         <div class="form-group">
 
-            <label>
-                Category
-            </label>
+          <label>Email</label>
 
-            <select id="designCategory">
-
-                <option>
-                    Graphic Design
-                </option>
-
-                <option>
-                    Flyer
-                </option>
-
-                <option>
-                    Brochure
-                </option>
-
-                <option>
-                    Social Media
-                </option>
-
-                <option>
-                    Template
-                </option>
-
-                <option>
-                    Other
-                </option>
-
-            </select>
+          <input id="profileEmail"
+                 class="form-control"
+                 readonly>
 
         </div>
 
-    </div>
+        <button class="btn btn-primary"
+                onclick="saveProfile()">
+          Save Profile
+        </button>
 
+      </div>
 
-    <div class="form-group">
 
-        <label>
-            Tags
-        </label>
+      <!-- ADMIN -->
 
-        <input
-            id="designTags"
-            placeholder="flyer, business, template">
+      <div class="panel" id="adminPanel">
 
-    </div>
+        <h2>Admin Panel</h2>
 
+        <h3 style="margin-bottom:15px">
+          Pending Designs
+        </h3>
 
-    <div class="form-group">
-
-        <label>
-            Preview Image
-        </label>
-
-        <input
-            id="designPreview"
-            type="file"
-            accept="image/*">
-
-    </div>
-
-
-    <div class="form-group">
-
-        <label>
-            Design File
-            (AI / EPS / SVG / PDF / ZIP)
-        </label>
-
-        <input
-            id="designFile"
-            type="file">
-
-    </div>
-
-
-    <button
-        class="btn"
-        onclick="submitDesign()">
-
-        Submit Design
-
-    </button>
-
-
-    <p
-        id="designMessage"
-        style="margin-top:12px">
-
-    </p>
-
-</div>
-
-
-<!-- UPLOAD VIDEO -->
-
-<div
-    id="uploadVideo"
-    class="dashboard-panel hidden">
-
-    <h2>
-        Add YouTube Video
-    </h2>
-
-    <p class="muted">
-        YouTube video link submit করুন।
-    </p>
-
-    <br>
-
-
-    <div class="form-group">
-
-        <label>
-            Video Title
-        </label>
-
-        <input
-            id="videoTitle"
-            placeholder="Video Title">
-
-    </div>
-
-
-    <div class="form-group">
-
-        <label>
-            Description
-        </label>
-
-        <textarea
-            id="videoDescription"
-            placeholder="Video Description">
-
-        </textarea>
-
-    </div>
-
-
-    <div class="form-group">
-
-        <label>
-            YouTube Link
-        </label>
-
-        <input
-            id="videoUrl"
-            placeholder="https://youtube.com/watch?v=...">
-
-    </div>
-
-
-    <button
-        class="btn"
-        onclick="submitVideo()">
-
-        Submit Video
-
-    </button>
-
-
-    <p
-        id="videoMessage"
-        style="margin-top:12px">
-
-    </p>
-
-</div>
-
-
-<!-- MY DESIGNS -->
-
-<div
-    id="myDesigns"
-    class="dashboard-panel hidden">
-
-    <h2>
-        My Designs
-    </h2>
-
-    <br>
-
-    <div
-        id="myDesignList">
-
-    </div>
-
-</div>
-
-
-<!-- MY VIDEOS -->
-
-<div
-    id="myVideos"
-    class="dashboard-panel hidden">
-
-    <h2>
-        My Videos
-    </h2>
-
-    <br>
-
-    <div
-        id="myVideoList">
-
-    </div>
-
-</div>
-
-
-<!-- WALLET -->
-
-<div
-    id="wallet"
-    class="dashboard-panel hidden">
-
-    <h2>
-        My Wallet
-    </h2>
-
-    <br>
-
-
-    <div class="stats">
-
-        <div class="stat">
-
-            <span>
-                Available Balance
-            </span>
-
-            <strong>
-                $<span id="walletBalance">
-                    0.00
-                </span>
-            </strong>
-
+        <div id="adminDesignList">
+          <p>No pending designs.</p>
         </div>
 
+        <hr style="margin:30px 0">
 
-        <div class="stat">
+        <h3 style="margin-bottom:15px">
+          Pending Videos
+        </h3>
 
-            <span>
-                Total Sales
-            </span>
-
-            <strong>
-                $0.00
-            </strong>
-
+        <div id="adminVideoList">
+          <p>No pending videos.</p>
         </div>
 
-    </div>
+      </div>
 
+    </main>
 
-    <br>
-
-    <h3>
-        Withdraw
-    </h3>
-
-    <p class="muted">
-        Payment gateway যুক্ত করার পর
-        এখানে withdrawal চালু করা হবে।
-    </p>
-
-    <br>
-
-    <button
-        class="btn btn-gray"
-        onclick="alert('Payment system এখনো connect করা হয়নি.')">
-
-        Request Withdrawal
-
-    </button>
-
-</div>
-
-
-<!-- PROFILE -->
-
-<div
-    id="profile"
-    class="dashboard-panel hidden">
-
-    <h2>
-        My Profile
-    </h2>
-
-    <br>
-
-
-    <div class="form-group">
-
-        <label>
-            Name
-        </label>
-
-        <input
-            id="profileName">
-
-    </div>
-
-
-    <div class="form-group">
-
-        <label>
-            Email
-        </label>
-
-        <input
-            id="profileEmail"
-            readonly>
-
-    </div>
-
-
-    <button
-        class="btn"
-        onclick="saveProfile()">
-
-        Save Profile
-
-    </button>
-
-</div>
-
-
-<!-- ADMIN -->
-
-<div
-    id="admin"
-    class="dashboard-panel hidden">
-
-    <h2>
-        ⚙️ Admin Dashboard
-    </h2>
-
-    <p class="muted">
-        এখানে submitted designs এবং videos approve/reject করা যাবে।
-    </p>
-
-    <br>
-
-
-    <h3>
-        Pending Designs
-    </h3>
-
-    <br>
-
-    <div id="adminDesignList"></div>
-
-
-    <br>
-
-    <h3>
-        Pending Videos
-    </h3>
-
-    <br>
-
-    <div id="adminVideoList"></div>
-
-
-    <br>
-
-    <h3>
-        Website Logo
-    </h3>
-
-    <br>
-
-    <input
-        type="file"
-        id="adminLogo"
-        accept="image/*">
-
-    <br><br>
-
-    <button
-        class="btn"
-        onclick="saveLogo()">
-
-        Save Logo
-
-    </button>
-
-</div>
-
-
-</main>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= CTA ================= -->
+<!-- CTA -->
 
-<section class="cta">
+<div class="cta">
 
-<div class="container">
+  <h2>Ready to Share Your Ideas?</h2>
 
-    <h2>
-        Become a Creator on Unique Idea
-    </h2>
+  <p>
+    Join Unique Idea and showcase your digital work.
+  </p>
 
-    <p>
-        Account খুলে আপনার design ও YouTube content submit করুন।
-    </p>
-
-    <br>
-
-    <button
-        class="btn"
-        onclick="openAuth()">
-
-        Create Creator Account
-
-    </button>
+  <button class="btn btn-primary"
+          style="background:white;color:#5b35d5"
+          onclick="openAuth()">
+    Get Started
+  </button>
 
 </div>
 
-</section>
 
-
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
-    © 2026 Unique Idea. All Rights Reserved.
+  <div class="footer-inner">
+
+    <div>
+      <h2>Unique Idea</h2>
+
+      <p>
+        Your hub for digital designs,
+        online work and creative ideas.
+      </p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+
+      <a href="#home">Home</a>
+      <a href="#designs">Designs</a>
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+    </div>
+
+    <div>
+      <h3>Creator</h3>
+
+      <a href="#" onclick="openAuth()">Register</a>
+      <a href="#" onclick="openAuth()">Login</a>
+      <a href="#dashboard">Dashboard</a>
+    </div>
+
+  </div>
 
 </footer>
 
 
-<!-- ================= AUTH MODAL ================= -->
+<!-- AUTH MODAL -->
 
-<div
-    id="authModal"
-    class="modal hidden">
+<div class="modal" id="authModal">
 
-<div class="modal-box">
+  <div class="modal-box">
 
-    <button
-        class="close"
-        onclick="closeAuth()">
+    <span class="close" onclick="closeAuth()">×</span>
 
-        ×
+    <div class="tabs">
 
-    </button>
+      <button id="loginTab"
+              class="active"
+              onclick="showAuth('login')">
+        Login
+      </button>
 
-
-    <h2>
-        Unique Idea Account
-    </h2>
-
-    <p style="color:#687386;margin-top:7px">
-
-        Login অথবা নতুন Creator Account তৈরি করুন।
-
-    </p>
-
-
-    <div class="auth-tabs">
-
-        <button
-            id="loginTab"
-            class="active"
-            onclick="switchAuth('login')">
-
-            Login
-
-        </button>
-
-
-        <button
-            id="registerTab"
-            onclick="switchAuth('register')">
-
-            Register
-
-        </button>
+      <button id="registerTab"
+              onclick="showAuth('register')">
+        Register
+      </button>
 
     </div>
 
 
     <!-- LOGIN -->
 
-    <div id="loginForm">
+    <div class="auth-form active" id="loginForm">
 
-        <div class="form-group">
+      <h2 style="margin-bottom:20px">
+        Welcome Back
+      </h2>
 
-            <label>
-                Email
-            </label>
+      <div class="form-group">
 
-            <input
-                id="loginEmail"
-                type="email"
-                placeholder="Email">
+        <label>Email</label>
 
-        </div>
+        <input id="loginEmail"
+               class="form-control"
+               type="email"
+               placeholder="Your email">
 
+      </div>
 
-        <div class="form-group">
+      <div class="form-group">
 
-            <label>
-                Password
-            </label>
+        <label>Password</label>
 
-            <input
-                id="loginPassword"
-                type="password"
-                placeholder="Password">
+        <input id="loginPassword"
+               class="form-control"
+               type="password"
+               placeholder="Password">
 
-        </div>
+      </div>
 
-
-        <button
-            class="btn"
-            onclick="login()">
-
-            Login
-
-        </button>
+      <button class="btn btn-primary"
+              style="width:100%"
+              onclick="login()">
+        Login
+      </button>
 
     </div>
 
 
     <!-- REGISTER -->
 
-    <div
-        id="registerForm"
-        class="hidden">
+    <div class="auth-form" id="registerForm">
 
-        <div class="form-group">
+      <h2 style="margin-bottom:20px">
+        Create Account
+      </h2>
 
-            <label>
-                Name
-            </label>
+      <div class="form-group">
 
-            <input
-                id="registerName"
-                placeholder="Your Name">
+        <label>Name</label>
 
-        </div>
+        <input id="registerName"
+               class="form-control"
+               placeholder="Your name">
 
+      </div>
 
-        <div class="form-group">
+      <div class="form-group">
 
-            <label>
-                Email
-            </label>
+        <label>Email</label>
 
-            <input
-                id="registerEmail"
-                type="email"
-                placeholder="Your Email">
+        <input id="registerEmail"
+               class="form-control"
+               type="email"
+               placeholder="Your email">
 
-        </div>
+      </div>
 
+      <div class="form-group">
 
-        <div class="form-group">
+        <label>Password</label>
 
-            <label>
-                Password
-            </label>
+        <input id="registerPassword"
+               class="form-control"
+               type="password"
+               placeholder="Create password">
 
-            <input
-                id="registerPassword"
-                type="password"
-                placeholder="Minimum 6 characters">
+      </div>
 
-        </div>
-
-
-        <button
-            class="btn"
-            onclick="register()">
-
-            Create Account
-
-        </button>
+      <button class="btn btn-primary"
+              style="width:100%"
+              onclick="register()">
+        Create Account
+      </button>
 
     </div>
 
-
-    <p
-        id="authMessage"
-        style="margin-top:15px">
-
-    </p>
-
-</div>
+  </div>
 
 </div>
 
 
 <script>
 
-/* =====================================================
-   UNIQUE IDEA MARKETPLACE
-   FRONTEND DEMO VERSION
-===================================================== */
+/* ===============================
+   LOCAL DEMO DATABASE
+================================ */
+
+let users =
+JSON.parse(localStorage.getItem("uniqueIdeaUsers") || "[]");
+
+let designs =
+JSON.parse(localStorage.getItem("uniqueIdeaDesigns") || "[]");
+
+let videos =
+JSON.parse(localStorage.getItem("uniqueIdeaVideos") || "[]");
+
+let currentUser =
+JSON.parse(localStorage.getItem("uniqueIdeaCurrentUser") || "null");
 
 
-/* ================= GLOBAL ================= */
-
-let currentUser = null;
-
-
-/* ================= DEFAULT ADMIN ================= */
-
-const ADMIN_EMAIL =
-    "admin@uniqueidea.com";
-
-
-/* ================= STORAGE ================= */
-
-function getUsers(){
-
-    return JSON.parse(
-        localStorage.getItem(
-            "uniqueIdeaUsers"
-        ) || "[]"
-    );
-
-}
-
-
-function saveUsers(users){
-
-    localStorage.setItem(
-        "uniqueIdeaUsers",
-        JSON.stringify(users)
-    );
-
-}
-
-
-function getDesigns(){
-
-    return JSON.parse(
-        localStorage.getItem(
-            "uniqueIdeaDesigns"
-        ) || "[]"
-    );
-
-}
-
-
-function saveDesigns(data){
-
-    localStorage.setItem(
-        "uniqueIdeaDesigns",
-        JSON.stringify(data)
-    );
-
-}
-
-
-function getVideos(){
-
-    return JSON.parse(
-        localStorage.getItem(
-            "uniqueIdeaVideos"
-        ) || "[]"
-    );
-
-}
-
-
-function saveVideos(data){
-
-    localStorage.setItem(
-        "uniqueIdeaVideos",
-        JSON.stringify(data)
-    );
-
-}
-
-
-/* ================= AUTH MODAL ================= */
+/* ===============================
+   AUTH MODAL
+================================ */
 
 function openAuth(){
 
-    document
-        .getElementById("authModal")
-        .classList.remove("hidden");
+  document.getElementById("authModal")
+    .classList.add("active");
 
 }
-
 
 function closeAuth(){
 
-    document
-        .getElementById("authModal")
-        .classList.add("hidden");
+  document.getElementById("authModal")
+    .classList.remove("active");
+
+}
+
+function showAuth(type){
+
+  document.getElementById("loginForm")
+    .classList.toggle("active",type==="login");
+
+  document.getElementById("registerForm")
+    .classList.toggle("active",type==="register");
+
+  document.getElementById("loginTab")
+    .classList.toggle("active",type==="login");
+
+  document.getElementById("registerTab")
+    .classList.toggle("active",type==="register");
 
 }
 
 
-function switchAuth(type){
-
-    const login =
-        document.getElementById(
-            "loginForm"
-        );
-
-    const register =
-        document.getElementById(
-            "registerForm"
-        );
-
-
-    const loginTab =
-        document.getElementById(
-            "loginTab"
-        );
-
-    const registerTab =
-        document.getElementById(
-            "registerTab"
-        );
-
-
-    if(type==="login"){
-
-        login.classList.remove("hidden");
-
-        register.classList.add("hidden");
-
-        loginTab.classList.add("active");
-
-        registerTab.classList.remove("active");
-
-    }else{
-
-        login.classList.add("hidden");
-
-        register.classList.remove("hidden");
-
-        loginTab.classList.remove("active");
-
-        registerTab.classList.add("active");
-
-    }
-
-}
-
-
-/* ================= REGISTER ================= */
+/* ===============================
+   REGISTER
+================================ */
 
 function register(){
 
-    const name =
-        document
-            .getElementById("registerName")
-            .value
-            .trim();
+  const name =
+    document.getElementById("registerName").value.trim();
 
+  const email =
+    document.getElementById("registerEmail").value.trim().toLowerCase();
 
-    const email =
-        document
-            .getElementById("registerEmail")
-            .value
-            .trim()
-            .toLowerCase();
+  const password =
+    document.getElementById("registerPassword").value;
 
+  if(!name || !email || !password){
 
-    const password =
-        document
-            .getElementById("registerPassword")
-            .value;
+    alert("সব তথ্য পূরণ করুন।");
+    return;
 
+  }
 
-    const message =
-        document.getElementById(
-            "authMessage"
-        );
+  if(password.length < 6){
 
+    alert("Password কমপক্ষে ৬ অক্ষরের হতে হবে।");
+    return;
 
-    if(!name || !email || !password){
+  }
 
-        message.textContent =
-            "সব তথ্য পূরণ করুন।";
+  if(users.some(u=>u.email===email)){
 
-        message.style.color="red";
+    alert("এই Email দিয়ে আগে থেকেই account আছে।");
+    return;
 
-        return;
+  }
 
-    }
+  const user = {
 
+    id:Date.now().toString(),
 
-    if(password.length < 6){
+    name:name,
 
-        message.textContent =
-            "Password কমপক্ষে 6 characters হতে হবে।";
+    email:email,
 
-        message.style.color="red";
+    password:password,
 
-        return;
+    role:"user",
 
-    }
+    balance:0,
 
+    designs:0,
 
-    const users =
-        getUsers();
+    videos:0,
 
+    sales:0
 
-    if(
-        users.some(
-            user =>
-                user.email === email
-        )
-    ){
+  };
 
-        message.textContent =
-            "এই email দিয়ে আগে থেকেই account আছে।";
+  users.push(user);
 
-        message.style.color="red";
+  localStorage.setItem(
+    "uniqueIdeaUsers",
+    JSON.stringify(users)
+  );
 
-        return;
+  alert("Account তৈরি হয়েছে। এখন Login করুন।");
 
-    }
+  showAuth("login");
 
-
-    const user = {
-
-        id:
-            Date.now().toString(),
-
-        name:name,
-
-        email:email,
-
-        password:password,
-
-        role:
-            email === ADMIN_EMAIL
-                ? "admin"
-                : "user",
-
-        balance:0,
-
-        createdAt:
-            new Date().toISOString()
-
-    };
-
-
-    users.push(user);
-
-    saveUsers(users);
-
-
-    message.textContent =
-        "Account তৈরি হয়েছে। এখন Login করুন।";
-
-    message.style.color="green";
-
-
-    setTimeout(
-        function(){
-
-            switchAuth("login");
-
-        },
-        800
-    );
+  document.getElementById("loginEmail").value=email;
 
 }
 
 
-/* ================= LOGIN ================= */
+/* ===============================
+   LOGIN
+================================ */
 
 function login(){
 
-    const email =
-        document
-            .getElementById("loginEmail")
-            .value
-            .trim()
-            .toLowerCase();
+  const email =
+    document.getElementById("loginEmail")
+    .value.trim().toLowerCase();
 
+  const password =
+    document.getElementById("loginPassword").value;
 
-    const password =
-        document
-            .getElementById("loginPassword")
-            .value;
-
-
-    const users =
-        getUsers();
-
-
-    const user =
-        users.find(
-            item =>
-                item.email === email &&
-                item.password === password
-        );
-
-
-    const message =
-        document.getElementById(
-            "authMessage"
-        );
-
-
-    if(!user){
-
-        message.textContent =
-            "Email অথবা Password ভুল।";
-
-        message.style.color="red";
-
-        return;
-
-    }
-
-
-    currentUser = user;
-
-
-    localStorage.setItem(
-        "uniqueIdeaCurrentUser",
-        JSON.stringify(user)
+  const user =
+    users.find(
+      u=>u.email===email && u.password===password
     );
 
+  if(!user){
 
-    closeAuth();
+    alert("Email অথবা Password ভুল।");
+    return;
 
-    updateUI();
+  }
 
-    openDashboard();
+  currentUser=user;
+
+  localStorage.setItem(
+    "uniqueIdeaCurrentUser",
+    JSON.stringify(user)
+  );
+
+  closeAuth();
+
+  updateLoginUI();
+
+  alert("Login successful!");
 
 }
 
 
-/* ================= LOGOUT ================= */
+/* ===============================
+   LOGOUT
+================================ */
 
 function logout(){
 
-    currentUser=null;
+  currentUser=null;
 
-    localStorage.removeItem(
-        "uniqueIdeaCurrentUser"
-    );
+  localStorage.removeItem(
+    "uniqueIdeaCurrentUser"
+  );
 
+  updateLoginUI();
 
-    updateUI();
-
-    window.location.hash =
-        "home";
-
-}
-
-
-/* ================= UPDATE UI ================= */
-
-function updateUI(){
-
-    const loggedIn =
-        currentUser !== null;
-
-
-    document
-        .getElementById("loginButton")
-        .classList.toggle(
-            "hidden",
-            loggedIn
-        );
-
-
-    document
-        .getElementById("logoutButton")
-        .classList.toggle(
-            "hidden",
-            !loggedIn
-        );
-
-
-    document
-        .getElementById("dashboardLink")
-        .classList.toggle(
-            "hidden",
-            !loggedIn
-        );
-
-
-    document
-        .getElementById("dashboardSection")
-        .classList.toggle(
-            "hidden",
-            !loggedIn
-        );
-
-
-    if(loggedIn){
-
-        document
-            .getElementById("dashboardName")
-            .textContent =
-                currentUser.name;
-
-
-        document
-            .getElementById("profileName")
-            .value =
-                currentUser.name;
-
-
-        document
-            .getElementById("profileEmail")
-            .value =
-                currentUser.email;
-
-
-        document
-            .getElementById(
-                "adminDashboardButton"
-            )
-            .classList.toggle(
-                "hidden",
-                currentUser.role !== "admin"
-            );
-
-
-        updateDashboard();
-
-    }
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 
 }
 
 
-/* ================= OPEN DASHBOARD ================= */
+/* ===============================
+   LOGIN UI
+================================ */
 
-function openDashboard(){
+function updateLoginUI(){
 
-    document
-        .getElementById(
-            "dashboardSection"
-        )
-        .scrollIntoView({
-            behavior:"smooth"
-        });
+  const loginBtn =
+    document.getElementById("loginBtn");
 
-}
+  const logoutBtn =
+    document.getElementById("logoutBtn");
 
+  const dashboardLink =
+    document.getElementById("dashboardLink");
 
-/* ================= DASHBOARD TABS ================= */
+  const dashboard =
+    document.getElementById("dashboard");
 
-function showDashboard(
-    panel,
-    button
-){
+  if(currentUser){
 
-    document
-        .querySelectorAll(
-            ".dashboard-panel"
-        )
-        .forEach(
-            item =>
-                item.classList.add(
-                    "hidden"
-                )
-        );
+    loginBtn.classList.add("hidden");
 
+    logoutBtn.classList.remove("hidden");
 
-    document
-        .getElementById(panel)
-        .classList.remove(
-            "hidden"
-        );
+    dashboardLink.classList.remove("hidden");
 
+    dashboard.classList.add("active");
 
-    document
-        .querySelectorAll(
-            ".sidebar button"
-        )
-        .forEach(
-            item =>
-                item.classList.remove(
-                    "active"
-                )
-        );
+    loadDashboard();
 
+    if(currentUser.role==="admin"){
 
-    if(button){
-
-        button.classList.add(
-            "active"
-        );
-
-    }
-
-
-    if(panel==="myDesigns")
-        loadMyDesigns();
-
-
-    if(panel==="myVideos")
-        loadMyVideos();
-
-
-    if(panel==="admin")
-        loadAdmin();
-
-}
-
-
-/* ================= DESIGN SUBMIT ================= */
-
-function submitDesign(){
-
-    if(!currentUser){
-
-        openAuth();
-
-        return;
-
-    }
-
-
-    const title =
-        document
-            .getElementById("designTitle")
-            .value
-            .trim();
-
-
-    const description =
-        document
-            .getElementById("designDescription")
-            .value
-            .trim();
-
-
-    const price =
-        document
-            .getElementById("designPrice")
-            .value;
-
-
-    const category =
-        document
-            .getElementById("designCategory")
-            .value;
-
-
-    const tags =
-        document
-            .getElementById("designTags")
-            .value
-            .trim();
-
-
-    const preview =
-        document
-            .getElementById("designPreview")
-            .files[0];
-
-
-    const file =
-        document
-            .getElementById("designFile")
-            .files[0];
-
-
-    const message =
-        document.getElementById(
-            "designMessage"
-        );
-
-
-    if(!title || !file){
-
-        message.textContent =
-            "Design title এবং design file দিন।";
-
-        message.style.color="red";
-
-        return;
-
-    }
-
-
-    const design = {
-
-        id:
-            Date.now(),
-
-        userId:
-            currentUser.id,
-
-        seller:
-            currentUser.name,
-
-        title:title,
-
-        description:description,
-
-        price:
-            Number(price || 0),
-
-        category:category,
-
-        tags:tags,
-
-        preview:
-            preview
-                ? URL.createObjectURL(preview)
-                : "",
-
-        fileName:
-            file.name,
-
-        status:
-            "pending",
-
-        createdAt:
-            new Date().toISOString()
-
-    };
-
-
-    const designs =
-        getDesigns();
-
-
-    designs.unshift(
-        design
-    );
-
-
-    saveDesigns(
-        designs
-    );
-
-
-    message.textContent =
-        "Design সফলভাবে submit হয়েছে। Admin approval-এর অপেক্ষায় আছে।";
-
-    message.style.color="green";
-
-
-    document
-        .getElementById("designTitle")
-        .value="";
-
-
-    document
-        .getElementById("designDescription")
-        .value="";
-
-
-    document
-        .getElementById("designPrice")
-        .value="";
-
-
-    document
-        .getElementById("designTags")
-        .value="";
-
-
-    document
-        .getElementById("designPreview")
-        .value="";
-
-
-    document
-        .getElementById("designFile")
-        .value="";
-
-
-    updateDashboard();
-
-}
-
-
-/* ================= YOUTUBE ID ================= */
-
-function getYouTubeId(url){
-
-    try{
-
-        const parsed =
-            new URL(url);
-
-
-        if(
-            parsed.hostname.includes(
-                "youtu.be"
-            )
-        ){
-
-            return parsed.pathname
-                .replace("/","");
-
-        }
-
-
-        if(
-            parsed.searchParams.get("v")
-        ){
-
-            return parsed
-                .searchParams
-                .get("v");
-
-        }
-
-
-        if(
-            parsed.pathname.includes(
-                "/shorts/"
-            )
-        ){
-
-            return parsed.pathname
-                .split("/shorts/")[1]
-                .split("/")[0];
-
-        }
-
-
-        return null;
-
-    }catch{
-
-        return null;
-
-    }
-
-}
-
-
-/* ================= VIDEO SUBMIT ================= */
-
-function submitVideo(){
-
-    if(!currentUser){
-
-        openAuth();
-
-        return;
-
-    }
-
-
-    const title =
-        document
-            .getElementById("videoTitle")
-            .value
-            .trim();
-
-
-    const description =
-        document
-            .getElementById("videoDescription")
-            .value
-            .trim();
-
-
-    const url =
-        document
-            .getElementById("videoUrl")
-            .value
-            .trim();
-
-
-    const videoId =
-        getYouTubeId(url);
-
-
-    const message =
-        document.getElementById(
-            "videoMessage"
-        );
-
-
-    if(!title || !videoId){
-
-        message.textContent =
-            "সঠিক Video title এবং YouTube link দিন।";
-
-        message.style.color="red";
-
-        return;
-
-    }
-
-
-    const video = {
-
-        id:
-            Date.now(),
-
-        userId:
-            currentUser.id,
-
-        creator:
-            currentUser.name,
-
-        title:title,
-
-        description:description,
-
-        url:url,
-
-        videoId:videoId,
-
-        status:
-            "pending",
-
-        createdAt:
-            new Date().toISOString()
-
-    };
-
-
-    const videos =
-        getVideos();
-
-
-    videos.unshift(
-        video
-    );
-
-
-    saveVideos(
-        videos
-    );
-
-
-    message.textContent =
-        "Video submit হয়েছে। Admin approval-এর পর public হবে।";
-
-    message.style.color="green";
-
-
-    document
-        .getElementById("videoTitle")
-        .value="";
-
-
-    document
-        .getElementById("videoDescription")
-        .value="";
-
-
-    document
-        .getElementById("videoUrl")
-        .value="";
-
-
-    updateDashboard();
-
-}
-
-
-/* ================= MY DESIGNS ================= */
-
-function loadMyDesigns(){
-
-    const container =
-        document.getElementById(
-            "myDesignList"
-        );
-
-
-    const designs =
-        getDesigns().filter(
-            design =>
-                design.userId ===
-                currentUser.id
-        );
-
-
-    if(!designs.length){
-
-        container.innerHTML =
-            "<p>No designs uploaded yet.</p>";
-
-        return;
-
-    }
-
-
-    container.innerHTML = `
-
-        <div class="table-wrap">
-
-        <table>
-
-        <tr>
-
-            <th>Title</th>
-
-            <th>Category</th>
-
-            <th>Price</th>
-
-            <th>Status</th>
-
-        </tr>
-
-        ${
-            designs.map(
-                design => `
-
-                <tr>
-
-                    <td>
-                        ${escapeHTML(
-                            design.title
-                        )}
-                    </td>
-
-                    <td>
-                        ${escapeHTML(
-                            design.category
-                        )}
-                    </td>
-
-                    <td>
-                        $${Number(
-                            design.price
-                        ).toFixed(2)}
-                    </td>
-
-                    <td>
-                        ${statusBadge(
-                            design.status
-                        )}
-                    </td>
-
-                </tr>
-
-                `
-            ).join("")
-        }
-
-        </table>
-
-        </div>
-
-    `;
-
-}
-
-
-/* ================= MY VIDEOS ================= */
-
-function loadMyVideos(){
-
-    const container =
-        document.getElementById(
-            "myVideoList"
-        );
-
-
-    const videos =
-        getVideos().filter(
-            video =>
-                video.userId ===
-                currentUser.id
-        );
-
-
-    if(!videos.length){
-
-        container.innerHTML =
-            "<p>No videos uploaded yet.</p>";
-
-        return;
-
-    }
-
-
-    container.innerHTML = `
-
-        <div class="table-wrap">
-
-        <table>
-
-        <tr>
-
-            <th>Title</th>
-
-            <th>Status</th>
-
-            <th>Watch</th>
-
-        </tr>
-
-        ${
-            videos.map(
-                video => `
-
-                <tr>
-
-                    <td>
-                        ${escapeHTML(
-                            video.title
-                        )}
-                    </td>
-
-                    <td>
-                        ${statusBadge(
-                            video.status
-                        )}
-                    </td>
-
-                    <td>
-
-                        <a
-                            class="btn btn-light"
-                            href="${video.url}"
-                            target="_blank">
-
-                            Watch
-
-                        </a>
-
-                    </td>
-
-                </tr>
-
-                `
-            ).join("")
-        }
-
-        </table>
-
-        </div>
-
-    `;
-
-}
-
-
-/* ================= ADMIN ================= */
-
-function loadAdmin(){
-
-    if(
-        !currentUser ||
-        currentUser.role !== "admin"
-    ){
-
-        return;
-
-    }
-
-
-    const designs =
-        getDesigns().filter(
-            design =>
-                design.status ===
-                "pending"
-        );
-
-
-    const videos =
-        getVideos().filter(
-            video =>
-                video.status ===
-                "pending"
-        );
-
-
-    const designBox =
-        document.getElementById(
-            "adminDesignList"
-        );
-
-
-    const videoBox =
-        document.getElementById(
-            "adminVideoList"
-        );
-
-
-    if(!designs.length){
-
-        designBox.innerHTML =
-            "<p>No pending designs.</p>";
+      document
+        .getElementById("adminPanelBtn")
+        .classList.remove("hidden");
 
     }else{
 
-        designBox.innerHTML =
-            designs.map(
-                design => `
-
-                <div class="admin-item">
-
-                    <h3>
-                        ${escapeHTML(
-                            design.title
-                        )}
-                    </h3>
-
-                    <p>
-                        Seller:
-                        ${escapeHTML(
-                            design.seller
-                        )}
-                    </p>
-
-                    <p>
-                        Category:
-                        ${escapeHTML(
-                            design.category
-                        )}
-                    </p>
-
-                    <p>
-                        Price:
-                        $${Number(
-                            design.price
-                        ).toFixed(2)}
-                    </p>
-
-                    <div class="admin-buttons">
-
-                        <button
-                            class="btn btn-green"
-                            onclick="moderateDesign(
-                                ${design.id},
-                                'approved'
-                            )">
-
-                            Approve
-
-                        </button>
-
-                        <button
-                            class="btn btn-red"
-                            onclick="moderateDesign(
-                                ${design.id},
-                                'rejected'
-                            )">
-
-                            Reject
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-                `
-            ).join("");
+      document
+        .getElementById("adminPanelBtn")
+        .classList.add("hidden");
 
     }
 
+  }else{
 
-    if(!videos.length){
+    loginBtn.classList.remove("hidden");
 
-        videoBox.innerHTML =
-            "<p>No pending videos.</p>";
+    logoutBtn.classList.add("hidden");
 
-    }else{
+    dashboardLink.classList.add("hidden");
 
-        videoBox.innerHTML =
-            videos.map(
-                video => `
+    dashboard.classList.remove("active");
 
-                <div class="admin-item">
-
-                    <h3>
-                        ${escapeHTML(
-                            video.title
-                        )}
-                    </h3>
-
-                    <p>
-                        Creator:
-                        ${escapeHTML(
-                            video.creator
-                        )}
-                    </p>
-
-                    <div class="admin-buttons">
-
-                        <button
-                            class="btn btn-green"
-                            onclick="moderateVideo(
-                                ${video.id},
-                                'approved'
-                            )">
-
-                            Approve
-
-                        </button>
-
-                        <button
-                            class="btn btn-red"
-                            onclick="moderateVideo(
-                                ${video.id},
-                                'rejected'
-                            )">
-
-                            Reject
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-                `
-            ).join("");
-
-    }
+  }
 
 }
 
 
-/* ================= MODERATION ================= */
+/* ===============================
+   DASHBOARD
+================================ */
 
-function moderateDesign(
-    id,
-    status
-){
+function loadDashboard(){
 
-    const designs =
-        getDesigns();
+  if(!currentUser) return;
 
+  document.getElementById("profileName")
+    .value=currentUser.name;
 
-    const item =
-        designs.find(
-            design =>
-                design.id === id
-        );
+  document.getElementById("profileEmail")
+    .value=currentUser.email;
 
-
-    if(item){
-
-        item.status =
-            status;
-
-    }
-
-
-    saveDesigns(
-        designs
+  const myDesigns =
+    designs.filter(
+      d=>d.userId===currentUser.id
     );
 
+  const myVideos =
+    videos.filter(
+      v=>v.userId===currentUser.id
+    );
+
+  document.getElementById("statDesigns")
+    .textContent=myDesigns.length;
+
+  document.getElementById("statVideos")
+    .textContent=myVideos.length;
+
+  document.getElementById("statBalance")
+    .textContent=currentUser.balance || 0;
+
+  document.getElementById("statSales")
+    .textContent=currentUser.sales || 0;
+
+  document.getElementById("walletBalance")
+    .textContent=currentUser.balance || 0;
+
+  loadMyDesigns();
+
+  loadMyVideos();
+
+  if(currentUser.role==="admin"){
 
     loadAdmin();
 
-    loadPublicContent();
-
-    updateDashboard();
+  }
 
 }
 
 
-function moderateVideo(
-    id,
-    status
-){
+/* ===============================
+   DASHBOARD PANEL
+================================ */
 
-    const videos =
-        getVideos();
+function showPanel(id,button){
 
+  document
+    .querySelectorAll(".panel")
+    .forEach(p=>p.classList.remove("active"));
 
-    const item =
-        videos.find(
-            video =>
-                video.id === id
-        );
+  document
+    .getElementById(id)
+    .classList.add("active");
 
+  document
+    .querySelectorAll(".sidebar button")
+    .forEach(b=>b.classList.remove("active"));
 
-    if(item){
-
-        item.status =
-            status;
-
-    }
-
-
-    saveVideos(
-        videos
-    );
-
-
-    loadAdmin();
-
-    loadPublicContent();
-
-    updateDashboard();
+  if(button){
+    button.classList.add("active");
+  }
 
 }
 
 
-/* ================= PUBLIC CONTENT ================= */
-
-function loadPublicContent(){
-
-    const designs =
-        getDesigns().filter(
-            design =>
-                design.status ===
-                "approved"
-        );
-
-
-    const videos =
-        getVideos().filter(
-            video =>
-                video.status ===
-                "approved"
-        );
-
-
-    const designBox =
-        document.getElementById(
-            "publicDesigns"
-        );
-
-
-    const videoBox =
-        document.getElementById(
-            "publicVideos"
-        );
-
-
-    if(!designs.length){
-
-        designBox.innerHTML = `
-
-            <div class="card">
-
-                <div class="card-body">
-
-                    <h3>
-                        No approved designs yet
-                    </h3>
-
-                    <p>
-                        Creator uploads will appear here after admin approval.
-                    </p>
-
-                </div>
-
-            </div>
-
-        `;
-
-    }else{
-
-        designBox.innerHTML =
-            designs.map(
-                design => `
-
-                <div class="card">
-
-                    <div class="card-image">
-
-                        ${
-                            design.preview
-                            ?
-                            `<img
-                                src="${design.preview}"
-                                alt="${escapeHTML(
-                                    design.title
-                                )}">`
-                            :
-                            `<span>
-                                🎨
-                            </span>`
-                        }
-
-                    </div>
-
-
-                    <div class="card-body">
-
-                        <h3>
-                            ${escapeHTML(
-                                design.title
-                            )}
-                        </h3>
-
-                        <p>
-                            ${escapeHTML(
-                                design.description ||
-                                "Digital Design"
-                            )}
-                        </p>
-
-                        <div class="price">
-
-                            $${Number(
-                                design.price
-                            ).toFixed(2)}
-
-                        </div>
-
-                        <div class="card-actions">
-
-                            <button
-                                class="btn"
-                                onclick="buyDesign(
-                                    ${design.id}
-                                )">
-
-                                Buy Design
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                `
-            ).join("");
-
-    }
-
-
-    if(!videos.length){
-
-        videoBox.innerHTML = `
-
-            <div class="card">
-
-                <div class="card-body">
-
-                    <h3>
-                        No approved videos yet
-                    </h3>
-
-                </div>
-
-            </div>
-
-        `;
-
-    }else{
-
-        videoBox.innerHTML =
-            videos.map(
-                video => `
-
-                <div class="card">
-
-                    <div class="card-image">
-
-                        <img
-                            src="https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg"
-                            alt="Video">
-
-                    </div>
-
-
-                    <div class="card-body">
-
-                        <h3>
-                            ${escapeHTML(
-                                video.title
-                            )}
-                        </h3>
-
-                        <p>
-                            ${escapeHTML(
-                                video.description ||
-                                "Unique Idea Video"
-                            )}
-                        </p>
-
-                        <div class="card-actions">
-
-                            <a
-                                class="btn"
-                                href="${video.url}"
-                                target="_blank">
-
-                                ▶ Watch Video
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                `
-            ).join("");
-
-    }
-
-}
-
-
-/* ================= BUY ================= */
-
-function buyDesign(id){
-
-    if(!currentUser){
-
-        alert(
-            "Design কিনতে আগে Login করুন।"
-        );
-
-        openAuth();
-
-        return;
-
-    }
-
-
-    alert(
-        "Payment Gateway এখনো connect করা হয়নি। পরে bKash/Card/অন্যান্য payment system যুক্ত করা যাবে।"
-    );
-
-}
-
-
-/* ================= PROFILE ================= */
+/* ===============================
+   SAVE PROFILE
+================================ */
 
 function saveProfile(){
 
-    const name =
-        document
-            .getElementById("profileName")
-            .value
-            .trim();
+  if(!currentUser) return;
 
+  const name =
+    document.getElementById("profileName")
+    .value.trim();
 
-    if(!name){
+  if(!name){
 
-        alert(
-            "Name দিন।"
-        );
+    alert("Name দিন।");
+    return;
 
-        return;
+  }
 
-    }
+  currentUser.name=name;
 
-
-    const users =
-        getUsers();
-
-
-    const user =
-        users.find(
-            item =>
-                item.id ===
-                currentUser.id
-        );
-
-
-    if(user){
-
-        user.name =
-            name;
-
-    }
-
-
-    saveUsers(
-        users
+  users =
+    users.map(
+      u=>u.id===currentUser.id
+      ?currentUser
+      :u
     );
 
+  localStorage.setItem(
+    "uniqueIdeaUsers",
+    JSON.stringify(users)
+  );
 
-    currentUser.name =
-        name;
+  localStorage.setItem(
+    "uniqueIdeaCurrentUser",
+    JSON.stringify(currentUser)
+  );
 
-
-    localStorage.setItem(
-        "uniqueIdeaCurrentUser",
-        JSON.stringify(
-            currentUser
-        )
-    );
-
-
-    updateUI();
-
-
-    alert(
-        "Profile saved successfully."
-    );
+  alert("Profile updated!");
 
 }
 
 
-/* ================= LOGO ================= */
+/* ===============================
+   DESIGN SUBMISSION
+================================ */
 
-function saveLogo(){
+function submitDesign(){
 
-    if(
-        !currentUser ||
-        currentUser.role !== "admin"
-    ){
+  if(!currentUser){
 
-        alert(
-            "শুধু Admin logo পরিবর্তন করতে পারবে।"
-        );
+    openAuth();
+    return;
 
-        return;
+  }
 
-    }
+  const title =
+    document.getElementById("designTitle").value.trim();
+
+  const description =
+    document.getElementById("designDescription").value.trim();
+
+  const price =
+    Number(document.getElementById("designPrice").value);
+
+  const category =
+    document.getElementById("designCategory").value;
+
+  const tags =
+    document.getElementById("designTags").value.trim();
+
+  const preview =
+    document.getElementById("designPreview").files[0];
+
+  const file =
+    document.getElementById("designFile").files[0];
+
+  if(!title || !price || !category || !file){
+
+    alert("Title, Price, Category এবং Design File দিন।");
+    return;
+
+  }
+
+  let previewUrl="";
+
+  if(preview){
+
+    previewUrl=
+      URL.createObjectURL(preview);
+
+  }
+
+  const design={
+
+    id:Date.now().toString(),
+
+    userId:currentUser.id,
+
+    title:title,
+
+    description:description,
+
+    price:price,
+
+    category:category,
+
+    tags:tags,
+
+    previewUrl:previewUrl,
+
+    fileName:file.name,
+
+    status:"pending",
+
+    createdAt:new Date().toISOString()
+
+  };
+
+  designs.push(design);
+
+  localStorage.setItem(
+    "uniqueIdeaDesigns",
+    JSON.stringify(designs)
+  );
+
+  alert(
+    "Design submitted হয়েছে। Admin approve করার পর public marketplace-এ দেখা যাবে।"
+  );
+
+  document.getElementById("designTitle").value="";
+  document.getElementById("designDescription").value="";
+  document.getElementById("designPrice").value="";
+  document.getElementById("designCategory").value="";
+  document.getElementById("designTags").value="";
+  document.getElementById("designPreview").value="";
+  document.getElementById("designFile").value="";
+
+  loadDashboard();
+
+}
 
 
-    const file =
-        document
-            .getElementById("adminLogo")
-            .files[0];
+/* ===============================
+   MY DESIGNS
+================================ */
 
+function loadMyDesigns(){
 
-    if(!file){
+  const box =
+    document.getElementById("myDesignList");
 
-        alert(
-            "Logo image নির্বাচন করুন।"
-        );
-
-        return;
-
-    }
-
-
-    const reader =
-        new FileReader();
-
-
-    reader.onload =
-        function(event){
-
-            localStorage.setItem(
-                "uniqueIdeaLogo",
-                event.target.result
-            );
-
-
-            loadLogo();
-
-
-            alert(
-                "Logo saved successfully."
-            );
-
-        };
-
-
-    reader.readAsDataURL(
-        file
+  const list =
+    designs.filter(
+      d=>d.userId===currentUser.id
     );
 
-}
+  if(!list.length){
 
+    box.innerHTML="<p>No designs yet.</p>";
+    return;
 
-function loadLogo(){
+  }
 
-    const logo =
-        localStorage.getItem(
-            "uniqueIdeaLogo"
-        );
+  box.innerHTML=list.map(d=>`
 
+    <div style="
+      padding:15px;
+      border:1px solid #eee;
+      border-radius:10px;
+      margin-bottom:10px;
+    ">
 
-    const image =
-        document.getElementById(
-            "siteLogo"
-        );
+      <strong>${escapeHTML(d.title)}</strong>
 
+      <p>
+        Price: ৳${d.price}
+      </p>
 
-    const text =
-        document.getElementById(
-            "logoText"
-        );
-
-
-    if(logo){
-
-        image.src =
-            logo;
-
-        image.style.display =
-            "block";
-
-        text.style.display =
-            "none";
-
-    }else{
-
-        image.style.display =
-            "none";
-
-        text.style.display =
-            "block";
-
-    }
-
-}
-
-
-/* ================= DASHBOARD UPDATE ================= */
-
-function updateDashboard(){
-
-    if(!currentUser)
-        return;
-
-
-    const designs =
-        getDesigns().filter(
-            design =>
-                design.userId ===
-                currentUser.id
-        );
-
-
-    const videos =
-        getVideos().filter(
-            video =>
-                video.userId ===
-                currentUser.id
-        );
-
-
-    document
-        .getElementById("designCount")
-        .textContent =
-            designs.length;
-
-
-    document
-        .getElementById("videoCount")
-        .textContent =
-            videos.length;
-
-
-    document
-        .getElementById("balance")
-        .textContent =
-            "$" +
-            Number(
-                currentUser.balance || 0
-            ).toFixed(2);
-
-
-    document
-        .getElementById("walletBalance")
-        .textContent =
-            Number(
-                currentUser.balance || 0
-            ).toFixed(2);
-
-}
-
-
-/* ================= STATUS ================= */
-
-function statusBadge(
-    status
-){
-
-    return `
-
-        <span class="badge ${status}">
-
-            ${escapeHTML(
-                status
-            )}
-
+      <p>
+        Status:
+        <span class="badge">
+          ${d.status}
         </span>
+      </p>
 
-    `;
+    </div>
 
-}
-
-
-/* ================= SECURITY ================= */
-
-function escapeHTML(
-    text
-){
-
-    const div =
-        document.createElement(
-            "div"
-        );
-
-
-    div.textContent =
-        text;
-
-
-    return div.innerHTML;
+  `).join("");
 
 }
 
 
-/* ================= START ================= */
+/* ===============================
+   VIDEO SUBMISSION
+================================ */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function(){
+function submitVideo(){
 
-        loadLogo();
+  if(!currentUser){
 
-        loadPublicContent();
+    openAuth();
+    return;
+
+  }
+
+  const title =
+    document.getElementById("videoTitle")
+    .value.trim();
+
+  const description =
+    document.getElementById("videoDescription")
+    .value.trim();
+
+  const url =
+    document.getElementById("videoUrl")
+    .value.trim();
+
+  const videoId =
+    getYouTubeId(url);
+
+  if(!title || !videoId){
+
+    alert("সঠিক YouTube URL দিন।");
+    return;
+
+  }
+
+  const video={
+
+    id:Date.now().toString(),
+
+    userId:currentUser.id,
+
+    title:title,
+
+    description:description,
+
+    url:url,
+
+    videoId:videoId,
+
+    status:"pending",
+
+    createdAt:new Date().toISOString()
+
+  };
+
+  videos.push(video);
+
+  localStorage.setItem(
+    "uniqueIdeaVideos",
+    JSON.stringify(videos)
+  );
+
+  alert(
+    "Video submitted হয়েছে। Admin approval-এর পর public হবে।"
+  );
+
+  document.getElementById("videoTitle").value="";
+  document.getElementById("videoDescription").value="";
+  document.getElementById("videoUrl").value="";
+
+  loadDashboard();
+
+}
 
 
-        const saved =
-            localStorage.getItem(
-                "uniqueIdeaCurrentUser"
-            );
+/* ===============================
+   MY VIDEOS
+================================ */
+
+function loadMyVideos(){
+
+  const box =
+    document.getElementById("myVideoList");
+
+  const list =
+    videos.filter(
+      v=>v.userId===currentUser.id
+    );
+
+  if(!list.length){
+
+    box.innerHTML="<p>No videos yet.</p>";
+    return;
+
+  }
+
+  box.innerHTML=list.map(v=>`
+
+    <div style="
+      padding:15px;
+      border:1px solid #eee;
+      border-radius:10px;
+      margin-bottom:10px;
+    ">
+
+      <strong>${escapeHTML(v.title)}</strong>
+
+      <p>
+        Status:
+        <span class="badge">
+          ${v.status}
+        </span>
+      </p>
+
+    </div>
+
+  `).join("");
+
+}
 
 
-        if(saved){
+/* ===============================
+   ADMIN
+================================ */
 
-            currentUser =
-                JSON.parse(
-                    saved
-                );
+function loadAdmin(){
 
-        }
+  const designBox =
+    document.getElementById("adminDesignList");
+
+  const videoBox =
+    document.getElementById("adminVideoList");
+
+  const pendingDesigns =
+    designs.filter(d=>d.status==="pending");
+
+  const pendingVideos =
+    videos.filter(v=>v.status==="pending");
 
 
-        updateUI();
+  if(!pendingDesigns.length){
+
+    designBox.innerHTML="<p>No pending designs.</p>";
+
+  }else{
+
+    designBox.innerHTML=
+      pendingDesigns.map(d=>`
+
+      <div style="
+        padding:15px;
+        border:1px solid #eee;
+        border-radius:10px;
+        margin-bottom:10px;
+      ">
+
+        <strong>
+          ${escapeHTML(d.title)}
+        </strong>
+
+        <p>
+          Price: ৳${d.price}
+        </p>
+
+        <button class="btn btn-primary"
+          onclick="approveDesign('${d.id}')">
+          Approve
+        </button>
+
+        <button class="btn btn-outline"
+          onclick="rejectDesign('${d.id}')">
+          Reject
+        </button>
+
+      </div>
+
+    `).join("");
+
+  }
+
+
+  if(!pendingVideos.length){
+
+    videoBox.innerHTML="<p>No pending videos.</p>";
+
+  }else{
+
+    videoBox.innerHTML=
+      pendingVideos.map(v=>`
+
+      <div style="
+        padding:15px;
+        border:1px solid #eee;
+        border-radius:10px;
+        margin-bottom:10px;
+      ">
+
+        <strong>
+          ${escapeHTML(v.title)}
+        </strong>
+
+        <br><br>
+
+        <button class="btn btn-primary"
+          onclick="approveVideo('${v.id}')">
+          Approve
+        </button>
+
+        <button class="btn btn-outline"
+          onclick="rejectVideo('${v.id}')">
+          Reject
+        </button>
+
+      </div>
+
+    `).join("");
+
+  }
+
+}
+
+
+/* ===============================
+   APPROVE / REJECT
+================================ */
+
+function approveDesign(id){
+
+  designs=
+    designs.map(
+      d=>d.id===id
+      ?{...d,status:"approved"}
+      :d
+    );
+
+  localStorage.setItem(
+    "uniqueIdeaDesigns",
+    JSON.stringify(designs)
+  );
+
+  alert("Design approved!");
+
+  loadAdmin();
+
+  loadPublicContent();
+
+}
+
+
+function rejectDesign(id){
+
+  designs=
+    designs.map(
+      d=>d.id===id
+      ?{...d,status:"rejected"}
+      :d
+    );
+
+  localStorage.setItem(
+    "uniqueIdeaDesigns",
+    JSON.stringify(designs)
+  );
+
+  alert("Design rejected!");
+
+  loadAdmin();
+
+}
+
+
+function approveVideo(id){
+
+  videos=
+    videos.map(
+      v=>v.id===id
+      ?{...v,status:"approved"}
+      :v
+    );
+
+  localStorage.setItem(
+    "uniqueIdeaVideos",
+    JSON.stringify(videos)
+  );
+
+  alert("Video approved!");
+
+  loadAdmin();
+
+  loadPublicContent();
+
+}
+
+
+function rejectVideo(id){
+
+  videos=
+    videos.map(
+      v=>v.id===id
+      ?{...v,status:"rejected"}
+      :v
+    );
+
+  localStorage.setItem(
+    "uniqueIdeaVideos",
+    JSON.stringify(videos)
+  );
+
+  alert("Video rejected!");
+
+  loadAdmin();
+
+}
+
+
+/* ===============================
+   PUBLIC CONTENT
+================================ */
+
+function loadPublicContent(){
+
+  const designBox =
+    document.getElementById("publicDesigns");
+
+  const videoBox =
+    document.getElementById("publicVideos");
+
+
+  const approvedDesigns =
+    designs.filter(d=>d.status==="approved");
+
+
+  if(approvedDesigns.length){
+
+    designBox.innerHTML +=
+      approvedDesigns.map(d=>`
+
+      <div class="card design-item">
+
+        <div class="card-preview">
+
+          ${
+            d.previewUrl
+            ?
+            `<img src="${d.previewUrl}">`
+            :
+            `<div class="placeholder">🎨</div>`
+          }
+
+        </div>
+
+        <div class="card-body">
+
+          <h3>
+            ${escapeHTML(d.title)}
+          </h3>
+
+          <p>
+            ${escapeHTML(d.description || "")}
+          </p>
+
+          <div class="card-footer">
+
+            <span class="price">
+              ৳${d.price}
+            </span>
+
+            <button class="btn btn-primary"
+              onclick="buyDesign('${escapeHTML(d.title)}',${d.price})">
+              Buy Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    `).join("");
+
+  }
+
+
+  const approvedVideos =
+    videos.filter(v=>v.status==="approved");
+
+
+  if(approvedVideos.length){
+
+    videoBox.innerHTML +=
+      approvedVideos.map(v=>`
+
+      <div class="card">
+
+        <div class="video-box">
+
+          <img src="https://img.youtube.com/vi/${v.videoId}/hqdefault.jpg">
+
+          <div class="play">▶</div>
+
+        </div>
+
+        <div class="card-body">
+
+          <h3>
+            ${escapeHTML(v.title)}
+          </h3>
+
+          <p>
+            ${escapeHTML(v.description || "")}
+          </p>
+
+          <button class="btn btn-primary"
+            onclick="openVideo('${v.url}')">
+            Watch Video
+          </button>
+
+        </div>
+
+      </div>
+
+    `).join("");
+
+  }
+
+}
+
+
+/* ===============================
+   BUY
+================================ */
+
+function buyDesign(title,price){
+
+  if(!currentUser){
+
+    alert("Design কিনতে Login করতে হবে।");
+
+    openAuth();
+
+    return;
+
+  }
+
+  alert(
+    title +
+    "\nPrice: ৳" +
+    price +
+    "\n\nPayment gateway এখনো connected হয়নি।"
+  );
+
+}
+
+
+/* ===============================
+   WITHDRAW
+================================ */
+
+function withdraw(){
+
+  if(!currentUser) return;
+
+  const amount =
+    prompt(
+      "কত টাকা withdraw করতে চান?"
+    );
+
+  if(!amount) return;
+
+  const num=Number(amount);
+
+  if(num<=0){
+
+    alert("সঠিক amount দিন।");
+    return;
+
+  }
+
+  if(num>Number(currentUser.balance)){
+
+    alert("আপনার balance যথেষ্ট নয়।");
+    return;
+
+  }
+
+  alert(
+    "Withdrawal request system payment gateway-এর সাথে connect করার পর কাজ করবে।"
+  );
+
+}
+
+
+/* ===============================
+   YOUTUBE
+================================ */
+
+function getYouTubeId(url){
+
+  try{
+
+    const u=new URL(url);
+
+    if(u.hostname.includes("youtu.be")){
+
+      return u.pathname.substring(1);
 
     }
-);
+
+    if(u.hostname.includes("youtube.com")){
+
+      if(u.searchParams.get("v")){
+
+        return u.searchParams.get("v");
+
+      }
+
+      const parts=u.pathname.split("/");
+
+      const index=parts.indexOf("embed");
+
+      if(index!==-1){
+
+        return parts[index+1];
+
+      }
+
+      const shorts=parts.indexOf("shorts");
+
+      if(shorts!==-1){
+
+        return parts[shorts+1];
+
+      }
+
+    }
+
+  }catch(e){
+
+    return null;
+
+  }
+
+  return null;
+
+}
 
 
-/* ================= MODAL CLOSE ================= */
+function openVideo(url){
 
-document
-    .getElementById("authModal")
-    .addEventListener(
-        "click",
-        function(event){
+  window.open(url,"_blank");
 
-            if(
-                event.target ===
-                this
-            ){
+}
 
-                closeAuth();
 
-            }
+/* ===============================
+   SEARCH
+================================ */
 
-        }
-    );
+function searchDesigns(){
+
+  const q =
+    document.getElementById("searchBox")
+    .value
+    .toLowerCase()
+    .trim();
+
+  document
+    .querySelectorAll(".design-item")
+    .forEach(card=>{
+
+      const text =
+        card.innerText.toLowerCase();
+
+      card.style.display =
+        !q || text.includes(q)
+        ? ""
+        : "none";
+
+    });
+
+}
+
+
+/* ===============================
+   SECURITY DISPLAY
+================================ */
+
+function escapeHTML(str){
+
+  return String(str)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* ===============================
+   DEMO ADMIN
+================================ */
+
+if(!users.length){
+
+  users.push({
+
+    id:"admin-001",
+
+    name:"Unique Idea Admin",
+
+    email:"admin@uniqueidea.com",
+
+    password:"admin123",
+
+    role:"admin",
+
+    balance:0,
+
+    designs:0,
+
+    videos:0,
+
+    sales:0
+
+  });
+
+  localStorage.setItem(
+    "uniqueIdeaUsers",
+    JSON.stringify(users)
+  );
+
+}
+
+
+/* ===============================
+   INITIALIZE
+================================ */
+
+updateLoginUI();
+
+loadPublicContent();
 
 </script>
 
