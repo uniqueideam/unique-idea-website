@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -7,6 +8,7 @@
 <title>MS MARUF | Graphic Designer Portfolio</title>
 
 <style>
+
 :root{
     --bg:#f5f7fb;
     --card:#ffffff;
@@ -16,6 +18,8 @@
     --primary2:#8b5cf6;
     --border:#e5e7eb;
     --dark:#111827;
+    --red:#e60000;
+    --red2:#ff3333;
 }
 
 *{
@@ -29,7 +33,7 @@ html{
 }
 
 body{
-    font-family:Arial, "Noto Sans Bengali", sans-serif;
+    font-family:Arial,"Noto Sans Bengali",sans-serif;
     background:var(--bg);
     color:var(--text);
     line-height:1.6;
@@ -44,17 +48,29 @@ img{
     max-width:100%;
 }
 
+button,
+input,
+textarea,
+select{
+    font-family:inherit;
+}
+
 .container{
     width:90%;
     max-width:1180px;
     margin:auto;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.92);
+    background:rgba(255,255,255,.94);
     backdrop-filter:blur(12px);
     border-bottom:1px solid var(--border);
 }
@@ -104,6 +120,11 @@ header{
     border-radius:9px;
     cursor:pointer;
 }
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     padding:100px 0;
@@ -188,6 +209,47 @@ header{
     color:var(--primary);
 }
 
+
+/* =========================
+   YOUTUBE TOP BUTTON
+========================= */
+
+.youtube-top-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    margin-top:5px;
+
+    padding:14px 24px;
+
+    background:#e60000;
+    color:#ffffff;
+
+    border:2px solid #ff3333;
+    border-radius:10px;
+
+    font-size:15px;
+    font-weight:700;
+
+    box-shadow:0 0 18px rgba(255,0,0,.25);
+
+    transition:.3s;
+}
+
+.youtube-top-btn:hover{
+    background:#ff3333;
+    border-color:#ff6666;
+    transform:translateY(-2px);
+    box-shadow:0 0 28px rgba(255,0,0,.45);
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
 .profile-card{
     background:var(--card);
     border:1px solid var(--border);
@@ -215,6 +277,11 @@ header{
     font-size:14px;
 }
 
+
+/* =========================
+   SECTIONS
+========================= */
+
 .section{
     padding:85px 0;
 }
@@ -239,6 +306,11 @@ header{
 .section-heading p{
     color:var(--muted);
 }
+
+
+/* =========================
+   ABOUT
+========================= */
 
 .about-grid{
     display:grid;
@@ -278,6 +350,41 @@ header{
     font-weight:bold;
 }
 
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:25px;
+}
+
+.design-card,
+.video-card,
+.social-card,
+.contact-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.design-card:hover,
+.video-card:hover,
+.social-card:hover,
+.contact-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(31,41,55,.09);
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
 .portfolio-tools{
     display:flex;
     justify-content:space-between;
@@ -306,31 +413,6 @@ header{
     color:var(--text);
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-    gap:25px;
-}
-
-.design-card,
-.video-card,
-.social-card,
-.contact-card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:16px;
-    overflow:hidden;
-    transition:.3s;
-}
-
-.design-card:hover,
-.video-card:hover,
-.social-card:hover,
-.contact-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 35px rgba(31,41,55,.09);
-}
-
 .design-preview{
     width:100%;
     height:360px;
@@ -356,8 +438,8 @@ header{
 }
 
 .card-tags{
-    color:var(--primary) !important;
-    font-size:13px !important;
+    color:var(--primary)!important;
+    font-size:13px!important;
 }
 
 .card-actions{
@@ -383,104 +465,10 @@ header{
     color:var(--primary);
 }
 
-.video-thumbnail{
-    position:relative;
-    display:block;
-    cursor:pointer;
-}
 
-.video-thumbnail img{
-    width:100%;
-    height:205px;
-    object-fit:cover;
-    display:block;
-}
-
-.play-icon{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#ef233c;
-    color:white;
-    font-size:27px;
-}
-
-.social-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:18px;
-}
-
-.social-card{
-    padding:25px 15px;
-    text-align:center;
-}
-
-.social-icon{
-    width:55px;
-    height:55px;
-    margin:0 auto 12px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#ede9fe;
-    color:var(--primary);
-    font-size:24px;
-    font-weight:bold;
-}
-
-.social-card h3{
-    font-size:17px;
-    margin-bottom:5px;
-}
-
-.social-card p{
-    color:var(--muted);
-    font-size:13px;
-    margin-bottom:12px;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:20px;
-}
-
-.contact-card{
-    padding:25px;
-}
-
-.contact-card h3{
-    margin-bottom:7px;
-}
-
-.contact-card p{
-    color:var(--muted);
-    word-break:break-word;
-}
-
-.contact-card a{
-    color:var(--primary);
-    font-weight:bold;
-}
-
-.empty{
-    grid-column:1/-1;
-    padding:45px;
-    text-align:center;
-    color:var(--muted);
-    background:var(--card);
-    border:1px dashed var(--border);
-    border-radius:15px;
-}
+/* =========================
+   UPLOAD PANEL
+========================= */
 
 .upload-panel{
     background:var(--card);
@@ -538,6 +526,311 @@ header{
     border-color:var(--primary);
 }
 
+
+/* =========================
+   VIDEOS
+========================= */
+
+.video-thumbnail{
+    position:relative;
+    display:block;
+    cursor:pointer;
+}
+
+.video-thumbnail img{
+    width:100%;
+    height:205px;
+    object-fit:cover;
+    display:block;
+}
+
+.play-icon{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#ef233c;
+    color:white;
+    font-size:27px;
+}
+
+
+/* =========================
+   SOCIAL MEDIA
+========================= */
+
+.social-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:18px;
+}
+
+.social-card{
+    padding:25px 15px;
+    text-align:center;
+}
+
+.social-icon{
+    width:55px;
+    height:55px;
+    margin:0 auto 12px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ede9fe;
+    color:var(--primary);
+    font-size:24px;
+    font-weight:bold;
+}
+
+.social-card h3{
+    font-size:17px;
+    margin-bottom:5px;
+}
+
+.social-card p{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:12px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.contact-card{
+    padding:25px;
+}
+
+.contact-card h3{
+    margin-bottom:7px;
+}
+
+.contact-card p{
+    color:var(--muted);
+    word-break:break-word;
+}
+
+.contact-card a{
+    color:var(--primary);
+    font-weight:bold;
+}
+
+
+/* =========================
+   ORDER NOW
+========================= */
+
+.order-section{
+    padding:20px 0 85px;
+}
+
+.order-box{
+    width:100%;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(31,41,55,.07);
+}
+
+.order-heading{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.order-heading h2{
+    font-size:30px;
+    margin-bottom:7px;
+}
+
+.order-heading p{
+    color:var(--muted);
+}
+
+
+/* RED ORDER BUTTON */
+
+.order-button{
+    width:100%;
+    padding:18px 25px;
+    border:2px solid #ff3333;
+    border-radius:12px;
+    background:#e60000;
+    color:#ffffff;
+    font-size:22px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s ease;
+    box-shadow:0 0 18px rgba(255,0,0,.35);
+}
+
+.order-button:hover{
+    background:#ff3333;
+    border-color:#ff6666;
+    transform:translateY(-2px);
+    box-shadow:0 0 28px rgba(255,0,0,.55);
+}
+
+
+/* ORDER FORM */
+
+.order-form{
+    display:none;
+    margin-top:25px;
+    padding-top:25px;
+    border-top:1px solid var(--border);
+}
+
+.order-form.show{
+    display:block;
+}
+
+.order-form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:17px;
+}
+
+.order-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.order-group.full{
+    grid-column:1/-1;
+}
+
+.order-group label{
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.order-group input,
+.order-group textarea,
+.order-group select{
+    width:100%;
+    padding:13px;
+    border:1px solid var(--border);
+    border-radius:9px;
+    background:var(--bg);
+    color:var(--text);
+    outline:none;
+}
+
+.order-group textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.order-group input:focus,
+.order-group textarea:focus,
+.order-group select:focus{
+    border-color:#e60000;
+}
+
+
+/* TWO OPTIONS */
+
+.subject-options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.subject-option{
+    position:relative;
+}
+
+.subject-option input{
+    position:absolute;
+    opacity:0;
+}
+
+.subject-option label{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    padding:14px;
+
+    border:2px solid var(--border);
+    border-radius:10px;
+
+    background:var(--card);
+    color:var(--text);
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.subject-option label:hover{
+    border-color:#ff3333;
+    color:#e60000;
+}
+
+.subject-option input:checked + label{
+    background:#e60000;
+    color:white;
+    border-color:#e60000;
+    box-shadow:0 0 15px rgba(255,0,0,.25);
+}
+
+.order-submit{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#111827;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.order-submit:hover{
+    background:#000000;
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty{
+    grid-column:1/-1;
+    padding:45px;
+    text-align:center;
+    color:var(--muted);
+    background:var(--card);
+    border:1px dashed var(--border);
+    border-radius:15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
     background:var(--dark);
     color:white;
@@ -557,6 +850,11 @@ footer p{
 footer a{
     color:#a5b4fc;
 }
+
+
+/* =========================
+   DARK MODE
+========================= */
 
 .dark{
     --bg:#0b1120;
@@ -586,6 +884,11 @@ footer a{
     background:#1f2937;
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:800px){
 
     .navbar{
@@ -600,15 +903,12 @@ footer a{
 
     .hero{
         padding:65px 0;
+        text-align:center;
     }
 
     .hero-grid,
     .about-grid{
         grid-template-columns:1fr;
-    }
-
-    .hero{
-        text-align:center;
     }
 
     .hero p{
@@ -628,20 +928,43 @@ footer a{
         font-size:29px;
     }
 
-    .form-grid{
+    .form-grid,
+    .order-form-grid{
         grid-template-columns:1fr;
     }
 
-    .form-group.full{
+    .form-group.full,
+    .order-group.full{
         grid-column:auto;
     }
+
+    .subject-options{
+        grid-template-columns:1fr;
+    }
+
+    .order-box{
+        padding:22px;
+    }
+
+    .order-heading h2{
+        font-size:25px;
+    }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
     <div class="container navbar">
 
         <a href="#home" class="logo">
@@ -649,25 +972,48 @@ footer a{
         </a>
 
         <nav class="nav-links">
+
             <a href="#home">Home</a>
+
             <a href="#about">About Me</a>
+
             <a href="#portfolio">Portfolio</a>
+
             <a href="#videos">YouTube</a>
+
             <a href="#social">Social Media</a>
+
             <a href="#contact">Contact</a>
-            <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+
+            <a href="#order">Order Now</a>
+
+            <button
+                class="theme-btn"
+                onclick="toggleTheme()">
+                🌙
+            </button>
+
         </nav>
 
     </div>
+
 </header>
 
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero" id="home">
+
     <div class="container hero-grid">
 
         <div>
-            <span class="badge">GRAPHIC DESIGNER & CONTENT CREATOR</span>
+
+            <span class="badge">
+                GRAPHIC DESIGNER & CONTENT CREATOR
+            </span>
 
             <h1>
                 Hello, I'm<br>
@@ -681,27 +1027,36 @@ footer a{
             </p>
 
             <div class="hero-buttons">
-                <a href="#portfolio" class="btn btn-primary">
+
+                <a
+                    href="#portfolio"
+                    class="btn btn-primary">
                     🎨 View My Portfolio
                 </a>
 
-                <a href="https://www.youtube.com/@uniqueIdeam"
-                   target="_blank"
-                   class="btn btn-outline">
+                <!-- RED YOUTUBE BUTTON -->
+
+                <a
+                    href="https://www.youtube.com/@uniqueIdeam"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-top-btn">
+
                     ▶ Visit My YouTube
+
                 </a>
+
             </div>
+
         </div>
 
 
         <div class="profile-card">
 
-            <!-- নিজের ছবি দিতে চাইলে নিচের src পরিবর্তন করো -->
             <img
                 class="profile-image"
                 src="https://placehold.co/500x500/635bff/ffffff?text=MS+MARUF"
-                alt="MS MARUF Profile Photo"
-            >
+                alt="MS MARUF Profile Photo">
 
             <h2>MS MARUF</h2>
 
@@ -712,23 +1067,36 @@ footer a{
         </div>
 
     </div>
+
 </section>
 
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section class="section" id="about">
+
     <div class="container">
 
         <div class="section-heading">
+
             <small>About Me</small>
+
             <h2>আমার সম্পর্কে</h2>
-            <p>আমার কাজ, দক্ষতা এবং অভিজ্ঞতা</p>
+
+            <p>
+                আমার কাজ, দক্ষতা এবং অভিজ্ঞতা
+            </p>
+
         </div>
+
 
         <div class="about-grid">
 
             <div class="about-box">
+
                 <h3>আমি কী করি?</h3>
 
                 <p>
@@ -743,63 +1111,115 @@ footer a{
                     Online Work, Digital Tips এবং Tutorial ভিডিও
                     প্রকাশ করি।
                 </p>
+
             </div>
 
 
             <div class="about-box">
+
                 <h3>আমার দক্ষতা</h3>
 
                 <div class="skills">
-                    <span class="skill">Adobe Illustrator</span>
-                    <span class="skill">Adobe Photoshop</span>
-                    <span class="skill">Graphic Design</span>
-                    <span class="skill">Logo Design</span>
-                    <span class="skill">Flyer Design</span>
-                    <span class="skill">YouTube Content</span>
-                    <span class="skill">Thumbnail Design</span>
-                    <span class="skill">Vector Design</span>
+
+                    <span class="skill">
+                        Adobe Illustrator
+                    </span>
+
+                    <span class="skill">
+                        Adobe Photoshop
+                    </span>
+
+                    <span class="skill">
+                        Graphic Design
+                    </span>
+
+                    <span class="skill">
+                        Logo Design
+                    </span>
+
+                    <span class="skill">
+                        Flyer Design
+                    </span>
+
+                    <span class="skill">
+                        YouTube Content
+                    </span>
+
+                    <span class="skill">
+                        Thumbnail Design
+                    </span>
+
+                    <span class="skill">
+                        Vector Design
+                    </span>
+
                 </div>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
 
 
 
-<!-- PORTFOLIO -->
+<!-- =========================
+     PORTFOLIO
+========================= -->
+
 <section class="section" id="portfolio">
+
     <div class="container">
 
         <div class="section-heading">
+
             <small>My Portfolio</small>
+
             <h2>আমার ডিজাইন</h2>
-            <p>আমার তৈরি করা ডিজাইনগুলো এখানে দেখতে পারবে</p>
+
+            <p>
+                আমার তৈরি করা ডিজাইনগুলো এখানে দেখতে পারবে
+            </p>
+
         </div>
 
 
-        <!-- নিজের ডিজাইন যোগ করার ফর্ম -->
         <div class="upload-panel">
 
-            <h3>➕ নতুন ডিজাইন যোগ করো</h3>
+            <h3>
+                ➕ নতুন ডিজাইন যোগ করো
+            </h3>
 
             <div class="form-grid">
 
                 <div class="form-group">
-                    <label>Design Title *</label>
+
+                    <label>
+                        Design Title *
+                    </label>
+
                     <input
                         type="text"
                         id="designTitle"
-                        placeholder="যেমন: Corporate Flyer Design"
-                    >
+                        placeholder="যেমন: Corporate Flyer Design">
+
                 </div>
 
 
                 <div class="form-group">
-                    <label>Category *</label>
+
+                    <label>
+                        Category *
+                    </label>
 
                     <select id="designCategory">
-                        <option value="">Category নির্বাচন করো</option>
+
+                        <option value="">
+                            Category নির্বাচন করো
+                        </option>
+
                         <option>Flyer</option>
                         <option>Brochure</option>
                         <option>Business Card</option>
@@ -808,52 +1228,68 @@ footer a{
                         <option>Social Media</option>
                         <option>Template</option>
                         <option>Other</option>
+
                     </select>
+
                 </div>
 
 
                 <div class="form-group full">
-                    <label>Description *</label>
+
+                    <label>
+                        Description *
+                    </label>
 
                     <textarea
                         id="designDescription"
-                        placeholder="ডিজাইন সম্পর্কে বিস্তারিত লিখো"
-                    ></textarea>
+                        placeholder="ডিজাইন সম্পর্কে বিস্তারিত লিখো">
+                    </textarea>
+
                 </div>
 
 
                 <div class="form-group">
-                    <label>Tags</label>
+
+                    <label>
+                        Tags
+                    </label>
 
                     <input
                         type="text"
                         id="designTags"
-                        placeholder="flyer, business, corporate"
-                    >
+                        placeholder="flyer, business, corporate">
+
                 </div>
 
 
                 <div class="form-group">
-                    <label>Preview Image *</label>
+
+                    <label>
+                        Preview Image *
+                    </label>
 
                     <input
                         type="file"
                         id="designImage"
-                        accept="image/*"
-                    >
+                        accept="image/*">
+
                 </div>
 
 
                 <div class="form-group full">
+
                     <button
                         class="btn btn-primary"
-                        onclick="addDesign()"
-                    >
+                        onclick="addDesign()">
+
                         Upload Design
+
                     </button>
+
                 </div>
 
             </div>
+
         </div>
 
 
@@ -864,15 +1300,18 @@ footer a{
                 type="search"
                 id="designSearch"
                 placeholder="ডিজাইন সার্চ করো..."
-                oninput="displayDesigns()"
-            >
+                oninput="displayDesigns()">
+
 
             <select
                 class="select-box"
                 id="designFilter"
-                onchange="displayDesigns()"
-            >
-                <option value="">সব Category</option>
+                onchange="displayDesigns()">
+
+                <option value="">
+                    সব Category
+                </option>
+
                 <option>Flyer</option>
                 <option>Brochure</option>
                 <option>Business Card</option>
@@ -881,310 +1320,745 @@ footer a{
                 <option>Social Media</option>
                 <option>Template</option>
                 <option>Other</option>
+
             </select>
 
         </div>
 
 
-        <div class="cards" id="designList"></div>
+        <div
+            class="cards"
+            id="designList">
+        </div>
 
     </div>
+
 </section>
 
 
 
-<!-- VIDEOS -->
+<!-- =========================
+     VIDEOS
+========================= -->
+
 <section class="section" id="videos">
+
     <div class="container">
 
         <div class="section-heading">
-            <small>My YouTube Videos</small>
-            <h2>আমার YouTube ভিডিও</h2>
-            <p>ভিডিওর Thumbnail-এ ক্লিক করলে সরাসরি YouTube-এ যাবে</p>
+
+            <small>
+                My YouTube Videos
+            </small>
+
+            <h2>
+                আমার YouTube ভিডিও
+            </h2>
+
+            <p>
+                ভিডিওর Thumbnail-এ ক্লিক করলে সরাসরি YouTube-এ যাবে
+            </p>
+
         </div>
 
 
-        <!-- ভিডিও যোগ করার ফর্ম -->
         <div class="upload-panel">
 
-            <h3>➕ নতুন YouTube ভিডিও যোগ করো</h3>
+            <h3>
+                ➕ নতুন YouTube ভিডিও যোগ করো
+            </h3>
 
             <div class="form-grid">
 
                 <div class="form-group full">
-                    <label>Video Title *</label>
+
+                    <label>
+                        Video Title *
+                    </label>
 
                     <input
                         type="text"
                         id="videoTitle"
-                        placeholder="যেমন: How to Start YouTube Channel"
-                    >
+                        placeholder="যেমন: How to Start YouTube Channel">
+
                 </div>
 
 
                 <div class="form-group full">
-                    <label>YouTube Video Link *</label>
+
+                    <label>
+                        YouTube Video Link *
+                    </label>
 
                     <input
                         type="url"
                         id="videoURL"
-                        placeholder="https://www.youtube.com/watch?v=..."
-                    >
+                        placeholder="https://www.youtube.com/watch?v=...">
+
                 </div>
 
 
                 <div class="form-group">
-                    <label>Description *</label>
+
+                    <label>
+                        Description *
+                    </label>
 
                     <textarea
                         id="videoDescription"
-                        placeholder="ভিডিও সম্পর্কে বিস্তারিত লিখো"
-                    ></textarea>
+                        placeholder="ভিডিও সম্পর্কে বিস্তারিত লিখো">
+                    </textarea>
+
                 </div>
 
 
                 <div class="form-group">
-                    <label>Tags</label>
+
+                    <label>
+                        Tags
+                    </label>
 
                     <input
                         type="text"
                         id="videoTags"
-                        placeholder="youtube, tutorial, bangla"
-                    >
+                        placeholder="youtube, tutorial, bangla">
+
                 </div>
 
 
                 <div class="form-group">
-                    <label>Custom Thumbnail</label>
+
+                    <label>
+                        Custom Thumbnail
+                    </label>
 
                     <input
                         type="file"
                         id="videoThumbnail"
-                        accept="image/*"
-                    >
+                        accept="image/*">
+
                 </div>
 
 
                 <div class="form-group full">
+
                     <button
                         class="btn btn-primary"
-                        onclick="addVideo()"
-                    >
+                        onclick="addVideo()">
+
                         Add YouTube Video
+
                     </button>
+
                 </div>
 
             </div>
+
         </div>
 
 
-        <div class="cards" id="videoList"></div>
+        <div
+            class="cards"
+            id="videoList">
+        </div>
 
     </div>
+
 </section>
 
 
 
-<!-- SOCIAL MEDIA -->
+<!-- =========================
+     SOCIAL MEDIA
+========================= -->
+
 <section class="section" id="social">
+
     <div class="container">
 
         <div class="section-heading">
-            <small>Social Media</small>
-            <h2>আমার সোশ্যাল মিডিয়া</h2>
-            <p>আমার সব সোশ্যাল মিডিয়া অ্যাকাউন্ট</p>
+
+            <small>
+                Social Media
+            </small>
+
+            <h2>
+                আমার সোশ্যাল মিডিয়া
+            </h2>
+
+            <p>
+                আমার সব সোশ্যাল মিডিয়া অ্যাকাউন্ট
+            </p>
+
         </div>
 
 
         <div class="social-grid">
 
-            <a class="social-card"
-               href="YOUR_FACEBOOK_LINK"
-               target="_blank">
-                <div class="social-icon">f</div>
-                <h3>Facebook</h3>
-                <p>আমার Facebook Profile/Page</p>
-                <strong>Visit Profile →</strong>
+
+            <a
+                class="social-card"
+                href="YOUR_FACEBOOK_LINK"
+                target="_blank">
+
+                <div class="social-icon">
+                    f
+                </div>
+
+                <h3>
+                    Facebook
+                </h3>
+
+                <p>
+                    আমার Facebook Profile/Page
+                </p>
+
+                <strong>
+                    Visit Profile →
+                </strong>
+
             </a>
 
 
-            <a class="social-card"
-               href="https://www.youtube.com/@uniqueIdeam"
-               target="_blank">
-                <div class="social-icon">▶</div>
-                <h3>YouTube</h3>
-                <p>আমার YouTube Channel</p>
-                <strong>Visit Channel →</strong>
+
+            <a
+                class="social-card"
+                href="https://www.youtube.com/@uniqueIdeam"
+                target="_blank">
+
+                <div class="social-icon">
+                    ▶
+                </div>
+
+                <h3>
+                    YouTube
+                </h3>
+
+                <p>
+                    আমার YouTube Channel
+                </p>
+
+                <strong>
+                    Visit Channel →
+                </strong>
+
             </a>
 
 
-            <a class="social-card"
-               href="YOUR_INSTAGRAM_LINK"
-               target="_blank">
-                <div class="social-icon">◎</div>
-                <h3>Instagram</h3>
-                <p>আমার Instagram Account</p>
-                <strong>Visit Account →</strong>
+
+            <a
+                class="social-card"
+                href="YOUR_INSTAGRAM_LINK"
+                target="_blank">
+
+                <div class="social-icon">
+                    ◎
+                </div>
+
+                <h3>
+                    Instagram
+                </h3>
+
+                <p>
+                    আমার Instagram Account
+                </p>
+
+                <strong>
+                    Visit Account →
+                </strong>
+
             </a>
 
 
-            <a class="social-card"
-               href="YOUR_TIKTOK_LINK"
-               target="_blank">
-                <div class="social-icon">♪</div>
-                <h3>TikTok</h3>
-                <p>আমার TikTok Account</p>
-                <strong>Visit Account →</strong>
+
+            <a
+                class="social-card"
+                href="YOUR_TIKTOK_LINK"
+                target="_blank">
+
+                <div class="social-icon">
+                    ♪
+                </div>
+
+                <h3>
+                    TikTok
+                </h3>
+
+                <p>
+                    আমার TikTok Account
+                </p>
+
+                <strong>
+                    Visit Account →
+                </strong>
+
             </a>
 
 
-            <a class="social-card"
-               href="YOUR_LINKEDIN_LINK"
-               target="_blank">
-                <div class="social-icon">in</div>
-                <h3>LinkedIn</h3>
-                <p>আমার LinkedIn Profile</p>
-                <strong>Visit Profile →</strong>
+
+            <a
+                class="social-card"
+                href="YOUR_LINKEDIN_LINK"
+                target="_blank">
+
+                <div class="social-icon">
+                    in
+                </div>
+
+                <h3>
+                    LinkedIn
+                </h3>
+
+                <p>
+                    আমার LinkedIn Profile
+                </p>
+
+                <strong>
+                    Visit Profile →
+                </strong>
+
             </a>
 
 
-            <a class="social-card"
-               href="YOUR_BEHANCE_LINK"
-               target="_blank">
-                <div class="social-icon">Be</div>
-                <h3>Behance</h3>
-                <p>আমার Design Portfolio</p>
-                <strong>View Portfolio →</strong>
+
+            <a
+                class="social-card"
+                href="YOUR_BEHANCE_LINK"
+                target="_blank">
+
+                <div class="social-icon">
+                    Be
+                </div>
+
+                <h3>
+                    Behance
+                </h3>
+
+                <p>
+                    আমার Design Portfolio
+                </p>
+
+                <strong>
+                    View Portfolio →
+                </strong>
+
             </a>
 
 
-            <a class="social-card"
-               href="YOUR_DRIBBBLE_LINK"
-               target="_blank">
-                <div class="social-icon">Dr</div>
-                <h3>Dribbble</h3>
-                <p>আমার Design Work</p>
-                <strong>View Designs →</strong>
+
+            <a
+                class="social-card"
+                href="YOUR_DRIBBBLE_LINK"
+                target="_blank">
+
+                <div class="social-icon">
+                    Dr
+                </div>
+
+                <h3>
+                    Dribbble
+                </h3>
+
+                <p>
+                    আমার Design Work
+                </p>
+
+                <strong>
+                    View Designs →
+                </strong>
+
             </a>
 
 
-            <a class="social-card"
-               href="YOUR_PINTEREST_LINK"
-               target="_blank">
-                <div class="social-icon">P</div>
-                <h3>Pinterest</h3>
-                <p>আমার Creative Ideas</p>
-                <strong>View Profile →</strong>
+
+            <a
+                class="social-card"
+                href="YOUR_PINTEREST_LINK"
+                target="_blank">
+
+                <div class="social-icon">
+                    P
+                </div>
+
+                <h3>
+                    Pinterest
+                </h3>
+
+                <p>
+                    আমার Creative Ideas
+                </p>
+
+                <strong>
+                    View Profile →
+                </strong>
+
             </a>
 
 
-            <a class="social-card"
-               href="YOUR_WHATSAPP_LINK"
-               target="_blank">
-                <div class="social-icon">W</div>
-                <h3>WhatsApp</h3>
-                <p>সরাসরি যোগাযোগ করো</p>
-                <strong>Message Me →</strong>
+
+            <a
+                class="social-card"
+                href="YOUR_WHATSAPP_LINK"
+                target="_blank">
+
+                <div class="social-icon">
+                    W
+                </div>
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+                <p>
+                    সরাসরি যোগাযোগ করো
+                </p>
+
+                <strong>
+                    Message Me →
+                </strong>
+
             </a>
 
         </div>
 
     </div>
+
 </section>
 
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section class="section" id="contact">
+
     <div class="container">
 
         <div class="section-heading">
-            <small>Contact Me</small>
-            <h2>যোগাযোগ করো</h2>
-            <p>কাজের প্রয়োজনে আমার সঙ্গে যোগাযোগ করতে পারো</p>
+
+            <small>
+                Contact Me
+            </small>
+
+            <h2>
+                যোগাযোগ করো
+            </h2>
+
+            <p>
+                কাজের প্রয়োজনে আমার সঙ্গে যোগাযোগ করতে পারো
+            </p>
+
         </div>
 
 
         <div class="contact-grid">
 
+
             <div class="contact-card">
-                <h3>📱 WhatsApp</h3>
+
+                <h3>
+                    📱 WhatsApp
+                </h3>
 
                 <p>
                     WhatsApp নম্বর:
                 </p>
 
-                <a href="https://wa.me/YOUR_WHATSAPP_NUMBER"
-                   target="_blank">
+                <a
+                    href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+                    target="_blank">
+
                     +880 1XXXXXXXXX
+
                 </a>
+
             </div>
 
 
+
             <div class="contact-card">
-                <h3>☎️ Personal Number</h3>
+
+                <h3>
+                    ☎️ Personal Number
+                </h3>
 
                 <p>
                     ব্যক্তিগত মোবাইল নম্বর:
                 </p>
 
                 <a href="tel:+8801XXXXXXXXX">
+
                     +880 1XXXXXXXXX
+
                 </a>
+
             </div>
 
 
+
             <div class="contact-card">
-                <h3>✉️ Email</h3>
+
+                <h3>
+                    ✉️ Email
+                </h3>
 
                 <p>
                     কাজের জন্য Email:
                 </p>
 
                 <a href="mailto:YOUR_EMAIL@gmail.com">
+
                     YOUR_EMAIL@gmail.com
+
                 </a>
+
             </div>
 
 
+
             <div class="contact-card">
-                <h3>📍 Location</h3>
+
+                <h3>
+                    📍 Location
+                </h3>
 
                 <p>
                     Bangladesh
                 </p>
+
             </div>
 
         </div>
 
     </div>
+
 </section>
 
-.order-button {
-  width: 100%;
-  padding: 18px 25px;
-  border: 2px solid #ff3333;
-  border-radius: 12px;
-  background: #e60000;
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 0 18px rgba(255, 0, 0, 0.35);
-}
 
-.order-button:hover {
-  background: #ff3333;
-  border-color: #ff6666;
-  transform: translateY(-2px);
-  box-shadow: 0 0 28px rgba(255, 0, 0, 0.55);
-}
 
-<footer>
+<!-- =========================
+     ORDER NOW
+     CONTACT-এর ঠিক পরে
+========================= -->
+
+<section
+    class="order-section"
+    id="order">
+
     <div class="container">
 
-        <h2>MS MARUF</h2>
+        <div class="order-box">
+
+            <div class="order-heading">
+
+                <h2>
+                    🛒 Order Your Design
+                </h2>
+
+                <p>
+                    আপনার প্রয়োজনীয় Design Service অর্ডার করতে নিচের বাটনে ক্লিক করুন।
+                </p>
+
+            </div>
+
+
+            <!-- BIG RED BUTTON -->
+
+            <button
+                class="order-button"
+                onclick="toggleOrderForm()">
+
+                🔴 ORDER NOW
+
+            </button>
+
+
+            <!-- ORDER FORM -->
+
+            <div
+                class="order-form"
+                id="orderForm">
+
+                <div class="order-form-grid">
+
+
+                    <div class="order-group">
+
+                        <label>
+                            Your Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="orderName"
+                            placeholder="আপনার নাম লিখুন">
+
+                    </div>
+
+
+
+                    <div class="order-group">
+
+                        <label>
+                            Email *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="orderEmail"
+                            placeholder="আপনার Email লিখুন">
+
+                    </div>
+
+
+
+                    <div class="order-group">
+
+                        <label>
+                            WhatsApp / Phone *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="orderPhone"
+                            placeholder="আপনার WhatsApp নম্বর">
+
+                    </div>
+
+
+
+                    <!-- SUBJECT -->
+
+                    <div class="order-group">
+
+                        <label>
+                            Subject *
+                        </label>
+
+                        <select id="orderSubject">
+
+                            <option value="">
+                                Subject নির্বাচন করুন
+                            </option>
+
+                            <option value="New Design Order">
+                                New Design Order
+                            </option>
+
+                            <option value="Custom Design Request">
+                                Custom Design Request
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- TWO OPTIONS -->
+
+                    <div class="order-group full">
+
+                        <label>
+                            Design Service নির্বাচন করুন *
+                        </label>
+
+
+                        <div class="subject-options">
+
+
+                            <div class="subject-option">
+
+                                <input
+                                    type="radio"
+                                    name="designService"
+                                    id="service1"
+                                    value="Graphic Design Service">
+
+                                <label for="service1">
+
+                                    🎨 Graphic Design Service
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="subject-option">
+
+                                <input
+                                    type="radio"
+                                    name="designService"
+                                    id="service2"
+                                    value="Custom Design Service">
+
+                                <label for="service2">
+
+                                    ✨ Custom Design Service
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="order-group full">
+
+                        <label>
+                            Order Details *
+                        </label>
+
+                        <textarea
+                            id="orderDetails"
+                            placeholder="আপনার কী ধরনের ডিজাইন প্রয়োজন, বিস্তারিত লিখুন...">
+                        </textarea>
+
+                    </div>
+
+
+
+                    <div class="order-group full">
+
+                        <button
+                            type="button"
+                            class="order-submit"
+                            onclick="submitOrder()">
+
+                            📩 Send Order Request
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <h2>
+            MS MARUF
+        </h2>
 
         <p>
             Graphic Designer & YouTube Content Creator
@@ -1194,30 +2068,44 @@ footer a{
             © 2026 MS MARUF. All Rights Reserved.
         </p>
 
-        <a href="https://www.youtube.com/@uniqueIdeam"
-           target="_blank">
+        <a
+            href="https://www.youtube.com/@uniqueIdeam"
+            target="_blank">
+
             Visit My YouTube Channel
+
         </a>
 
     </div>
+
 </footer>
 
 
 
 <script>
 
+
 /* ===============================
    STORAGE
 ================================ */
 
-const DESIGN_STORAGE = "msMarufPortfolioDesigns";
-const VIDEO_STORAGE = "msMarufPortfolioVideos";
+const DESIGN_STORAGE =
+    "msMarufPortfolioDesigns";
+
+const VIDEO_STORAGE =
+    "msMarufPortfolioVideos";
+
 
 let designs =
-    JSON.parse(localStorage.getItem(DESIGN_STORAGE)) || [];
+    JSON.parse(
+        localStorage.getItem(DESIGN_STORAGE)
+    ) || [];
+
 
 let videos =
-    JSON.parse(localStorage.getItem(VIDEO_STORAGE)) || [];
+    JSON.parse(
+        localStorage.getItem(VIDEO_STORAGE)
+    ) || [];
 
 
 
@@ -1246,11 +2134,14 @@ function fileToDataURL(file){
 
     return new Promise((resolve,reject)=>{
 
-        const reader = new FileReader();
+        const reader =
+            new FileReader();
 
-        reader.onload = () => resolve(reader.result);
+        reader.onload =
+            () => resolve(reader.result);
 
-        reader.onerror = reject;
+        reader.onerror =
+            reject;
 
         reader.readAsDataURL(file);
 
@@ -1267,24 +2158,48 @@ function fileToDataURL(file){
 async function addDesign(){
 
     const title =
-        document.getElementById("designTitle").value.trim();
+        document
+        .getElementById("designTitle")
+        .value
+        .trim();
+
 
     const category =
-        document.getElementById("designCategory").value;
+        document
+        .getElementById("designCategory")
+        .value;
+
 
     const description =
-        document.getElementById("designDescription").value.trim();
+        document
+        .getElementById("designDescription")
+        .value
+        .trim();
+
 
     const tags =
-        document.getElementById("designTags").value.trim();
+        document
+        .getElementById("designTags")
+        .value
+        .trim();
+
 
     const imageFile =
-        document.getElementById("designImage").files[0];
+        document
+        .getElementById("designImage")
+        .files[0];
 
 
-    if(!title || !category || !description || !imageFile){
+    if(
+        !title ||
+        !category ||
+        !description ||
+        !imageFile
+    ){
 
-        alert("Title, Category, Description এবং Preview Image পূরণ করো।");
+        alert(
+            "Title, Category, Description এবং Preview Image পূরণ করো।"
+        );
 
         return;
 
@@ -1311,7 +2226,9 @@ async function addDesign(){
 
             image:imageData,
 
-            date:new Date().toLocaleDateString()
+            date:
+                new Date()
+                .toLocaleDateString()
 
         });
 
@@ -1322,22 +2239,45 @@ async function addDesign(){
         );
 
 
-        document.getElementById("designTitle").value="";
-        document.getElementById("designCategory").value="";
-        document.getElementById("designDescription").value="";
-        document.getElementById("designTags").value="";
-        document.getElementById("designImage").value="";
+        document
+        .getElementById("designTitle")
+        .value="";
+
+
+        document
+        .getElementById("designCategory")
+        .value="";
+
+
+        document
+        .getElementById("designDescription")
+        .value="";
+
+
+        document
+        .getElementById("designTags")
+        .value="";
+
+
+        document
+        .getElementById("designImage")
+        .value="";
 
 
         displayDesigns();
 
-        alert("✅ Design Portfolio-তে যোগ হয়েছে।");
+
+        alert(
+            "✅ Design Portfolio-তে যোগ হয়েছে।"
+        );
 
     }
 
     catch(error){
 
-        alert("Design যোগ করা যায়নি।");
+        alert(
+            "Design যোগ করা যায়নি।"
+        );
 
     }
 
@@ -1352,27 +2292,44 @@ async function addDesign(){
 function displayDesigns(){
 
     const list =
-        document.getElementById("designList");
+        document.getElementById(
+            "designList"
+        );
 
 
     const search =
-        document.getElementById("designSearch")
-            .value
-            .toLowerCase();
+        document
+        .getElementById("designSearch")
+        .value
+        .toLowerCase();
 
 
     const filter =
-        document.getElementById("designFilter")
-            .value;
+        document
+        .getElementById("designFilter")
+        .value;
 
 
     const filtered =
-        designs.filter(design => {
+        designs.filter(design=>{
 
             const matchesSearch =
-                design.title.toLowerCase().includes(search) ||
-                design.description.toLowerCase().includes(search) ||
-                design.tags.toLowerCase().includes(search);
+
+                design.title
+                .toLowerCase()
+                .includes(search)
+
+                ||
+
+                design.description
+                .toLowerCase()
+                .includes(search)
+
+                ||
+
+                design.tags
+                .toLowerCase()
+                .includes(search);
 
 
             const matchesCategory =
@@ -1380,7 +2337,10 @@ function displayDesigns(){
                 design.category === filter;
 
 
-            return matchesSearch && matchesCategory;
+            return(
+                matchesSearch &&
+                matchesCategory
+            );
 
         });
 
@@ -1388,9 +2348,13 @@ function displayDesigns(){
     if(filtered.length === 0){
 
         list.innerHTML = `
+
             <div class="empty">
+
                 এখনো কোনো ডিজাইন যোগ করা হয়নি।
+
             </div>
+
         `;
 
         return;
@@ -1399,7 +2363,9 @@ function displayDesigns(){
 
 
     list.innerHTML =
-        filtered.map(design => `
+
+        filtered
+        .map(design=>`
 
             <article class="design-card">
 
@@ -1420,28 +2386,37 @@ function displayDesigns(){
                     </p>
 
                     <p>
-                        <strong>Category:</strong>
+
+                        <strong>
+                            Category:
+                        </strong>
+
                         ${escapeHTML(design.category)}
+
                     </p>
 
                     <p class="card-tags">
+
                         ${escapeHTML(design.tags)}
+
                     </p>
 
                     <div class="card-actions">
 
                         <button
                             class="small-btn"
-                            onclick="openImage('${design.image}')"
-                        >
+                            onclick="openImage('${design.image}')">
+
                             🔍 View Full Design
+
                         </button>
 
                         <button
                             class="small-btn"
-                            onclick="deleteDesign(${design.id})"
-                        >
+                            onclick="deleteDesign(${design.id})">
+
                             🗑 Delete
+
                         </button>
 
                     </div>
@@ -1450,7 +2425,8 @@ function displayDesigns(){
 
             </article>
 
-        `).join("");
+        `)
+        .join("");
 
 }
 
@@ -1462,15 +2438,25 @@ function displayDesigns(){
 
 function deleteDesign(id){
 
-    if(!confirm("এই ডিজাইনটি মুছে ফেলবে?")) return;
+    if(
+        !confirm(
+            "এই ডিজাইনটি মুছে ফেলবে?"
+        )
+    )
+        return;
+
 
     designs =
-        designs.filter(design => design.id !== id);
+        designs.filter(
+            design=>design.id !== id
+        );
+
 
     localStorage.setItem(
         DESIGN_STORAGE,
         JSON.stringify(designs)
     );
+
 
     displayDesigns();
 
@@ -1486,27 +2472,46 @@ function getYouTubeID(url){
 
     try{
 
-        const parsed = new URL(url);
+        const parsed =
+            new URL(url);
 
-        if(parsed.hostname.includes("youtube.com")){
 
-            if(parsed.pathname === "/watch"){
+        if(
+            parsed.hostname
+            .includes("youtube.com")
+        ){
 
-                return parsed.searchParams.get("v");
+            if(
+                parsed.pathname === "/watch"
+            ){
+
+                return parsed
+                    .searchParams
+                    .get("v");
 
             }
 
-            if(parsed.pathname.startsWith("/shorts/")){
 
-                return parsed.pathname
+            if(
+                parsed.pathname
+                .startsWith("/shorts/")
+            ){
+
+                return parsed
+                    .pathname
                     .split("/shorts/")[1]
                     .split("/")[0];
 
             }
 
-            if(parsed.pathname.startsWith("/embed/")){
 
-                return parsed.pathname
+            if(
+                parsed.pathname
+                .startsWith("/embed/")
+            ){
+
+                return parsed
+                    .pathname
                     .split("/embed/")[1]
                     .split("/")[0];
 
@@ -1515,9 +2520,12 @@ function getYouTubeID(url){
         }
 
 
-        if(parsed.hostname === "youtu.be"){
+        if(
+            parsed.hostname === "youtu.be"
+        ){
 
-            return parsed.pathname
+            return parsed
+                .pathname
                 .replace("/","")
                 .split("/")[0];
 
@@ -1544,24 +2552,48 @@ function getYouTubeID(url){
 async function addVideo(){
 
     const title =
-        document.getElementById("videoTitle").value.trim();
+        document
+        .getElementById("videoTitle")
+        .value
+        .trim();
+
 
     const url =
-        document.getElementById("videoURL").value.trim();
+        document
+        .getElementById("videoURL")
+        .value
+        .trim();
+
 
     const description =
-        document.getElementById("videoDescription").value.trim();
+        document
+        .getElementById("videoDescription")
+        .value
+        .trim();
+
 
     const tags =
-        document.getElementById("videoTags").value.trim();
+        document
+        .getElementById("videoTags")
+        .value
+        .trim();
+
 
     const thumbnailFile =
-        document.getElementById("videoThumbnail").files[0];
+        document
+        .getElementById("videoThumbnail")
+        .files[0];
 
 
-    if(!title || !url || !description){
+    if(
+        !title ||
+        !url ||
+        !description
+    ){
 
-        alert("Video Title, Link এবং Description পূরণ করো।");
+        alert(
+            "Video Title, Link এবং Description পূরণ করো।"
+        );
 
         return;
 
@@ -1574,7 +2606,9 @@ async function addVideo(){
 
     if(!videoID){
 
-        alert("সঠিক YouTube Video Link দাও।");
+        alert(
+            "সঠিক YouTube Video Link দাও।"
+        );
 
         return;
 
@@ -1590,7 +2624,9 @@ async function addVideo(){
         if(thumbnailFile){
 
             thumbnail =
-                await fileToDataURL(thumbnailFile);
+                await fileToDataURL(
+                    thumbnailFile
+                );
 
         }
 
@@ -1611,7 +2647,9 @@ async function addVideo(){
 
             thumbnail:thumbnail,
 
-            date:new Date().toLocaleDateString()
+            date:
+                new Date()
+                .toLocaleDateString()
 
         });
 
@@ -1622,22 +2660,45 @@ async function addVideo(){
         );
 
 
-        document.getElementById("videoTitle").value="";
-        document.getElementById("videoURL").value="";
-        document.getElementById("videoDescription").value="";
-        document.getElementById("videoTags").value="";
-        document.getElementById("videoThumbnail").value="";
+        document
+        .getElementById("videoTitle")
+        .value="";
+
+
+        document
+        .getElementById("videoURL")
+        .value="";
+
+
+        document
+        .getElementById("videoDescription")
+        .value="";
+
+
+        document
+        .getElementById("videoTags")
+        .value="";
+
+
+        document
+        .getElementById("videoThumbnail")
+        .value="";
 
 
         displayVideos();
 
-        alert("✅ YouTube ভিডিও যোগ হয়েছে।");
+
+        alert(
+            "✅ YouTube ভিডিও যোগ হয়েছে।"
+        );
 
     }
 
     catch(error){
 
-        alert("ভিডিও যোগ করা যায়নি।");
+        alert(
+            "ভিডিও যোগ করা যায়নি।"
+        );
 
     }
 
@@ -1652,15 +2713,21 @@ async function addVideo(){
 function displayVideos(){
 
     const list =
-        document.getElementById("videoList");
+        document.getElementById(
+            "videoList"
+        );
 
 
     if(videos.length === 0){
 
         list.innerHTML = `
+
             <div class="empty">
+
                 এখনো কোনো YouTube ভিডিও যোগ করা হয়নি।
+
             </div>
+
         `;
 
         return;
@@ -1669,7 +2736,9 @@ function displayVideos(){
 
 
     list.innerHTML =
-        videos.map(video => `
+
+        videos
+        .map(video=>`
 
             <article class="video-card">
 
@@ -1677,16 +2746,18 @@ function displayVideos(){
                     class="video-thumbnail"
                     href="${escapeHTML(video.url)}"
                     target="_blank"
-                    rel="noopener noreferrer"
-                >
+                    rel="noopener noreferrer">
 
                     <img
                         src="${video.thumbnail}"
                         alt="${escapeHTML(video.title)}"
-                        onerror="this.src='https://img.youtube.com/vi/${video.videoID}/hqdefault.jpg'"
-                    >
+                        onerror="
+                        this.src='https://img.youtube.com/vi/${video.videoID}/hqdefault.jpg'
+                        ">
 
-                    <span class="play-icon">▶</span>
+                    <span class="play-icon">
+                        ▶
+                    </span>
 
                 </a>
 
@@ -1705,22 +2776,26 @@ function displayVideos(){
                         ${escapeHTML(video.tags)}
                     </p>
 
+
                     <div class="card-actions">
 
                         <a
                             class="small-btn"
                             href="${escapeHTML(video.url)}"
                             target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                            rel="noopener noreferrer">
+
                             ▶ Watch on YouTube
+
                         </a>
+
 
                         <button
                             class="small-btn"
-                            onclick="deleteVideo(${video.id})"
-                        >
+                            onclick="deleteVideo(${video.id})">
+
                             🗑 Delete
+
                         </button>
 
                     </div>
@@ -1729,7 +2804,8 @@ function displayVideos(){
 
             </article>
 
-        `).join("");
+        `)
+        .join("");
 
 }
 
@@ -1741,15 +2817,25 @@ function displayVideos(){
 
 function deleteVideo(id){
 
-    if(!confirm("এই ভিডিওটি মুছে ফেলবে?")) return;
+    if(
+        !confirm(
+            "এই ভিডিওটি মুছে ফেলবে?"
+        )
+    )
+        return;
+
 
     videos =
-        videos.filter(video => video.id !== id);
+        videos.filter(
+            video=>video.id !== id
+        );
+
 
     localStorage.setItem(
         VIDEO_STORAGE,
         JSON.stringify(videos)
     );
+
 
     displayVideos();
 
@@ -1766,11 +2852,23 @@ function openImage(image){
     const newWindow =
         window.open("");
 
+
+    if(!newWindow)
+        return;
+
+
     newWindow.document.write(`
+
         <html>
+
         <head>
-            <title>Full Design Preview</title>
+
+            <title>
+                Full Design Preview
+            </title>
+
             <style>
+
                 body{
                     margin:0;
                     background:#111;
@@ -1779,17 +2877,25 @@ function openImage(image){
                     align-items:center;
                     min-height:100vh;
                 }
+
                 img{
                     max-width:100%;
                     max-height:100vh;
                     object-fit:contain;
                 }
+
             </style>
+
         </head>
+
         <body>
+
             <img src="${image}">
+
         </body>
+
         </html>
+
     `);
 
 }
@@ -1802,23 +2908,185 @@ function openImage(image){
 
 function toggleTheme(){
 
-    document.body.classList.toggle("dark");
+    document.body
+    .classList
+    .toggle("dark");
+
 
     localStorage.setItem(
+
         "msMarufTheme",
-        document.body.classList.contains("dark")
+
+        document.body
+        .classList
+        .contains("dark")
+
             ? "dark"
+
             : "light"
+
     );
 
 }
 
 
 if(
-    localStorage.getItem("msMarufTheme") === "dark"
+    localStorage.getItem(
+        "msMarufTheme"
+    ) === "dark"
 ){
 
-    document.body.classList.add("dark");
+    document.body
+    .classList
+    .add("dark");
+
+}
+
+
+
+/* ===============================
+   ORDER NOW FORM
+================================ */
+
+function toggleOrderForm(){
+
+    const form =
+        document.getElementById(
+            "orderForm"
+        );
+
+
+    form.classList.toggle("show");
+
+
+    if(
+        form.classList.contains("show")
+    ){
+
+        setTimeout(()=>{
+
+            form.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+            });
+
+        },100);
+
+    }
+
+}
+
+
+
+/* ===============================
+   SUBMIT ORDER
+================================ */
+
+function submitOrder(){
+
+    const name =
+        document
+        .getElementById("orderName")
+        .value
+        .trim();
+
+
+    const email =
+        document
+        .getElementById("orderEmail")
+        .value
+        .trim();
+
+
+    const phone =
+        document
+        .getElementById("orderPhone")
+        .value
+        .trim();
+
+
+    const subject =
+        document
+        .getElementById("orderSubject")
+        .value;
+
+
+    const service =
+        document
+        .querySelector(
+            'input[name="designService"]:checked'
+        );
+
+
+    const details =
+        document
+        .getElementById("orderDetails")
+        .value
+        .trim();
+
+
+    if(
+        !name ||
+        !email ||
+        !phone ||
+        !subject ||
+        !service ||
+        !details
+    ){
+
+        alert(
+            "দয়া করে Order Form-এর সব প্রয়োজনীয় তথ্য পূরণ করুন।"
+        );
+
+        return;
+
+    }
+
+
+    const message =
+
+`Hello MS MARUF,
+
+I want to place a design order.
+
+Name: ${name}
+
+Email: ${email}
+
+Phone/WhatsApp: ${phone}
+
+Subject: ${subject}
+
+Service: ${service.value}
+
+Order Details:
+${details}`;
+
+
+    /*
+       এখানে নিজের WhatsApp নম্বর বসাবে।
+
+       উদাহরণ:
+       8801712345678
+
+       + চিহ্ন ব্যবহার করবে না।
+    */
+
+    const YOUR_WHATSAPP_NUMBER =
+        "8801XXXXXXXXX";
+
+
+    const whatsappURL =
+        "https://wa.me/" +
+        YOUR_WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
 
 }
 
@@ -1836,3 +3104,4 @@ displayVideos();
 
 </body>
 </html>
+```
